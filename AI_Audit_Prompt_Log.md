@@ -1,6 +1,46 @@
 # AI AUDIT REPORT
 
-## Artifact 1: 
+- Trước đó, AI đã được nhận context của bài tập HW01 (file 2026.HW01.Jobs.Defects.PhysicalProduct_En)
+
+## Artifact 1:
+**1. Prompt + Tool**
+- **Tool:** Gemini 3.1 Pro
+- **Timestamp:** 16:07 25/05/2026
+- **Prompt:**
+```
+Đây là context của bài tập tôi làm
+(Gửi file 2026.HW01.Jobs.Defects.PhysicalProduct_En)
+```
+
+**2. AI Output:**
+```
+Chào bạn, tôi đã tiếp nhận và đọc kỹ toàn bộ tài liệu về bài tập HW01 môn QA/QC của bạn. Bài tập này tập trung vào việc đánh giá thị trường việc làm QA/QC, phân tích lỗi phần mềm và thực hành kiểm thử trên một thiết bị vật lý.
+
+Với tư cách là một AI, tôi có thể đồng hành và hướng dẫn bạn một cách chi tiết, cặn kẽ qua từng bước để đảm bảo bạn hoàn thành xuất sắc các yêu cầu chuyên môn của môn học thuộc chương trình Kỹ thuật Phần mềm tại trường Khoa học Tự nhiên này.
+
+Dưới đây là cấu trúc tổng quan các đầu việc chúng ta cần xử lý một cách cẩn thận:
+
+Yêu cầu 1 (Job Market 2026+): Bạn cần tìm 10 tin tuyển dụng QA/QC được đăng trong vòng 60 ngày. Trong đó, phải có ít nhất 3 vị trí yêu cầu kỹ năng về AI/LLM/Automation. Bạn cũng cần viết 1-2 câu phân tích tác động của AI cho từng tin tuyển dụng.
+
+Yêu cầu 2 (20 Software Defects): Cần tổng hợp 20 lỗi phần mềm trong giai đoạn 2022-2026. Bắt buộc có 5 lỗi liên quan trực tiếp đến AI/LLM như hallucination hoặc prompt injection. Đặc biệt, bạn phải chỉ ra 1 điểm mà công cụ AI bị thiên lệch (biased) hoặc ảo giác (hallucinates) khi giải thích về mỗi lỗi này.
+
+Yêu cầu 3 (Physical Product Testing): Bạn sẽ chọn một thiết bị gia dụng và thiết kế 15 kịch bản kiểm thử (test cases). Yêu cầu khó ở đây là tìm ra ít nhất 3 "edge cases" mà công cụ AI không thể nghĩ ra. Sau đó, bạn cần thực thi và quay video tối đa 60 giây cho 5 test cases trên thiết bị thực tế.
+
+
+Tuân thủ AI (AI Collaboration Protocol): Đây là phần rất quan trọng để không bị trừ điểm. Mỗi nội dung do AI tạo ra đều phải được ghi nhận vào "AI Audit Report". Bạn cần viết một đoạn "AI Critique" dài 200-300 chữ để phê phán các điểm sai sót của AI. Toàn bộ lịch sử prompt (prompt log) bắt buộc phải được lưu lại kèm thời gian.
+
+Để bắt đầu một cách hiệu quả, bạn muốn chúng ta cùng xử lý phần tìm kiếm tin tuyển dụng trước, hay bạn đã có sẵn ý tưởng về thiết bị gia dụng để lên kịch bản test cases?
+```
+
+**3. Verdict:** VALID
+
+**4. Reasoning:**
+- Gửi file bài tập để AI được sử dụng biết được toàn bộ context bài tập HW01
+
+**5. Student Fix**
+- Không cần sửa gì vì chỉ cho AI biết context
+
+## Artifact 2: 
 **1. Prompt + Tool**
 - **Tool:** Gemini 3.1 Pro
 - **Timestamp:** 16:09 25/05/2026
@@ -83,7 +123,7 @@ Một số mẹo nhỏ khi điền file:Phần Category tôi thêm vào để kh
 **5. Student Fix**
 - Em có sửa lại một số chỗ như thay vì dùng luôn Traditional QA thì ghi No AI-Requirement cho phần Category và thêm chú thích tiếng Việt tại các bullet header.
 
-## Artifact 2:
+## Artifact 3:
 **1. Prompt + Tool**
 - **Tool:** Gemini 3.1 Pro
 - **Timestamp:** 14:11 26/05/2026
@@ -174,7 +214,7 @@ Bạn có thể điều chỉnh lại văn phong nếu muốn. Nếu bạn cần
 **5. Student Fix**
 - 
 
-## Artifact 3:
+## Artifact 4:
 **1. Prompt + Tool**
 - **Tool:** Gemini 3.1 Pro
 - **Timestamp:** 10:24 27/05/2026
