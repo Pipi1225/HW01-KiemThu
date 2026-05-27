@@ -447,176 +447,127 @@
 
 ---
 
-### Defect 7: 
-* **Link defect (Source):**
+### Defect 7: Lỗi rò rỉ dữ liệu qua API của Optus (2022)
+* **Link defect (Source):** https://www.qld.gov.au/community/your-home-community/cyber-security/cyber-security-for-queenslanders/case-studies/optus-data-breach
 * **Nội dung (Description):**
-  - 
-* **Độ nghiêm trọng (Severity):**
+  - Một endpoint API (dùng để kiểm tra thông tin khách hàng) của nhà mạng Optus đã bị cấu hình sai, mở công khai ra internet mà không yêu cầu bất kỳ bước authentication nào.
+* **Độ nghiêm trọng (Severity):** Rất cao
 * **Hậu quả (Consequences):** 
-  - 
+  - Dữ liệu cá nhân (họ tên, năm sinh, số điện thoại, địa chỉ, hộ chiếu và bằng lái xe) của gần 10 triệu người dân Úc bị đánh cắp.
 * **Giải pháp (Solution):**
-  - 
+  - Triển khai API Gateway với cơ chế xác thực chặt chẽ hơn và việc kiểm thử nên được thông qua nhiều người hơn (Lỗi rò rỉ trên xảy ra là do con người).
 * **AI Bias/Hallucination:**
 
 ---
 
-### Defect 8: 
-* **Link defect (Source):**
+### Defect 8: Lỗi gây sập toàn bộ hệ thống của NATS Anh Quốc (2025)
+* **Link defect (Source):** https://www.euronews.com/travel/2025/07/31/uk-air-traffic-control-failure-airlines-demand-answers-after-more-than-150-flights-cancell
 * **Nội dung (Description):**
-  - 
-* **Độ nghiêm trọng (Severity):**
+  - Hệ thống xử lý kế hoạch bay của NATS bị sập vì lỗi "liên quan tới radar", nên thay vì xử lý chuyến bay tự động thì giờ hệ thống bắt buộc xử lý thủ công. Từ đó, khiến cho hơn 150 chuyến bay bị hủy, ảnh hưởng gần hàng chục nghìn hành khách.
+* **Độ nghiêm trọng (Severity):** Rất cao
 * **Hậu quả (Consequences):** 
-  - 
+  - Hơn 150 chuyến bay bị hủy, ảnh hưởng rất lớn tới danh tiếng và doanh thu của hãng bay (vào tháng 8 năm 2023 đã từng xảy ra 1 vụ việc tương tự).
 * **Giải pháp (Solution):**
-  - 
+  - Nên sửa dứt điểm lỗi của hệ thống và rà soát lại toàn bộ kiến trúc Redundancy của phầm mềm.
 * **AI Bias/Hallucination:**
 
 ---
 
-### Defect 9: 
-* **Link defect (Source):**
-* **Nội dung (Description):**
-  - 
-* **Độ nghiêm trọng (Severity):**
+### Defect 9: Lỗ hổng SQL Injection của MOVEit Transfer (2023)
+* **Link defect (Source):** https://vncsglobal.vn/lo-hong-sql-injection-nghiem-trong-trong-moveit-transfer/
+* **Nội dung (Description):** 
+  - Lỗ hổng được định danh là CVE-2023-36934 gây ra mối đe dọa nghiêm trọng đối với một số phiên bản của Progress MOVEit Transfer. Mối đe dọa ở đây là lỗ hổng SQL injection trong ứng dụng web MOVEit Transfer.
+* **Độ nghiêm trọng (Severity):** Rất cao
 * **Hậu quả (Consequences):** 
-  - 
+  - Kẻ tấn công có khả năng khai thác lỗ hổng để truy cập trái phép vào cơ sở dữ liệu MOVEit Transfer. Điều này có thể thực hiện bằng cách gửi một tải trọng được chế tạo đặc biệt đến điểm cuối ứng dụng MOVEit Transfer, dẫn đến việc sửa đổi trái phép và phơi bày nội dung cơ sở dữ liệu MOVEit.
 * **Giải pháp (Solution):**
-  - 
+  - Sử dụng Parameterized Queries thay cho dùng SQL trực tiếp.
 * **AI Bias/Hallucination:**
 
 ---
 
-### Defect 10: 
-* **Link defect (Source):**
+### Defect 10: Sự cố sập hệ thống toàn cầu của McDonald's
+* **Link defect (Source):** https://znews.vn/mcdonald-s-dong-loat-gap-su-co-khap-the-gioi-post1464677.html
 * **Nội dung (Description):**
-  - 
-* **Độ nghiêm trọng (Severity):**
+  - Sự cố hệ thống khiến nhiều cửa hàng McDonald's trên toàn thế giới phải đóng cửa, làm gián đoạn ứng dụng và đơn đặt hàng online ở các quốc gia và vùng lãnh thổ. McDonald’s Nhật Bản xác nhận "nhiều" cửa hàng trên toàn quốc đã tạm ngừng hoạt động vì vấn đề này và McDonald's Hong Kong cho biết trên Facebook rằng họ cũng đang gặp "lỗi hệ thống máy tính" 
+* **Độ nghiêm trọng (Severity):** Cao
 * **Hậu quả (Consequences):** 
-  - 
+  - Các cửa hàng McDonald's ở nhiều quốc gia (đặc biệt là Australia, Nhật Bản, Hong Kong và Anh là chịu ảnh hưởng nặng nhất) không thể nhận đơn hàng qua app hoặc màn hình kiosk dẫn đến việc phải đóng cửa hoặc ghi giấy tay.
 * **Giải pháp (Solution):**
-  - 
+  - Nếu cần deploy các thay đổi về cấu hình quan trọng, chỉ nên thử nghiệm với vài cửa hàng trước để xem xét thay vì deploy thẳng cho toàn bộ hệ thống
 * **AI Bias/Hallucination:**
 
 ---
 
-### Defect 11: 
-* **Link defect (Source):**
+### Defect 11: Toyota cấu hình sai Cloud Bucket suốt 10 năm (2023)
+* **Link defect (Source):** https://cloudsecurityalliance.org/blog/2025/07/21/reflecting-on-the-2023-toyota-data-breach
 * **Nội dung (Description):**
-  - 
-* **Độ nghiêm trọng (Severity):**
+  - Do lỗi con người trong việc thiết lập môi trường Cloud, một cơ sở dữ liệu của Toyota đã bị đặt ở chế độ "Public" thay vì "Private" từ năm 2013 đến 2023.
+* **Độ nghiêm trọng (Severity):** Cao
 * **Hậu quả (Consequences):** 
-  - 
+  - Dữ liệu vị trí của hơn 2 triệu xe ô tô tại Nhật Bản bị phơi bày trên internet suốt một thập kỷ.
 * **Giải pháp (Solution):**
-  - 
+  - Tích hợp các công cụ CSPM để tự động quét và cảnh báo các bucket bị public.
 * **AI Bias/Hallucination:**
 
 ---
 
-### Defect 12: 
-* **Link defect (Source):**
+### Defect 12: Lỗi gián đoạn mạng diện rộng của AT&T (2024)
+* **Link defect (Source):** https://vjst.vn/mang-di-dong-cua-my-gap-su-co-dien-rong-va-ly-giai-ban-dau-62786.html
 * **Nội dung (Description):**
-  - 
-* **Độ nghiêm trọng (Severity):**
+  - Hơn 74.000 thuê bao của nhà mạng AT&T báo cáo sự cố trên trang web Down Detector chuyên theo dõi tình trạng ngừng hoạt động, với các gián đoạn dịch vụ mạng di động bắt đầu từ khoảng 4 giờ sáng ngày 22/2 theo giờ miền Đông nước Mỹ. Và trang web chỉ theo dõi và thống kê theo số lần tự báo cáo. Các báo cáo đã tăng đều đặn trong suốt buổi sáng nhưng đã chững lại vào lúc 9 giờ sáng. Đến 12h30 chiều, dữ liệu Down Detector vẫn ghi nhận có khoảng 25.000 thuê bao của AT&T báo cáo về sự cố này.
+  - Việc thực thi sai quy trình trong một bản cập nhật khi đang mở rộng mạng đã gây ra lỗi kết nối nghiêm trọng tại các trạm phát sóng.
+* **Độ nghiêm trọng (Severity):** Cao
 * **Hậu quả (Consequences):** 
-  - 
+  - Hàng chục nghìn người dùng Mỹ mất sóng điện thoại, không thể gọi các số khẩn cấp như 911... khi cần thiết.
 * **Giải pháp (Solution):**
-  - 
+  - Thiết lập tính năng Rollback tức thì nếu như phát hiện tỷ lệ rớt mạng tăng đột biến.
 * **AI Bias/Hallucination:**
 
 ---
 
-### Defect 13: 
-* **Link defect (Source):**
+### Defect 13: Vụ tấn công nhồi thông tin xác thực của 23andMe (2023)
+* **Link defect (Source):** https://www.hipaajournal.com/6-9-million-23andme-users-affected-by-data-breach/
 * **Nội dung (Description):**
-  - 
-* **Độ nghiêm trọng (Severity):**
+  - Lỗ hổng không nằm ở core database, mà ở việc 23andMe thiếu các cơ chế bảo vệ điểm đăng nhập và không bắt buộc 2FA. Hacker đã dùng kỹ thuật lấy pass lộ từ web khác thử vào 23andMe.
+* **Độ nghiêm trọng (Severity):** Cao
 * **Hậu quả (Consequences):** 
-  - 
+  - Dữ liệu di truyền của 6.9 triệu người dùng bị đánh cắp chỉ bằng 14,000 tài khoản bị đánh cắp. Vụ việc này đã gây thiệt hại gần 1 triệu $ đến 2 triệu $ theo công ty 23andMe ước tính.
 * **Giải pháp (Solution):**
-  - 
+  - Bắt buộc áp dụng Xác thực 2 yếu tố (MFA/2FA) cho tài khoản mới và trước đó, triển khai reCAPTCHA và khóa tài khoản tạm thời khi đăng nhập sai nhiều lần.
 * **AI Bias/Hallucination:**
 
 ---
 
-### Defect 14: 
-* **Link defect (Source):**
+### Defect 14: LastPass bị đánh cắp Vault mã hóa (2022)
+* **Link defect (Source):** https://thanhnien.vn/lastpass-lai-canh-bao-khach-hang-vi-bi-danh-cap-du-lieu-1851535299.htm
 * **Nội dung (Description):**
-  - 
-* **Độ nghiêm trọng (Severity):**
+  - Hacker đã truy cập vào kho lưu trữ đám mây của LastPass và hiện đang có bản sao lưu kho lưu trữ LastPass của người dùng, trong đó có thể gồm thông tin đăng nhập web, số thẻ tín dụng và các thông tin quan trọng khác. 
+* **Độ nghiêm trọng (Severity):** Rất cao
 * **Hậu quả (Consequences):** 
-  - 
+  - Khủng hoảng niềm tin nghiêm trọng, người dùng phải đổi toàn bộ mật khẩu trên internet (mặc dù LastPass nói dữ liệu của người dùng sẽ an toàn miễn là họ sử dụng mật khẩu chính đủ mạnh).
 * **Giải pháp (Solution):**
-  - 
+  - Áp dụng Zero-Trust cho nhân viên làm việc từ xa, không lưu trữ bản backup của vault cùng một chỗ với các key cấu hình hệ thống.
 * **AI Bias/Hallucination:**
 
 ---
 
-### Defect 15: 
-* **Link defect (Source):**
+### Defect 15: Công ty AnyDesk bị xâm nhập hệ thống Production (2024)
+* **Link defect (Source):** https://www.antoanthongtin.vn/tin/anydesk-bi-tan-cong-mang
 * **Nội dung (Description):**
-  - 
-* **Độ nghiêm trọng (Severity):**
+  - AnyDesk cho biết vụ việc được phát hiện sau khi các chuyên viên bảo mật kiểm tra an ninh hệ thống, khẳng định đây không phải là một cuộc tấn công bằng mã độc tống tiền, nhưng không chia sẻ quá nhiều thông tin về cuộc tấn công ngoài thông báo rằng máy chủ của họ đã bị xâm phạm. Công ty này đã thu hồi tất cả các chứng chỉ liên quan đến bảo mật và hệ thống đã được khắc phục hoặc thay thế khi cần thiết. Đồng thời, sẽ sớm thu hồi chứng chỉ ký mã Code Signing trước đó và bắt đầu thay thế bằng một chứng chỉ mới.
+  - AnyDesk cũng thu hồi tất cả mật khẩu đối trên trang web my[.]anydesk[.]com và kêu gọi người dùng thay đổi mật khẩu nếu những mật khẩu tương tự đã được sử dụng lại trên các dịch vụ trực tuyến khác. Công ty khuyến nghị người dùng tải xuống phiên bản phần mềm mới nhất đi kèm với chứng chỉ Code Signing mới.
+* **Độ nghiêm trọng (Severity):** Cao
 * **Hậu quả (Consequences):** 
-  - 
+  - Người dùng bị khủng hoảng niềm tin và phải thay đổi mật khẩu nếu những mật khẩu tương tự đã được sử dụng lại trên các dịch vụ trực tuyến khác
+  - Công ty phải thu hồi chứng chỉ số, người dùng phải cập nhật phiên bản mới để tránh rủi ro.
 * **Giải pháp (Solution):**
-  - 
+  - Phân quyền hệ thống khắt khe hơn và giám sát chặt chẽ các bất thường trong kho lưu trữ chứng chỉ số.
 * **AI Bias/Hallucination:**
 
 ---
 
 ### Defect 16: 
-* **Link defect (Source):**
-* **Nội dung (Description):**
-  - 
-* **Độ nghiêm trọng (Severity):**
-* **Hậu quả (Consequences):** 
-  - 
-* **Giải pháp (Solution):**
-  - 
-* **AI Bias/Hallucination:**
-
----
-
-### Defect 17: 
-* **Link defect (Source):**
-* **Nội dung (Description):**
-  - 
-* **Độ nghiêm trọng (Severity):**
-* **Hậu quả (Consequences):** 
-  - 
-* **Giải pháp (Solution):**
-  - 
-* **AI Bias/Hallucination:**
-
----
-
-### Defect 18: 
-* **Link defect (Source):**
-* **Nội dung (Description):**
-  - 
-* **Độ nghiêm trọng (Severity):**
-* **Hậu quả (Consequences):** 
-  - 
-* **Giải pháp (Solution):**
-  - 
-* **AI Bias/Hallucination:**
-
----
-
-### Defect 19: 
-* **Link defect (Source):**
-* **Nội dung (Description):**
-  - 
-* **Độ nghiêm trọng (Severity):**
-* **Hậu quả (Consequences):** 
-  - 
-* **Giải pháp (Solution):**
-  - 
-* **AI Bias/Hallucination:**
-
----
-
-### Defect 20: 
 * **Link defect (Source):**
 * **Nội dung (Description):**
   - 
