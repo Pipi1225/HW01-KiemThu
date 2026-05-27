@@ -369,17 +369,265 @@
 
 ## Requirement 2 - 20 Software Defects 2022–2026
 
-### Defect 1: 
+### Defect 1: Air Canada Chatbot Hallucination (2024)
 * **Link defect (Source):** https://techhq.com/news/air-canada-refund-for-customer-who-used-chatbot/
 * **Nội dung (Description):**
   - Chatbot AI của hãng hàng không Air Canada đã tự động bịa ra một chính sách không có thật, hứa hẹn với một hành khách rằng họ có thể mua vé máy bay dự đám tang với giá gốc, sau đó sẽ được hoàn lại tiền chênh lệch trong vòng 90 ngày.
 * **Độ nghiêm trọng (Severity):** Cao
 * **Hậu quả (Consequences):** 
-  - Hãng bị kiện ra tòa án dân sự và buộc phải bồi thường số tiền hoàn lại cho hành khách, gây ảnh hưởng xấu đến uy tín thương hiệu về việc áp dụng AI.
+  - Hãng bị kiện ra tòa án dân sự và buộc phải bồi thường số tiền hoàn lại cho hành khách, gây ảnh hưởng xấu đến uy tín của hãng và cả việc hãng áp dụng AI.
 * **Giải pháp (Solution):**
-  - Air Canada đã phải vô hiệu hóa chatbot này và cập nhật lại toàn bộ các điều khoản loại trừ trách nhiệm (disclaimer) trên website
+  - Với các hệ thống có thành phần tự động hóa, đội ngũ phát triển cần phải thường xuyên kiểm tra hệ thống xem có tự tạo ra các thông tin sai lệch ảnh hưởng đến trải nghiệm người dùng hay không.
 * **AI Bias/Hallucination:**
 
 --- 
 
+### Defect 2: Luật sư nộp án lệ giả do ChatGPT tạo ra (2025)
+* **Link defect (Source):** https://tuoitre.vn/luat-su-my-bi-phat-vi-dung-chatgpt-trich-dan-vu-an-khong-ton-tai-20250601122124481.htm
+* **Nội dung (Description):**
+  - Một luật sư đã soạn đơn kháng cáo, nhưng bản đệ trình này trích dẫn một vụ án tên "Royer kiện Nelson" nhưng vụ án này không thể tìm thấy trong bất kỳ cơ sở dữ liệu pháp lý nào và chỉ được tìm thấy thông qua ChatGPT.
+* **Độ nghiêm trọng (Severity):** Trung bình
+* **Hậu quả (Consequences):** 
+  - Tòa án cảnh cáo và yêu cầu người luật sư đó thanh toán phí luật sư cho bên bị đơn, hoàn trả chi phí cho thân chủ và đóng góp 1.000 USD cho tổ chức phi lợi nhuận “And Justice for All” tại bang Utah và người thư ký pháp lý - người soạn ra bản đệ trình đó - cũng đã bị sa thải khỏi công ty luật sau sự việc.
+* **Giải pháp (Solution):**
+  - Cần phải kiểm tra lại những nội dung của AI tạo ra, vì dù phiên bản có cao cấp tới đâu vẫn có khả năng AI bị hallucination/bias và sẽ tạo ra các thông tin sai lệch.
+* **AI Bias/Hallucination:**
+  
+--- 
+
+### Defect 3: Chevrolet Dealership Chatbot bị Prompt Injection (2023)
+* **Link defect (Source):** https://www.envive.ai/post/case-study-chevy-dealerships-ai-chatbot
+* **Nội dung (Description):**
+  - Vào tháng 11/2023, Chris Bakke - cựu nhân viên của công ty X, "thao túng" Chevrolet of Watsonville's ChatGPT-powered chatbot vào việc cho phép bán chiếc 2024 Chevy Tahoe với giá 1$, đồng ý với mọi điều kiện mà khách hàng yêu cầu và luôn luôn thêm cuối mỗi câu trả lời là khẳng định offer chatbox đề ra có hiệu lực pháp lý.
+* **Độ nghiêm trọng (Severity):** Trung bình
+* **Hậu quả (Consequences):** 
+  - Việc này khiến cho đại lý bị đem ra làm trò cười trên mạng xã hội và ảnh hưởng đến danh tiếng của đại lý. Nhưng may mắn là không vụ giao dịch 1$ nào diễn ra.
+* **Giải pháp (Solution):**
+  - Nếu như chatbot có quyền hạn cao hơn là tự thiết lập/tạo đơn hàng thì hậu quả của sự việc trên không dừng lại ở việc đại lý bị lấy làm trò cười. Nên để tránh vấn đề này, ta cần thiết lập chatbot bỏ qua các lệnh thao túng như "ignore all previous instructions" và cũng như giới hạn quyền hạn và scope hoạt động của bot trong FAQ.
+* **AI Bias/Hallucination:**
+
+---
+
+### Defect 4: Google Gemini Image Bias (2024)
+* **Link defect (Source):** https://www.theverge.com/2024/2/22/24079876/google-gemini-ai-photos-people-pause
+* **Nội dung (Description):**
+  - Công cụ tạo ảnh của Google Gemini bị lỗi bias quá mức về sự đa dạng sắc tộc. Khi người dùng yêu cầu tạo ảnh "Binh lính Đức năm 1943" hoặc "Các nhà lập quốc Mỹ", AI đã tự động inject thêm mấy các từ khóa vào prompt ngầm, khiến cho những bức ảnh tạo ra sai lệch hoàn toàn về mặt lịch sử (Lính Đức da màu, người châu Á, hoàng tộc Anh da màu...)
+* **Độ nghiêm trọng (Severity):** Cao
+* **Hậu quả (Consequences):** 
+  - Chỉ sau 24h khi phát hiện lỗi, Google phải lên tiếng xin lỗi toàn cầu, vô hiệu hóa và bảo trì tính năng tạo hình ảnh người và ảnh hưởng đến danh tiếng của Google.
+* **Giải pháp (Solution):**
+  - Cần huấn luyện lại AI là chỉ nên làm đúng theo yêu cầu của người dùng.
+* **AI Bias/Hallucination:**
+
+---
+
+### Defect 5: Chatbot y tế "Tessa" của NEDA đưa lời khuyên có hại (2023)
+* **Link defect (Source):** https://museumoffailure.com/exhibition/tessa-ai-failure-eating-disorders
+* **Nội dung (Description):**
+  - Hiệp hội Rối loạn Ăn uống Quốc gia (NEDA) Mỹ đã gỡ bỏ một chatbot tên Tessa. Ngay khi được triển khai, thay vì hỗ trợ tâm lý, hỗ trợ người đang bị mắc bệnh rối loạn ăn uống, thì chatbot lại đưa ra các lời khuyên gây hại ngược lại cho cơ thể của người gọi - giảm cân, đo mỡ cơ thể và tính calo chỉ 500 - 1000 calo mỗi ngày. Điều này thường tốt cho cơ thể người có thể trạng khỏe mạnh nhưng cực kỳ dễ khiến người đang bệnh rối loạn ăn uống trở nên trầm trọng hơn.
+* **Độ nghiêm trọng (Severity):** Rất cao 
+* **Hậu quả (Consequences):** 
+  - NEDA đã phải đóng chatbot giữa cơn bão chỉ trích và xóa hết toàn bộ thông tin của chatbot Tessa trên trang chủ. Ảnh hưởng vô cùng lớn tới danh tiếng cũng như là sức khỏe, tinh thần của những người bệnh bị nhận những lời khuyên độc hại khi chatbot vẫn còn hoạt động.
+* **Giải pháp (Solution):**
+  - Những lĩnh vực như tư vấn tâm lý hay y tế (ảnh hưởng tới sức khỏe, tinh thần của người dùng) không bao giờ được để hoàn toàn cho AI Generative xử lý. Nếu dùng thì phải luôn có con người kiểm duyệt nội dung trả lời trước khi phản hồi.
+* **AI Bias/Hallucination:**
+
+---
+
+### Defect 6: Sự cố màn hình xanh toàn cầu CrowdStrike (2024)
+* **Link defect (Source):** https://www.ibm.com/think/news/recent-crowdstrike-outage-what-you-should-know
+* **Nội dung (Description):**
+  - Một bản system update bị lỗi của phần mềm diệt virus CrowdStrike Falcon đã gây ra vòng lặp cứ boot lên, bị Bluescreen of Death (BSOD) rồi lại tắt, khiến cho máy không thể khởi động đúng cách.
+* **Độ nghiêm trọng (Severity):** Rất cao
+* **Hậu quả (Consequences):** 
+  - Ước tính 8.5 triệu máy bị ảnh hưởng, khiến cho các hãng hàng không, ngân hàng, và bệnh viện trên toàn thế giới phải ngừng hoạt động. Thiệt hại kinh tế ước tính hàng tỷ USD.
+* **Giải pháp (Solution):**
+  - Cần áp dụng quy trình Phased Rollout thay vì đẩy cập nhập toàn cầu cùng lúc và cần tăng cường test các file cấu hình trước khi publish, đẩy cập nhập.
+* **AI Bias/Hallucination:**
+
+---
+
+### Defect 7: 
+* **Link defect (Source):**
+* **Nội dung (Description):**
+  - 
+* **Độ nghiêm trọng (Severity):**
+* **Hậu quả (Consequences):** 
+  - 
+* **Giải pháp (Solution):**
+  - 
+* **AI Bias/Hallucination:**
+
+---
+
+### Defect 8: 
+* **Link defect (Source):**
+* **Nội dung (Description):**
+  - 
+* **Độ nghiêm trọng (Severity):**
+* **Hậu quả (Consequences):** 
+  - 
+* **Giải pháp (Solution):**
+  - 
+* **AI Bias/Hallucination:**
+
+---
+
+### Defect 9: 
+* **Link defect (Source):**
+* **Nội dung (Description):**
+  - 
+* **Độ nghiêm trọng (Severity):**
+* **Hậu quả (Consequences):** 
+  - 
+* **Giải pháp (Solution):**
+  - 
+* **AI Bias/Hallucination:**
+
+---
+
+### Defect 10: 
+* **Link defect (Source):**
+* **Nội dung (Description):**
+  - 
+* **Độ nghiêm trọng (Severity):**
+* **Hậu quả (Consequences):** 
+  - 
+* **Giải pháp (Solution):**
+  - 
+* **AI Bias/Hallucination:**
+
+---
+
+### Defect 11: 
+* **Link defect (Source):**
+* **Nội dung (Description):**
+  - 
+* **Độ nghiêm trọng (Severity):**
+* **Hậu quả (Consequences):** 
+  - 
+* **Giải pháp (Solution):**
+  - 
+* **AI Bias/Hallucination:**
+
+---
+
+### Defect 12: 
+* **Link defect (Source):**
+* **Nội dung (Description):**
+  - 
+* **Độ nghiêm trọng (Severity):**
+* **Hậu quả (Consequences):** 
+  - 
+* **Giải pháp (Solution):**
+  - 
+* **AI Bias/Hallucination:**
+
+---
+
+### Defect 13: 
+* **Link defect (Source):**
+* **Nội dung (Description):**
+  - 
+* **Độ nghiêm trọng (Severity):**
+* **Hậu quả (Consequences):** 
+  - 
+* **Giải pháp (Solution):**
+  - 
+* **AI Bias/Hallucination:**
+
+---
+
+### Defect 14: 
+* **Link defect (Source):**
+* **Nội dung (Description):**
+  - 
+* **Độ nghiêm trọng (Severity):**
+* **Hậu quả (Consequences):** 
+  - 
+* **Giải pháp (Solution):**
+  - 
+* **AI Bias/Hallucination:**
+
+---
+
+### Defect 15: 
+* **Link defect (Source):**
+* **Nội dung (Description):**
+  - 
+* **Độ nghiêm trọng (Severity):**
+* **Hậu quả (Consequences):** 
+  - 
+* **Giải pháp (Solution):**
+  - 
+* **AI Bias/Hallucination:**
+
+---
+
+### Defect 16: 
+* **Link defect (Source):**
+* **Nội dung (Description):**
+  - 
+* **Độ nghiêm trọng (Severity):**
+* **Hậu quả (Consequences):** 
+  - 
+* **Giải pháp (Solution):**
+  - 
+* **AI Bias/Hallucination:**
+
+---
+
+### Defect 17: 
+* **Link defect (Source):**
+* **Nội dung (Description):**
+  - 
+* **Độ nghiêm trọng (Severity):**
+* **Hậu quả (Consequences):** 
+  - 
+* **Giải pháp (Solution):**
+  - 
+* **AI Bias/Hallucination:**
+
+---
+
+### Defect 18: 
+* **Link defect (Source):**
+* **Nội dung (Description):**
+  - 
+* **Độ nghiêm trọng (Severity):**
+* **Hậu quả (Consequences):** 
+  - 
+* **Giải pháp (Solution):**
+  - 
+* **AI Bias/Hallucination:**
+
+---
+
+### Defect 19: 
+* **Link defect (Source):**
+* **Nội dung (Description):**
+  - 
+* **Độ nghiêm trọng (Severity):**
+* **Hậu quả (Consequences):** 
+  - 
+* **Giải pháp (Solution):**
+  - 
+* **AI Bias/Hallucination:**
+
+---
+
+### Defect 20: 
+* **Link defect (Source):**
+* **Nội dung (Description):**
+  - 
+* **Độ nghiêm trọng (Severity):**
+* **Hậu quả (Consequences):** 
+  - 
+* **Giải pháp (Solution):**
+  - 
+* **AI Bias/Hallucination:**
+
+---
+
 ## Requirement 3 - Test cases for ONE physical product
+
