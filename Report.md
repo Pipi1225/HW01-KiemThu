@@ -1,0 +1,385 @@
+# HW01 – QA/QC Jobs · 20 Defects · Test a Physical Product
+
+## Requirement 1 - QA/QC Job Market 2026+
+
+### Job 1: QA Automation Engineer, Embedded Video AI - Motorola Solutions
+* **Category:** AI-Required
+* **Link bài đăng (Source):** https://www.linkedin.com/jobs/view/4401702135/
+* **Dated Screenshot:**
+  ![Dated Screenshot Job 1](images/4401702135_1.png)
+* **Thông tin công việc (Job Description):**
+  - At Motorola Solutions, we believe that everything starts with our people. We’re a global close-knit community, united by the relentless pursuit to help keep people safer everywhere. We build and connect technologies to help protect people, property and places. Our solutions foster the collaboration that’s critical for safer communities, safer schools, safer hospitals, safer businesses, and ultimately, safer nations. Connect with a career that matters, and help us build a safer future.
+  - **Department Overview:** The Embedded AI group designs, develops, and evaluates advanced computer vision models, algorithms, and AI applications integrated into cameras and security video servers. Our solutions power key products from Motorola's leading brands including Avigilon, Pelco, and Alta, delivering intelligent and efficient customer experiences. Collaborating closely with hardware, firmware, and cloud teams, we ensure seamless integration and optimal performance of AI-driven technologies in cutting-edge security systems.
+  - As a Quality Assurance Automation Engineer in our camera systems group, you will play a crucial role in technically leading, designing, developing, and optimizing automated test solutions for intelligent embedded camera systems and user interfaces and evaluating Computer Vision and AI algorithms. You will be responsible for the full lifecycle of test automation development, from conceptualization to deployment, while also contributing to backend API test design and implementation. This position requires a deep understanding of modern UI frameworks, strong full-stack test automation principles, and experience with camera technologies or similar data-intensive applications. We are seeking a highly skilled and detail-oriented Quality Assurance Automation Engineer who can lead our Vietnam embedded automation efforts. The ideal candidate is passionate about leading successful deployments of commercial systems for the benefit of our customers.
+  - **Key Responsibilities:**
+    - Collaborate with a small team of Quality assurance engineers and Quality technicians.
+    - Ensure that the Motorola Solutions Embedded AI group produces the highest quality, smartest, easiest to use products in the surveillance industry.
+    - Help lead the design & implementation of a quality evaluation pipeline, workflows, and reporting service for automatically testing IoT devices code prior to release.
+    - Contribute to a comprehensive quality assurance strategy to ensure the reliability and performance of our edge-based video surveillance cameras and cloud-based services.
+    - Execute quality assurance testing strategies for OTA firmware releases for cameras and appliances.
+    - Work with the quality team to develop an exhaustive test approach, including pass fail metrics, real and synthetic video datasets, and automation as part of a comprehensive test suite for each new feature.
+    - Collaborate with product management, embedded software developers, algorithm developers, data scientists, and user interface engineers to define system requirements and use-cases for each new analytics feature.
+    - Coordinate with software development teams to define release scope, objectives, and timelines.
+    - Develop and maintain quality metrics, reports, and documentation to track and communicate product quality improvements.
+    - Analyze test results, identify trends, and provide recommendations for process improvements.
+    - Stay up-to-date with industry best practices and emerging technologies related to quality assurance and AI-based video surveillance systems.
+    - Support our cross-team software escalation process, ensuring timely resolution of critical quality issues and effective communication with stakeholders.
+    - Identify and close testing holes in current test processes and automation.
+    - Create and execute test plans, test cases, and test scripts for both manual and automated testing.
+    - Conduct off-site outdoor field testing of analytics features on camera hardware.
+  - **Additional Info:** Travel requirements: None. Relocation provided: None. Position type: Experienced. Referral payment plan: Yes.
+  - Motorola Solutions is an Equal Opportunity Employer. All qualified applicants will receive consideration for employment without regard to race, color, religion or belief, sex, sexual orientation, gender identity, national origin, disability, veteran status or any other legally-protected characteristic. We are proud of our people-first and community-focused culture, empowering every Motorolan to be their most authentic self and to do their best work to deliver on the promise of a safer world. If you’d like to join our team but feel that you don’t quite meet all of the preferred skills, we’d still love to hear why you think you’d be a great addition to our team.
+
+* **Kỹ năng cần thiết (Required Skills):**
+  - Bachelor of Science degree in Electrical Engineering, Computer Engineering, Computer Science, Robotics, Physics, or equivalent experience from a technical engineering discipline.
+  - Experience leading a small team, evaluating performance and managing direct reports successfully.
+  - 4 years+ of experience in quality assurance automation engineering.
+  - Proven experience in designing, implementing, and managing comprehensive quality assurance strategies and automation frameworks for complex software and hardware systems.
+  - Expertise in developing and authoring Python, C++, and Javascript automation software to test individual software components, web-enabled embedded hardware, IoT, and/or Robotics.
+  - Strong background in cloud-connected applications with platforms such as AWS, Azure, and Google Cloud, and integrating automated tests within CI/CD pipelines.
+  - Demonstrated ability to mentor young developers, fostering a culture of quality, innovation, and continuous improvement.
+  - Excellent communication, collaboration, and interpersonal skills, with the ability to effectively engage with technical and non-technical stakeholders across all levels of the organization.
+  - Experience with AI, machine learning, and computer vision technologies, and their application in quality assurance.
+  - Ability to troubleshoot complex technical issues, think critically, and drive timely resolution of critical quality issues.
+  - Highly organized, creative, and curious, with the ability to multi-task and thrive in an autonomous, empowering, and exciting environment.
+
+* **Salary:** Không công bố
+* **AI Impact Analysis:**
+  - Vai trò của QA trong job này bị AI tác động mạnh, vì cần phải đánh giá độ ổn định mô hình thị giác, xử lý drift dữ liệu và chất lượng tập video. AI tuy là có hỗ trợ tự động hóa test và tạo dữ liệu giả lập, nhưng vẫn cần test thủ công để bắt các lỗi với bối cảnh thực tế và tính đúng đắn của hiệu năng.
+
+---
+
+### Job 2: QA Engineer - Motorola Solutions
+* **Category:** AI-Required
+* **Link bài đăng (Source):** https://www.linkedin.com/jobs/view/4390332055/
+* **Dated Screenshot:**
+  ![Dated Screenshot Job 2](images/4390332055_2.png)
+* **Thông tin công việc (Job Description):**
+  - At Motorola Solutions, we believe that everything starts with our people. We’re a global close-knit community, united by the relentless pursuit to help keep people safer everywhere. We build and connect technologies to help protect people, property and places. Our solutions foster the collaboration that’s critical for safer communities, safer schools, safer hospitals, safer businesses, and ultimately, safer nations. Connect with a career that matters, and help us build a safer future.
+  - **Department Overview:** R&D Test Department. Responsible for evaluating and ensuring the quality of AI products and solutions.
+  - We are seeking a diligent and detail-oriented QA Engineer to join our R&D team. The successful candidate will be responsible for ensuring the quality and reliability of our model and core engines. You will play a key role in building testing infrastructure, benchmarking models, and defining complex data scenarios to predict how model performance impacts the final product.
+  - **Key Responsibilities:**
+    - Test Automation Architecture: Design, develop, and optimize scalable automated testing frameworks for core engines. Focus on streamlining model benchmarking, regression suites, and performance profiling.
+    - Data Engineering for QA: Architect comprehensive data strategies. Define and synthesize complex data contexts and edge-case scenarios required to stress-test ML model robustness.
+    - End-to-End Risk Analysis: Evaluate model outputs through a product lens. Predict systemic risks and quantify how model variance impacts the final user experience post-integration.
+    - CI/CD Integration: Seamlessly integrate automated validation gates into the CI/CD pipeline to ensure continuous quality delivery for cloud-connected and embedded components.
+    - Cross-functional Collaboration: Work closely with Data and Dev teams to triage defects, analyze root causes, and refine model training requirements based on QA insights.
+  - **Additional Info:** Travel requirements: None. Relocation provided: None. Position type: Experienced. Referral payment plan: Yes.
+  - Motorola Solutions is an Equal Opportunity Employer. All qualified applicants will receive consideration for employment without regard to race, color, religion or belief, sex, sexual orientation, gender identity, national origin, disability, veteran status or any other legally-protected characteristic. We are proud of our people-first and community-focused culture, empowering every Motorolan to be their most authentic self and to do their best work to deliver on the promise of a safer world. If you’d like to join our team but feel that you don’t quite meet all of the preferred skills, we’d still love to hear why you think you’d be a great addition to our team.
+* **Kỹ năng cần thiết (Required Skills):**
+  - Required: Minimum 3 years in Software Quality Engineering or Backend Development, with a focus on automation.
+  - Required: Bachelor’s degree in Computer Science, Machine Engineering, or a related technical field.
+  - Required: Proficient in Python (for automation & ML scripting) and C++ or JavaScript (for engine-level or web-integrated testing).
+  - Required: Solid understanding of AI/ML lifecycles and Computer Vision fundamentals.
+  - Required: Hands-on experience with cloud platforms (AWS, Azure, or GCP) and IoT/Robotics environments.
+  - Preferred: Proven track record of architecting test frameworks from scratch.
+  - Preferred: Experience in Scrum/Agile environments with a focus on rapid iteration.
+  - Preferred: Experience leveraging LLMs or AI-based coding assistants to accelerate test script generation and data synthesis.
+  - Preferred: Ability to translate complex technical risks into actionable insights for non-technical stakeholders.
+  - Preferred: Ability to calculate and interpret core metrics (mAP, Precision/Recall, F1-score, etc.) to assess model performance beyond simple "pass/fail" results.
+  - Preferred: Proficiency with Git, Jira, TestRail, and modern CI/CD tools (Jenkins, GitLab CI, or GitHub Actions).
+  - Preferred: Able to communicate verbally and written in English language.
+* **Salary:** Không công bố
+* **AI Impact Analysis:**
+  - Công việc gắn trực tiếp với AI/ML nên QA phải mở rộng kỹ năng về benchmarking, dữ liệu cận biên và đánh giá rủi ro của sản phẩm. Tuy là AI có thể giúp tạo script và tổng hợp dữ liệu nhanh, nhưng cần quy trình kiểm soát để đảm bảo kết quả có thể lặp lại và giải thích được.
+
+---
+
+### Job 3: SWQA Development Engineer - NVIDIA
+* **Category:** AI-Required
+* **Link bài đăng (Source):** https://www.linkedin.com/jobs/view/4395482272/
+* **Dated Screenshot:**
+  ![Dated Screenshot Job 3](images/4395482272_3.png)
+* **Thông tin công việc (Job Description):**
+  - NVIDIA is the world leader in GPU Computing. We are passionate about markets include gaming, automotive, professional vision, HPC, datacenters and networking in addition to our traditional OEM business. NVIDIA is also well positioned as the ‘AI Computing Company’, and NVIDIA GPUs are the brains powering modern Deep Learning software frameworks, accelerated analytics, modern data centers, and driving autonomous vehicles. We have some of the most experienced and dedicated people in the world working for us. If you are dedicated, forward-thinking, and if working with hard-working technical people across countries sounds exciting, this job is for you.
+  - We are now looking for a Software QA Development Engineer; you will collaborate with multi-functional groups. SWQA Developer Engineer at NVIDIA is responsible for test planning, execution, and reporting, you will also write scripts to automate testing, design and develop tools for QA team, or develop integration tests for validation, so QA Engineer can improve productivity or optimize test plan. As a SWQA Developer, you must identify weak spots and constantly design better and creative test plans to break software and identify potential issues. You will have a huge impact on the quality of NVIDIA's products.
+  - **What You’ll Be Doing:**
+    - Review product requirements and develop test matrix.
+    - Build test plan, design test case, execute and report test progress, bugs, and results to management.
+    - Automate test cases and assist in the architecture, crafting and implementing of test frameworks.
+    - Manage bug lifecycle and co-work with inter-groups to drive for solutions.
+    - In-house repro and verify customer issues/fixes.
+* **Kỹ năng cần thiết (Required Skills):**
+  - Required: BS or higher degree or equivalent experience in CS/EE/CE plus equivalent with 2+ years QA experience.
+  - Required: Proficient in Unix/Linux and shell/python programming skills.
+  - Required: Rich experience in test cases development, tests automation in API/UI and failure analysis.
+  - Required: Solid experience with AI development tools, including creating test cases, automating test cases, and ensuring comprehensive code coverage, among other related tasks.
+  - Required: Good knowledge and hands-on experience in model testing and LLM benchmarking.
+  - Required: Good QA sense including attention to detail, problem-solving, data analysis, quality standards knowledge, time management etc.
+  - Required: Excellent communicator, fluent written and verbal English.
+  - Required: Good teamwork with ability to work independently.
+  - Required: Passion to learn new hardcore technology.
+  - Preferred: Experience working with NVIDIA GPU hardware is a strong plus.
+  - Preferred: Background in deep learning frameworks is a plus.
+  - Preferred: Experience in parallel programming ideally CUDA/OpenCL is a plus.
+* **Salary:** Không công bố
+* **AI Impact Analysis:**
+  - Vai trò này phụ thuộc vào Model Testing và LLM benchmarking, nên QA cần quản lý độ ổn định kết quả. Mặc dù là AI có thể tăng tốc tạo test và phân tích log, nhưng cần có quy tắc đánh giá rõ ràng để tránh đánh giá sai do thay đổi nhỏ trong mô hình.
+  
+---
+
+### Job 4: QC Intern – ITBee Solutions - Bee Coffee
+* **Category:** Not AI-Required
+* **Link bài đăng (Source):** https://www.linkedin.com/jobs/view/4417844680/
+* **Dated Screenshot:**
+  ![Dated Screenshot Job 4](images/4417844680_4.png)
+* **Thông tin công việc (Job Description):**
+  - **Location:** Ho Chi Minh City, Vietnam.
+  - **About ITBee Solutions:** ITBee Solutions is a software outsourcing & offshore development company working with clients from Japan, Korea, Singapore, and other global markets. We are looking for a motivated QC Intern who is eager to learn software testing processes and grow together with our development team.
+  - **Responsibilities:**
+    - Support testing web/mobile applications.
+    - Create and execute test cases/checklists.
+    - Report and track bugs/issues.
+    - Work closely with Developers, PMs, and other team members.
+    - Support regression testing and UI/UX checking.
+    - Learn software development/testing workflow in real projects.
+  - **Benefits:**
+    - Internship allowance support.
+    - Opportunity to join real international projects.
+    - Training and mentoring from experienced team members.
+    - Friendly and flexible working environment.
+    - Opportunity to become a full-time employee.
+  - **Working Time:** Monday – Friday.
+* **Kỹ năng cần thiết (Required Skills):**
+  - Final-year student or fresh graduate in IT/Software/Computer Science.
+  - Basic understanding of software testing concepts.
+  - Careful, responsible, and willing to learn.
+  - Good communication and teamwork skills.
+  - Basic English reading skill is a plus.
+  - Having knowledge of Jira/Testcase tools is a plus.
+* **Salary:** Không công bố
+* **AI Impact Analysis:**
+  - Ở vai trò thực tập QC, AI có thể hỗ trợ viết test case, tóm tắt bug, và gợi ý checklist. Tuy nhiên, chất lượng vẫn phụ thuộc vào kỹ năng quan sát và test thủ công, vì AI dễ bỏ sót các tình huống thực tế.
+
+---
+
+### Job 5: Junior QA QC - Bhatia general contracting
+* **Category:** Not AI-Required
+* **Link bài đăng (Source):** https://www.linkedin.com/jobs/view/4407184608/
+* **Dated Screenshot:**
+  ![Dated Screenshot Job 5](images/4407184608_5.png)
+* **Thông tin công việc (Job Description):**
+  - We are looking for a Junior QA/QC Engineer with strong experience in building construction projects.
+  - **Industry:** Building Construction (High-Rise & Mid Rise Projects).
+  - **Location:** United Arab Emirates.
+  - **Experience:** Minimum 5+ years in the UAE/GCC with a proven track record in high-rise building projects.
+  - **Qualification:** Bachelor’s Degree in Civil Engineering or equivalent.
+  - **Availability:** Preferably immediate joiners.
+  - **Key Responsibilities:**
+    - Implement and monitor quality assurance and control procedures on site.
+    - Ensure all works are executed in compliance with project specifications, drawings, and standards.
+    - Coordinate with consultants and project teams to close NCRs, MIRs, and ITRs efficiently.
+    - Prepare QA/QC documentation, reports, and inspection records.
+* **Kỹ năng cần thiết (Required Skills):**
+  - Strong knowledge of QA/QC standards and ISO procedures.
+  - Excellent communication and coordination skills.
+  - Experience in high-rise or large-scale building projects is mandatory.
+* **Salary:** Không công bố
+* **AI Impact Analysis:**
+  - Công việc QA/QC trong xây dựng ít bị ảnh hưởng trực tiếp bởi AI do tính chất của công việc. Nhưng AI vẫn có thể hỗ trợ đọc tài liệu, đối chiếu tiêu chuẩn và phân tích dữ liệu. Tất nhiên là các quy trình kiểm tra hiện trường và nghiệm thu vật liệu vẫn cần có con người kiểm tra để đảm bảo tuân thủ và an toàn.
+  
+---
+
+### Job 6: QA/QC Engineer - Egis
+* **Category:** Not AI-Required
+* **Link bài đăng (Source):** https://www.linkedin.com/jobs/view/4416602193/
+* **Dated Screenshot:**
+  ![Dated Screenshot Job 6](images/4416602193_6.png)
+* **Thông tin công việc (Job Description):**
+  - Waagner Biro Bridge Services is a leader in delivering high-quality projects in bridge construction, steel structures, and marine engineering. Known for iconic and technically advanced structures, we also provide design and build solutions for harbors, marinas, and jetties. Our comprehensive facility management services cover bridges, road infrastructure, buildings, and aviation facilities, ensuring long-term performance and excellence. At Waagner Biro, we are committed to achieving the extraordinary in every project. Learn more: www.waagnerbiro-bridgesystems.com
+  - We are seeking a detail-oriented and analytical QA/QC Engineer to join our dynamic team in Dubai, United Arab Emirates. In this role, you will play a crucial part in ensuring operational excellence, maintaining compliance with industry standards, and guaranteeing the quality and reliability of our systems and processes. You will work collaboratively with cross-functional teams, contractors, and stakeholders to develop and enforce comprehensive quality assurance and control measures that drive organizational success and customer satisfaction.
+    - Develop, implement, and maintain comprehensive QA/QC plans and procedures that align with organizational standards, industry regulations, and best practices.
+    - Conduct regular quality audits, system reviews, and operational checks to ensure all activities conform to established specifications and quality benchmarks.
+    - Monitor compliance against organizational guidelines and specifications, validating system performance, maintenance procedures, documentation, and reporting criteria.
+    - Perform testing and validation activities including Factory Acceptance Tests (FAT), Site Acceptance Tests (SAT), System Integration Tests (SIT), and operational validation exercises.
+    - Analyze performance metrics and identify trends that may impact system quality and reliability; recommend corrective actions and process improvements to meet key performance indicators.
+    - Prepare detailed QA/QC reports, non-conformance reports (NCRs), corrective and preventive action plans, test logs, and change control documentation.
+    - Establish risk assessment protocols and quality checkpoints in collaboration with operations, engineering, and system integration teams.
+    - Interpret technical drawings, specifications, and system documentation to ensure quality standards are met throughout project lifecycles.
+    - Coordinate with internal teams, contractors, and external stakeholders during quality escalations, incidents, or system reviews.
+    - Provide guidance and quality awareness training to operations and engineering teams to foster a culture of continuous improvement.
+    - Stay current with emerging technologies, industry best practices, and evolving quality management standards relevant to the organization.
+    - Ensure Health, Safety, and Environment (HSE) compliance during all quality assurance and audit activities.
+
+* **Kỹ năng cần thiết (Required Skills):**
+  - Education: Bachelor's degree in Engineering (Electrical, Telecommunications, Computer, Civil, or related field) or equivalent professional qualification.
+  - Experience: Minimum 5–8 years of professional experience in QA/QC roles within technical, industrial, or systems operations environments; demonstrated experience in quality assurance, system testing, compliance monitoring, and operational quality management; proven track record of developing and implementing QA/QC processes and procedures.
+  - Skills & Competencies: Strong analytical and problem-solving abilities with proficiency in data analysis and performance metrics evaluation; expertise in quality auditing, system reviews, and compliance verification; proficiency in testing methodologies and validation protocols (FAT, SAT, SIT); excellent technical documentation and report writing skills; ability to interpret technical drawings, specifications, and system documentation; root cause analysis and corrective action planning capabilities; proficiency with quality management software, testing tools, and data analysis applications; strong organizational and time management skills with ability to manage multiple priorities; exceptional communication and stakeholder management abilities; collaborative mindset with strong team coordination skills.
+  - Domain Expertise: Comprehensive understanding of ISO 9001 quality management principles and frameworks; familiarity with industry standards, specifications, and commissioning/testing protocols; knowledge of system performance monitoring and operational quality assurance; understanding of risk assessment methodologies and quality control checkpoints.
+  - Preferred: Certification in quality management (ISO 9001, Six Sigma, or equivalent); experience in systems operations, control environments, or technical infrastructure management; background in process improvement and continuous quality enhancement initiatives; proficiency in Arabic language (in addition to English); experience working in regulated or compliance-heavy industries.
+  - Essential Soft Skills: Detail-oriented with meticulous attention to accuracy and quality; proactive and innovative approach to problem-solving; transparent and honest communication style; supportive and collaborative team player; goal-oriented with strong commitment to organizational objectives; resilient and adaptable to changing priorities and environments; decisive decision-making capabilities under pressure.
+  - Additional: Excellent knowledge of construction materials and testing standards; proficient in MS Office and QA/QC reporting tools.
+
+* **Salary:** Không công bố
+* **AI Impact Analysis:**
+  - AI có thể giúp phát hiện dấu hiệu bất thường từ số liệu vận hành, tổng hợp báo cáo và gợi ý xử lý sai lệch. Nhưng vẫn cần kiểm soát chất lượng thủ công, đánh giá tuân thủ ISO và kỹ năng phân tích nguyên nhân gốc.
+---
+
+### Job 7: Software Tester - Capgemini
+* **Category:** Not AI-Required
+* **Link bài đăng (Source):** https://www.linkedin.com/jobs/view/4406275657/
+* **Dated Screenshot:**
+  ![Dated Screenshot Job 7](images/4406275657_7.png)
+* **Thông tin công việc (Job Description):**
+  - **Role Overview:** The Manual & Automation Tester will be responsible for end‑to‑end testing of Insurance Claims platforms, covering manual functional testing and automation test development/execution across core claims workflows and market‑specific customizations. The role supports multi‑market rollouts, regression testing, and automation at scale to ensure quality, compliance, and stability of claims processing systems.
+  - **Key Responsibilities:**
+    - **Manual Testing Responsibilities:**
+      - Understand Claims business processes including FNOL, adjudication, approvals, payments, recoveries, and closures.
+      - Review business requirements, user stories, and functional specifications for claims enhancements and releases.
+      - Design and execute manual test cases covering claims intake and workflow processing, benefit calculations and validations, policy, coverage, and eligibility checks, Claims Workbench and user role validations, integration touchpoints (policy admin, payments, document management).
+      - Perform functional, regression, integration, and UAT support testing.
+      - Execute market‑specific customization testing (e.g., language, regulatory, product variations).
+      - Log, track, and retest defects using standard defect management tools.
+      - Support business users during UAT and provide test evidence/sign‑off support.
+    - **Automation Testing Responsibilities:**
+      - Contribute to automation strategy and test coverage for the Claims platform.
+      - Develop and maintain automation test scripts for core claims workflows and reusable components.
+      - Execute automated regression suites and analyze test results.
+      - Ensure reusability and maintainability of automation assets for multi‑market adoption.
+      - Support automation framework enhancements and continuous improvement.
+      - Collaborate with manual testers to identify automation‑ready scenarios and reduce manual effort.
+      - Participate in CI/CD‑aligned test execution where applicable.
+  - **Working Location:** District 7, HCMC.
+* **Kỹ năng cần thiết (Required Skills):**
+  - Functional & Domain Skills: Strong understanding of Insurance Claims domain (Life, Health, Employee Benefits preferred); experience testing Claims platforms / Claims Workbench / BPM‑based systems; hands‑on experience with end‑to‑end claims lifecycle testing; exposure to multi‑market or regional rollouts is an advantage.
+  - Testing Skills: Solid experience in manual testing (test case design, execution, defect management); experience in automation testing (UI and/or regression automation); knowledge of test design techniques and regression strategies; familiarity with Agile/Scrum delivery models.
+  - Automation & Tools: Experience with test automation tools/frameworks (any modern UI or regression automation tool); understanding of automation framework concepts (reusability, data‑driven testing, maintenance); exposure to test management and defect tracking tools (e.g., Jira, ALM or equivalent).
+  - Soft Skills & Ways of Working: Strong analytical and problem‑solving skills; ability to work closely with business users, BAs, developers, and test managers; good communication skills for defect triage and status reporting; comfortable working in distributed / offshore‑onshore team models; proactive mindset with focus on quality, efficiency, and continuous improvement.
+  - Education & Experience: Bachelor’s degree in Engineering, Computer Science, or equivalent; 3–8 years of testing experience (manual + automation mix); insurance domain experience is highly preferred.
+  - Nice to Have: Experience in claims transformation programs or core system modernization; exposure to automation scaling across multiple markets; experience supporting regulatory or audit‑driven testing in insurance.
+* **Salary:** Không công bố
+* **AI Impact Analysis:**
+  - AI có thể tự động hóa kiểm thử hồi quy và hỗ trợ tạo dữ liệu test cho các luồng phức tạp. Nhưng cần phải chú ý đến tính minh bạch, bảo mật dữ liệu và đánh giá tác động lên trải nghiệm người dùng khi hệ thống có thành phần tự động hóa.
+
+---
+
+### Job 8: HCM – Nhân viên QC/ Tester (Junior Level) - Vexere.com - Vietnam’s #1 Transportation Booking Platform (Bus | Flight | Train | Bike Car Rental)
+* **Category:** Not AI-Required
+* **Link bài đăng (Source):** https://www.linkedin.com/jobs/view/4409304599/
+* **Dated Screenshot:**
+  ![Dated Screenshot Job 8](images/4409304599_8.png)
+* **Thông tin công việc (Job Description):**
+  - **Vexere: Revolutionizing Travel and Transportation in Vietnam:** We are a Vietnamese technology company aiming to revolutionize the travel and transportation industry. As the largest online bus ticketing platform in Vietnam, we help millions of travelers make unforgettable journeys. Recently we expanded to airlines, trains, and vehicle rentals in order to provide our customers with the best options for their travel plans.
+  - **Vexere’s Culture:** Vexere members believe our organization exists to solve pressing societal problems. Our company culture emphasizes community spirit, mutual support, and open communication. We encourage all members to express ourselves, contribute ideas on products and strategies, and strive to become future leaders.
+  - **Vexere’s Vision:** Vexere aspires to be a constantly growing and innovative business. We foster a strong culture of learning and development, aiming to leverage our technological strengths to continue revolutionizing the transportation and tourism sectors across Southeast Asia.
+  - **Responsibilies:**
+    - Analyze and review requirements, plan testing for platform features and system integration.
+    - Write test cases/test designs, create test cycles, and manage them on the system.
+    - Conduct API testing, workflow, automated jobs, and background processes.
+    - Test interfaces, dashboard pages, and UI configurations.
+    - Collaborate with the PO to understand business requirements and confirm completion criteria.
+    - Log bugs, verify and manage bugs, and track the progress of bug fixes and verifications.
+    - Propose improvements to the testing process, test coverage, and quality reporting.
+    - Support the review of business documents, providing feedback from a testing perspective.
+    - Receive feedback, check, and address customer feedback.
+    - Write automation scripts using Cypress, Playwright to accelerate the testing process.
+    - Perform tasks assigned by the team and leader.
+  - **Benefits:**
+    - Competitive salary + KPI-based quarterly bonuses.
+    - Hybrid Working.
+    - Clear career progression with opportunities for advancement to key positions based on your capabilities.
+    - Special discounted bus tickets for employees and their families.
+    - Comprehensive periodic health check-up policies.
+    - Participation in social insurance, health insurance, and unemployment insurance according to Vietnamese labor law after the probationary period.
+    - 12 days of annual leave, with an additional day added every 3 years (convertible to salary).
+    - Vibrant and dynamic working environment with a friendly and supportive team that shares knowledge and assists each other.
+    - Training and development opportunities in negotiation, communication, work management, interpersonal skills, and software technology.
+    - Free parking and allowances: Marriage, Newborn baby and others are applied.
+    - A spacious pantry fully equipped with a coffee maker, microwave, milk, tea and more.
+    - A wide range of sports and social activities: badminton, pickleball, football, etc.
+    - Other perks to be discussed during the interview.
+  - **For More Information, Please Contact Us Via:** Send your Resume to email: careers@vexere.com, with title: Fullname – Applied Position
+  - **Office Location:** Vexere Trading and Services Co., Ltd. – 2nd Floor – Building H3, 384 Hoang Dieu, Ward 6, District 4, HCMC
+  - **Working Hours:** 8:30 am – 6:00 pm from Monday to Friday, and Saturday morning.
+* **Kỹ năng cần thiết (Required Skills):**
+  - 1-3 years of experience.
+  - Holds a testing certification (ISTQB, QA Foundation, or relevant courses).
+  - Writes clear, systematic test cases and test plans, with good logical thinking.
+  - Conducts API testing, workflow testing, and automation platform testing. Possesses good testing mindset.
+  - Familiar with automation testing tools (Cypress, Selenium, Playwright, etc.).
+  - Communicates well with PO and Dev, proactively asks questions and provides feedback.
+  - Manages time effectively, prioritizes tasks, and performs well under pressure.
+  - Basic English skills.
+  - Preferably has experience in testing platforms, data pipelines, or workflow integration. Proactive, responsible, eager to learn and improve.
+* **Salary:** Thỏa thuận
+* **AI Impact Analysis:**
+  - Công việc QC/Tester có thể tận dụng AI để gợi ý test case, tạo script Playwright/Cypress và phân loại bug. Tuy nhiên, vẫn cần review kỹ kết quả do AI để đảm bảo đúng nghiệp vụ và không bỏ sót các luồng quan trọng.
+
+---
+
+### Job 9: Quality Engineer - Zalopay
+* **Category:** AI-Required
+* **Link bài đăng (Source):** https://www.linkedin.com/jobs/view/4409679195/
+* **Dated Screenshot:**
+  ![Dated Screenshot Job 9](images/4409679195_9.png)
+* **Thông tin công việc (Job Description):**
+  - Design and develop automated test scripts based on test cases and requirements.
+  - Regularly update and maintain test scripts to ensure they remain effective with application changes.
+  - Run automated tests and analyze results to ensure that software meets quality standards.
+  - Identify, log, and track defects found during testing and collaborate with developers to resolve them.
+  - Document test plans, test cases, and results to ensure comprehensive coverage and traceability.
+  - Identify opportunities for improving the efficiency and effectiveness of the test automation process.
+  - Review requirements, specifications, and technical design documents.
+  - Ensure that validated deliverables meet functional and design specifications and requirements.
+  - Keep updated with new testing tools and test strategies.
+* **Kỹ năng cần thiết (Required Skills):**
+  - Bachelor's degree in computer science, engineering, or a related field.
+  - 2+ years of hands-on experience in QE role.
+  - Experience with test automation frameworks like Selenium, Playwright, Appium, or similar.
+  - Experience with tools such as JMeter, Postman is preferred.
+  - Experience in writing new test cases based on requirements.
+  - Integration Test and developing test cases, test plan.
+  - Good knowledge of software development methodologies.
+  - Experience in applying test techniques on projects.
+  - Write test cases and report bugs clearly.
+  - Experience with Agile/Scrum development process.
+  - Familiar with Bug tracker such as Jira, TestRail...
+  - Use AI to improve work efficiency.
+* **Salary:** Không công bố
+* **AI Impact Analysis:**
+  - Trong phần mô tả công việc có nhắc đến “Use AI to improve work efficiency”, tức là AI sẽ được dùng để tăng tốc tạo test và phân tích kết quả. Và vẫn cần có con người để đảm bảo traceability, quy trình phê duyệt và chất lượng test case để tránh phụ thuộc quá mức vào công cụ.
+
+---
+
+### Job 10: Junior QA Engineer - Da Nang - AvePoint
+* **Category:** Not AI-Required
+* **Link bài đăng (Source):** https://www.linkedin.com/jobs/view/4077153978/
+* **Dated Screenshot:**
+  ![Dated Screenshot Job 10](images/4077153978_10.png)
+* **Thông tin công việc (Job Description):**
+  - **Key Responsibilities:**
+    - Participate in the requirements discovery, testing of the software product.
+    - Use Waterfall model and Agile model in projects.
+    - Build and execute test cases.
+    - Use testing techniques such as black box testing, functional testing and regression testing.
+* **Kỹ năng cần thiết (Required Skills):**
+  - Senior college or university student.
+  - Able to work full-time.
+  - Careful, good logical thinking, passionate about experimenting.
+  - Have a sense of responsibility, persistence.
+  - Able to work under pressure, hardworking, proactive, and responsible.
+  - Good communication skills.
+  - Proficiency in English is required, including speaking, listening, reading, and writing.
+  - Having certification in testing courses is an advantage.
+* **Salary:** Không công bố
+* **AI Impact Analysis:**
+  - AI phù hợp để hỗ trợ học tập, viết test case và gợi ý các edge case cho QA junior. Nhưng chỉ nên xem AI là công cụ hỗ trợ, còn kỹ năng phân tích yêu cầu và thiết kế test vẫn là cốt lõi và cần thiết.
+  
+---
+
+## Requirement 2 - 20 Software Defects 2022–2026
+
+### Defect 1: 
+* **Link defect (Source):** https://techhq.com/news/air-canada-refund-for-customer-who-used-chatbot/
+* **Nội dung (Description):**
+  - Chatbot AI của hãng hàng không Air Canada đã tự động bịa ra một chính sách không có thật, hứa hẹn với một hành khách rằng họ có thể mua vé máy bay dự đám tang với giá gốc, sau đó sẽ được hoàn lại tiền chênh lệch trong vòng 90 ngày.
+* **Độ nghiêm trọng (Severity):** Cao
+* **Hậu quả (Consequences):** 
+  - Hãng bị kiện ra tòa án dân sự và buộc phải bồi thường số tiền hoàn lại cho hành khách, gây ảnh hưởng xấu đến uy tín thương hiệu về việc áp dụng AI.
+* **Giải pháp (Solution):**
+  - Air Canada đã phải vô hiệu hóa chatbot này và cập nhật lại toàn bộ các điều khoản loại trừ trách nhiệm (disclaimer) trên website
+* **AI Bias/Hallucination:**
+
+--- 
+
+## Requirement 3 - Test cases for ONE physical product
