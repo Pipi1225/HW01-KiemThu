@@ -582,3 +582,11 @@
 
 ## Requirement 3 - Test cases for ONE physical product
 
+### Device + Student ID Card:
+  ![Device with student ID card](images/.png)
+  
+### Physical Product Information:
+* **Brand:** Senko
+* **Model:** Quạt LS1630
+* **Năm sản xuất (Year):** 07/2024
+* **Lô sản xuất:** 107
