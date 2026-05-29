@@ -611,4 +611,13 @@
 | **TC14**<br>*(Edge)* | Kiểm tra sức chịu tải vật lý của hộp số | Mép lồng quạt | 1. Đặt tay giữ mép quạt, cố tình cản lại không cho quạt xoay sang bên trái trong 5 giây.<br>2. Sau 5 giây, thả tay ra | Quạt phát ra tiếng "cạch cạch" ở hộp số đằng sau và khi thả tay ra, quạt vẫn xoay bình thường và ổn định. | [Điền thực tế] | Pass / Fail | AI Missed |
 | **TC15**<br>*(Edge)* | Kiểm tra độ vững của chân đế | Thân quạt | 1. Quạt đang chạy ở Mức 3.<br>2. Đẩy nhẹ thân quạt nghiêng 1 góc khoảng chừng 15 độ rồi buông tay | Sau khi buông tay, quạt tự lấy lại cân bằng và quay ổn định, không bị ngã. | [Điền thực tế] | Pass / Fail | AI Missed |
 
-### AI Missed Edge Cases Analysis
+### AI Conversation Screenshot:
+  ![AI Prompt History](images/AI_Conversation.png)
+
+(Em đã thay thế 3 test case cuối TC13, TC14, TC15 do AI tự tạo thành 3 edge case do mình tự làm)
+
+### AI Missed Edge Cases Analysis:
+- AI thường mô hình hóa chiếc quạt như một phần mềm với logic nhị phân (On/Off) mà bỏ qua các định luật vật lý thực tế, dẫn đến việc bỏ sót 3 Edge Cases sau:
+  - TC13: AI sẽ thường mặc định rằng bấm nút là quay, mà không lường trước quạt vẫn có điện, đã bấm nút mức 3 nhưng cánh quạt bị kẹt cứng do các yếu tố khác (như đưa cây đũa vào chặn quạt trong test case).
+  - TC14: AI thường chỉ xem tính năng xoay là biến logic (True/False), nên thường sẽ không nghĩ đến cơ chế an toàn khi gặp lực cản (trượt bánh răng để chống gãy quạt).  
+  - TC15: Các trường hợp đặc thù như có người vô tình đụng vô thân quạt khiến cho quạt bị nghiêng (mô phỏng bằng cách đẩy thân quạt nghiêng 15 độ) thường sẽ bị AI bỏ qua do thiếu nhận thức, tư duy về tình huống ngoài đời.
