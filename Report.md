@@ -429,11 +429,11 @@
   * Nó khẳng định về mặt pháp lý rằng: **Doanh nghiệp không thể đổ lỗi cho AI.** Bạn áp dụng công nghệ vào vận hành thì bạn phải chịu trách nhiệm hoàn toàn trước pháp luật về mọi phát ngôn của công nghệ đó.
   * Buộc các tập đoàn lớn phải cẩn trọng hơn gấp nhiều lần khi triển khai các mô hình ngôn ngữ lớn (LLM) để giao tiếp trực tiếp với khách hàng, dẫn đến sự ra đời của các dịch vụ bảo hiểm rủi ro dành riêng cho lỗi do AI gây ra.
   ```
-  - Bias/Hallucination: Về thông tin sơ bộ của vụ án thì Gemini nói đúng, ông Moffatt đã chi tổng cộng khoảng 1.640 CAD để mua vé khứ hồi và Air Canada thua kiện, nhưng hãng Air Canada đã bồi thường lại với số tiền là 650.88 CAD (khoảng 482 USD) và các khoảng chi phí khác không có đề cập cụ thể chứ không phải là tổng cộng hơn 600 USD như AI nói. AI đã tự ý suy diễn, làm tròn hoặc nhầm lẫn khi quy đổi tỷ giá ngoại tệ (từ CAD sang USD) để tự tạo ra một con số thiếu căn cứ.
-  
+  - **Bias/Hallucination:** Về thông tin sơ bộ của vụ án thì AI nói đúng, ông Moffatt đã chi tổng cộng khoảng 1.640 CAD để mua vé khứ hồi và Air Canada thua kiện, nhưng hãng Air Canada đã bồi thường lại với số tiền là 650.88 CAD (khoảng 482 USD) và các khoảng chi phí khác không có đề cập cụ thể chứ không phải là tổng cộng hơn 600 USD như AI nói. AI đã tự ý suy diễn, làm tròn hoặc nhầm lẫn khi quy đổi tỷ giá ngoại tệ (từ CAD sang USD) để tự tạo ra một con số thiếu căn cứ.
+
 --- 
 
-### Defect 2: Luật sư nộp án lệ giả do ChatGPT tạo ra (2025)
+### Defect 2: Luật sư nộp đơn kháng cáo có thông tin giả do ChatGPT tạo ra (2025)
 * **Link defect (Source):** https://tuoitre.vn/luat-su-my-bi-phat-vi-dung-chatgpt-trich-dan-vu-an-khong-ton-tai-20250601122124481.htm
 * **Nội dung (Description):**
   - Một luật sư đã soạn đơn kháng cáo, nhưng bản đệ trình này trích dẫn một vụ án tên "Royer kiện Nelson" nhưng vụ án này không thể tìm thấy trong bất kỳ cơ sở dữ liệu pháp lý nào và chỉ được tìm thấy thông qua ChatGPT.
@@ -443,6 +443,50 @@
 * **Giải pháp (Solution):**
   - Cần phải kiểm tra lại những nội dung của AI tạo ra, vì dù phiên bản có cao cấp tới đâu vẫn có khả năng AI bị hallucination/bias và sẽ tạo ra các thông tin sai lệch.
 * **AI Bias/Hallucination:**
+  - **Tool:** Gemini 3.5 Flash
+  - **Prompt:**
+  ```
+  Bạn hãy tóm tắt vụ việc liên quan tới luật sư nộp đơn kháng cáo có thông tin giả ở bang Utah (Mỹ) do ChatGPT tạo ra vào năm 2025
+  ```
+
+  - **AI Output:**
+  ```
+  Vụ việc bạn nhắc đến là một trong những lời cảnh tỉnh nghiêm khắc nhất về việc lạm dụng AI trong ngành luật, xảy ra vào đầu năm 2025 tại bang Utah (Mỹ). Dưới đây là tóm tắt toàn bộ diễn biến của vụ bê bối hy hữu này:
+
+  ### 1. Diễn biến sự việc
+
+  Vào tháng 1 năm 2025, một luật sư tại Utah đã nộp một bản hồ sơ kháng cáo lên tòa án phúc thẩm nhằm bào chữa cho thân chủ của mình. Để tiết kiệm thời gian, vị luật sư này đã sử dụng **ChatGPT** để soạn thảo văn bản và tìm kiếm các án lệ (các vụ án tương tự trong quá khứ) nhằm tăng tính thuyết phục cho lập luận.
+
+  Tuy nhiên, thay vì trích dẫn các vụ án có thật, ChatGPT đã tự "bịa" ra hàng loạt thông tin giả mạo bao gồm:
+
+  * Tên các vụ án không có thật.
+  * Số hiệu hồ sơ giả.
+  * Các phán quyết và lập luận pháp lý hoàn toàn hư cấu.
+
+  ### 2. Sự việc bị phát giác như thế nào?
+
+  Sự dối trá của AI nhanh chóng bị bại lộ khi phía đối tụng (các luật sư bên phản biện) và các thẩm phán tiến hành tra cứu các án lệ được trích dẫn trong đơn kháng cáo.
+
+  * Họ hoàn toàn không tìm thấy bất kỳ dấu vết nào của các vụ án này trên các hệ thống lưu trữ pháp lý chính thức của Mỹ (như Westlaw hay LexisNexis).
+  * Khi bị tòa án yêu cầu giải trình và cung cấp bản sao đầy đủ của các phán quyết đó, vị luật sư đã phải thừa nhận rằng mình đã quá tin tưởng vào ChatGPT mà không hề kiểm tra lại thông tin (cross-check).
+
+  ### 3. Hậu quả pháp lý
+
+  Hành vi này bị coi là vi phạm nghiêm trọng đạo đức nghề nghiệp và lừa dối tòa án (ngay cả khi không cố ý).
+
+  * **Bị phạt tiền và kỷ luật:** Luật sư này đã phải đối mặt với các hình phạt tài chính nặng nề từ tòa án.
+  * **Đình chỉ hành nghề:** Hội đồng luật sư bang Utah đã vào cuộc xem xét và đưa ra các biện pháp kỷ luật nghiêm khắc, bao gồm cả việc đình chỉ giấy phép hành nghề.
+  * **Ảnh hưởng đến thân chủ:** Đơn kháng cáo bị bác bỏ, gây thiệt hại trực tiếp đến quyền lợi của thân chủ.
+
+  ---
+
+  ### Bài học rút ra từ vụ việc
+
+  Vụ bê bối tại Utah năm 2025 là một minh chứng điển hình cho hiện tượng **"ảo giác" (hallucination)** của các mô hình ngôn ngữ lớn như ChatGPT — nơi AI viết ra những điều nghe rất có lý và chuyên nghiệp nhưng lại hoàn toàn sai sự thật.
+
+  Sự việc này cùng với một vài vụ việc tương tự trước đó tại New York đã buộc hệ thống tòa án Mỹ phải thắt chặt quy định: Nhiều thẩm phán hiện nay yêu cầu các luật sư phải ký cam kết minh bạch hoặc tuyệt đối không dùng AI để tự động soạn thảo văn bản pháp lý nếu không có sự rà soát nghiêm ngặt của con người.  
+  ```
+  - **Bias/Hallucination:** AI đã bị nhầm lẫn với 1 vụ án tương tự vào năm 2023 ở New York vì về thông tin vụ án thì AI nói sai hoàn toàn, vào năm 2025 thì thật sự có luật sư tại Utah nộp bản hồ sơ kháng cáo lên tòa, nhưng người soạn không phải là vị luật sư đó mà là thư ký pháp lý chưa có bằng - người này cũng đã bị sa thải ngay sau đó. Và vụ việc cũng không nghiêm trọng tới mức đình chỉ hành nghề vị luật sư mà chỉ yêu cầu ông đóng góp 1000 USD cho tổ chức phi lợi nhuận “And Justice for All” ở bang Utah, thanh toán phí luật sư cho bên bị đơn và hoàn trả chi phí cho thân chủ.
   
 --- 
 
@@ -456,6 +500,15 @@
 * **Giải pháp (Solution):**
   - Nếu như chatbot có quyền hạn cao hơn là tự thiết lập/tạo đơn hàng thì hậu quả của sự việc trên không dừng lại ở việc đại lý bị lấy làm trò cười. Nên để tránh vấn đề này, ta cần thiết lập chatbot bỏ qua các lệnh thao túng như "ignore all previous instructions" và cũng như giới hạn quyền hạn và scope hoạt động của bot trong FAQ.
 * **AI Bias/Hallucination:**
+  - **Tool:** Gemini 3.5 Flash
+  - **Prompt:**
+  ```
+  ```
+
+  - **AI Output:**
+  ```
+  ```
+  - **Bias/Hallucination:** 
 
 ---
 

@@ -495,10 +495,45 @@ Vụ kiện này được coi là một **"hồi chuông cảnh tỉnh"** lớn 
 - **Timestamp:** 
 - **Prompt:**
 ```
+Bạn hãy tóm tắt vụ việc liên quan tới luật sư nộp đơn kháng cáo có thông tin giả ở bang Utah (Mỹ) do ChatGPT tạo ra vào năm 2025
 ```
 
 **2. AI Output:**
 ```
+Vụ việc bạn nhắc đến là một trong những lời cảnh tỉnh nghiêm khắc nhất về việc lạm dụng AI trong ngành luật, xảy ra vào đầu năm 2025 tại bang Utah (Mỹ). Dưới đây là tóm tắt toàn bộ diễn biến của vụ bê bối hy hữu này:
+
+### 1. Diễn biến sự việc
+
+Vào tháng 1 năm 2025, một luật sư tại Utah đã nộp một bản hồ sơ kháng cáo lên tòa án phúc thẩm nhằm bào chữa cho thân chủ của mình. Để tiết kiệm thời gian, vị luật sư này đã sử dụng **ChatGPT** để soạn thảo văn bản và tìm kiếm các án lệ (các vụ án tương tự trong quá khứ) nhằm tăng tính thuyết phục cho lập luận.
+
+Tuy nhiên, thay vì trích dẫn các vụ án có thật, ChatGPT đã tự "bịa" ra hàng loạt thông tin giả mạo bao gồm:
+
+* Tên các vụ án không có thật.
+* Số hiệu hồ sơ giả.
+* Các phán quyết và lập luận pháp lý hoàn toàn hư cấu.
+
+### 2. Sự việc bị phát giác như thế nào?
+
+Sự dối trá của AI nhanh chóng bị bại lộ khi phía đối tụng (các luật sư bên phản biện) và các thẩm phán tiến hành tra cứu các án lệ được trích dẫn trong đơn kháng cáo.
+
+* Họ hoàn toàn không tìm thấy bất kỳ dấu vết nào của các vụ án này trên các hệ thống lưu trữ pháp lý chính thức của Mỹ (như Westlaw hay LexisNexis).
+* Khi bị tòa án yêu cầu giải trình và cung cấp bản sao đầy đủ của các phán quyết đó, vị luật sư đã phải thừa nhận rằng mình đã quá tin tưởng vào ChatGPT mà không hề kiểm tra lại thông tin (cross-check).
+
+### 3. Hậu quả pháp lý
+
+Hành vi này bị coi là vi phạm nghiêm trọng đạo đức nghề nghiệp và lừa dối tòa án (ngay cả khi không cố ý).
+
+* **Bị phạt tiền và kỷ luật:** Luật sư này đã phải đối mặt với các hình phạt tài chính nặng nề từ tòa án.
+* **Đình chỉ hành nghề:** Hội đồng luật sư bang Utah đã vào cuộc xem xét và đưa ra các biện pháp kỷ luật nghiêm khắc, bao gồm cả việc đình chỉ giấy phép hành nghề.
+* **Ảnh hưởng đến thân chủ:** Đơn kháng cáo bị bác bỏ, gây thiệt hại trực tiếp đến quyền lợi của thân chủ.
+
+---
+
+### Bài học rút ra từ vụ việc
+
+Vụ bê bối tại Utah năm 2025 là một minh chứng điển hình cho hiện tượng **"ảo giác" (hallucination)** của các mô hình ngôn ngữ lớn như ChatGPT — nơi AI viết ra những điều nghe rất có lý và chuyên nghiệp nhưng lại hoàn toàn sai sự thật.
+
+Sự việc này cùng với một vài vụ việc tương tự trước đó tại New York đã buộc hệ thống tòa án Mỹ phải thắt chặt quy định: Nhiều thẩm phán hiện nay yêu cầu các luật sư phải ký cam kết minh bạch hoặc tuyệt đối không dùng AI để tự động soạn thảo văn bản pháp lý nếu không có sự rà soát nghiêm ngặt của con người.
 ```
 
 **3. Verdict:** INVALID
