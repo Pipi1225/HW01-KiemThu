@@ -379,7 +379,58 @@
 * **Giải pháp (Solution):**
   - Với các hệ thống có thành phần tự động hóa, đội ngũ phát triển cần phải thường xuyên kiểm tra hệ thống xem có tự tạo ra các thông tin sai lệch ảnh hưởng đến trải nghiệm người dùng hay không.
 * **AI Bias/Hallucination:**
+  - **Tool:** Gemini 3.5 Flash
+  - **Prompt:**
+  ```
+  Bạn hãy tóm tắt vụ kiện liên quan tới Air Canada Chatbot Hallucination vào năm 2024
+  ```
 
+  - **AI Output:**
+  ```
+  Vụ kiện giữa hành khách **Jake Moffat** và hãng hàng không **Air Canada** vào đầu năm 2024 là một trong những án lệ lịch sử và nổi tiếng nhất ngành công nghệ, liên quan trực tiếp đến hiện tượng **"AI Hallucination" (Ảo giác AI)** khi doanh nghiệp ứng dụng chatbot tự động.
+
+  Dưới đây là tóm tắt chi tiết diễn biến vụ việc:
+
+  ### 1. Bối cảnh sự việc
+
+  Vào năm 2022, ông Jake Moffatt đặt một chuyến bay của hãng Air Canada từ Vancouver đến Toronto để dự đám tang của bà ngoại. Trước khi mua vé, ông đã trò chuyện với chatbot AI hỗ trợ trực tuyến trên trang web của hãng để hỏi về **chính sách giảm giá dành cho hành khách có người thân qua đời (Bereavement fares)**.
+
+  Chatbot này đã đưa ra thông tin sai lệch rằng: *Ông Moffatt cứ mua vé với mức giá thông thường trước, sau đó hãng sẽ hoàn lại khoản tiền chênh lệch giảm giá nếu ông nộp đơn yêu cầu trong vòng 90 ngày kể từ ngày bay.*
+
+  ### 2. Tranh chấp xảy ra
+
+  Tin lời chatbot, ông Moffatt đã chi tổng cộng khoảng 1.640 CAD để mua vé khứ hồi. Sau chuyến đi, ông nộp đơn xin hoàn tiền kèm theo giấy chứng tử của bà ngoại đúng như hướng dẫn.
+
+  Tuy nhiên, phía Air Canada đã **từ chối hoàn tiền**. Họ đưa ra chính sách chính thức của hãng, trong đó quy định rõ: *Chính sách giảm giá tang lễ không áp dụng cho các vé đã mua trước đó, và hãng sẽ không hoàn trả tiền chênh lệch sau khi giao dịch đã hoàn tất.*
+
+  Mặc dù ông Moffatt đã đưa ra ảnh chụp màn hình bằng chứng chatbot của hãng hứa hẹn như vậy, Air Canada chỉ thừa nhận chatbot dùng "từ ngữ gây hiểu lầm" nhưng vẫn kiên quyết không trả tiền. Ông Moffatt quyết định khởi kiện hãng ra Tòa án Phán quyết Dân sự British Columbia (Canada).
+
+  ### 3. Lập luận gây tranh cãi của Air Canada
+
+  Tại tòa, hãng hàng không Air Canada đã đưa ra một lập luận khiến giới công nghệ và pháp lý bất ngờ:
+
+  > Hãng cho rằng **chatbot là một thực thể pháp lý riêng biệt**, độc lập với hãng. Do đó, Air Canada không phải chịu trách nhiệm về những thông tin sai lệch hay "lời hứa hão" do chatbot tự bịa ra, và khách hàng đáng lẽ phải tự tra cứu thông tin chính xác tại các trang chính sách khác trên website của hãng.
+
+  ### 4. Phán quyết của Tòa án (Tháng 2/2024)
+
+  Tòa án đã hoàn toàn bác bỏ lập luận của Air Canada. Thành viên hội đồng trọng tài, ông Christopher Rivers, phán quyết rằng:
+
+  * **Doanh nghiệp phải chịu trách nhiệm toàn bộ:** Chatbot chỉ là một phần mở rộng trên trang web của Air Canada. Hãng có nghĩa vụ pháp lý phải đảm bảo tất cả thông tin trên nền tảng của mình (dù do người hay máy viết ra) là chính xác và không gây hiểu lầm cho người tiêu dùng.
+  * **Lỗi cẩu thả:** Tòa nhận định Air Canada đã "cung cấp thông tin sai lệch một cách cẩu thả". Không thể bắt khách hàng phải tự đi kiểm chứng chéo xem chatbot của hãng nói đúng hay sai.
+
+  **Kết quả:** Tòa buộc Air Canada phải bồi thường cho ông Jake Moffatt số tiền chênh lệch vé và các chi phí liên quan, tổng cộng hơn **600 USD** (khoảng 812 CAD). Hãng sau đó đã phải gỡ bỏ chatbot này khỏi website.
+
+  ---
+
+  ### Ý nghĩa của vụ kiện
+
+  Vụ kiện này được coi là một **"hồi chuông cảnh tỉnh"** lớn cho làn sóng bùng nổ AI toàn cầu:
+
+  * Nó khẳng định về mặt pháp lý rằng: **Doanh nghiệp không thể đổ lỗi cho AI.** Bạn áp dụng công nghệ vào vận hành thì bạn phải chịu trách nhiệm hoàn toàn trước pháp luật về mọi phát ngôn của công nghệ đó.
+  * Buộc các tập đoàn lớn phải cẩn trọng hơn gấp nhiều lần khi triển khai các mô hình ngôn ngữ lớn (LLM) để giao tiếp trực tiếp với khách hàng, dẫn đến sự ra đời của các dịch vụ bảo hiểm rủi ro dành riêng cho lỗi do AI gây ra.
+  ```
+  - Bias/Hallucination: Về thông tin sơ bộ của vụ án thì Gemini nói đúng, ông Moffatt đã chi tổng cộng khoảng 1.640 CAD để mua vé khứ hồi và Air Canada thua kiện, nhưng hãng Air Canada đã bồi thường lại với số tiền là 650.88 CAD (khoảng 482 USD) và các khoảng chi phí khác không có đề cập cụ thể chứ không phải là tổng cộng hơn 600 USD như AI nói. AI đã tự ý suy diễn, làm tròn hoặc nhầm lẫn khi quy đổi tỷ giá ngoại tệ (từ CAD sang USD) để tự tạo ra một con số thiếu căn cứ.
+  
 --- 
 
 ### Defect 2: Luật sư nộp án lệ giả do ChatGPT tạo ra (2025)
