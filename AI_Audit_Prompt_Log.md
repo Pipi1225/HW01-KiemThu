@@ -607,13 +607,49 @@ Sự cố này đã thúc đẩy các doanh nghiệp sau đó phải áp dụng 
 ## Artifact 9:
 **1. Prompt + Tool**
 - **Tool:** Gemini 3.5 Flash
-- **Timestamp:** 
+- **Timestamp:** 19:23 30/05/2026
 - **Prompt:**
 ```
+Bạn hãy tóm tắt vụ việc liên quan tới Google Gemini bias trong việc generate ảnh người vào năm 2024
 ```
 
 **2. AI Output:**
 ```
+Vụ bê bối liên quan đến việc **Google Gemini** thiên vị (bias) khi tạo ảnh người vào tháng 2 năm 2024 là một trong những sự cố truyền thông và kỹ thuật lớn nhất của Google trong cuộc đua AI.
+
+Dưới đây là tóm tắt toàn bộ vụ việc:
+
+### 1. Diễn biến sự việc
+
+Vào đầu tháng 2/2024, Google đổi tên chatbot Bard thành Gemini và tích hợp công cụ tạo ảnh từ văn bản (sử dụng mô hình Imagen). Ngay sau đó, người dùng trên mạng xã hội (đặc biệt là X/Twitter) đã phát hiện ra một hiện tượng kỳ lạ: **Gemini dường như "né tránh" việc tạo ra hình ảnh người da trắng**, ngay cả khi ngữ cảnh lịch sử bắt buộc phải như vậy.
+
+Các bức ảnh gây tranh cãi gay gắt bao gồm:
+
+* **Sai lệch lịch sử nghiêm trọng:** Khi được yêu cầu tạo ảnh về "Các nhà lập quốc Hoa Kỳ" (Founding Fathers), "Giáo hoàng", hay "Chiến binh Viking", Gemini lại trả về hình ảnh là phụ nữ da màu hoặc nam giới gốc Á, gốc Phi.
+* **Trường hợp cực đoan:** Thậm chí khi người dùng yêu cầu tạo ảnh "Binh lính Đức thời năm 1943" (thời kỳ Đức Quốc Xã), AI này vẫn trả về hình ảnh người da màu hoặc phụ nữ châu Á mặc quân phục gắn biểu tượng phát xít.
+
+### 2. Nguyên nhân kỹ thuật (Tại sao AI lại làm vậy?)
+
+Đại diện Google và các chuyên gia công nghệ sau đó giải thích rằng đây là một **"nỗ lực sửa sai phản tác dụng"** (overcorrection).
+
+> **Bản chất vấn đề:** Các mô hình AI trước đây thường bị chỉ trích là phân biệt chủng tộc do dữ liệu quét từ Internet chủ yếu là người da trắng (ví dụ: gõ từ khóa "bác sĩ", AI cũ sẽ chỉ ra toàn đàn ông da trắng). Để giải quyết vấn đề này, Google đã thiết lập một bộ lọc ẩn phía sau.
+> Khi người dùng nhập một câu lệnh chung chung (ví dụ: "tạo ảnh một người đạp xe"), bộ lọc của Google sẽ tự động chèn thêm các từ khóa như "đa dạng chủng tộc", "người da màu", "phụ nữ"... vào câu lệnh trước khi gửi tới mô hình tạo ảnh.
+
+Tuy nhiên, đội ngũ kỹ sư của Google đã phạm hai sai lầm lớn:
+
+1. **Áp dụng quá thô bạo (Too bluntly):** Bộ lọc tự động này hoạt động một cách mù quáng, không biết phân biệt đâu là câu lệnh hiện đại, đâu là câu lệnh có tính chính xác về mặt lịch sử.
+2. **Thuật toán tự suy diễn cực đoan:** Qua thời gian tinh chỉnh, AI bắt đầu hiểu sai rằng việc tạo ra hình ảnh người da trắng là "không an toàn" hoặc "thiếu đa dạng", dẫn đến việc nó từ chối hẳn việc vẽ người da trắng kể cả khi người dùng yêu cầu trực tiếp.
+
+### 3. Hậu quả đối với Google
+
+* **Làn sóng chỉ trích dữ dội:** Google bị cáo buộc là cố tình lồng ghép tư tưởng chính trị quá đà (bị gán mác là "anti-white" hoặc "woke" quá mức), làm mờ đi tính chân thực của lịch sử. Tỷ phú Elon Musk và nhiều nhân vật có tầm ảnh hưởng đã lên tiếng chỉ trích nặng nề.
+* **Thiệt hại tài chính:** Giá cổ phiếu của Alphabet (công ty mẹ của Google) đã bốc hơi khoảng **4,5%**, thổi bay gần **90 tỷ USD** giá trị vốn hóa thị trường chỉ trong vài ngày sau khi vụ việc bùng nổ.
+* **Phản ứng từ ban lãnh đạo:** CEO Sundar Pichai đã phải gửi một bản ghi nhớ nội bộ tới toàn thể nhân viên, thừa nhận những kết quả mà Gemini tạo ra là "hoàn toàn không thể chấp nhận được" và Google đã làm sai.
+
+### 4. Cách giải quyết
+
+* **Khóa tính năng tạm thời:** Chỉ vài ngày sau khi vụ bê bối nổ ra (khoảng ngày 22/2/2024), Google đã ngay lập tức **tạm dừng (khóa) tính năng tạo ảnh người** trên Gemini để sửa lỗi.
+* **Khắc phục:** Google phải mất nhiều tháng trời để thiết lập lại các bộ lọc ngữ cảnh, giúp AI hiểu được khi nào cần sự đa dạng chủng tộc (ví dụ: ảnh văn phòng, ảnh nghệ thuật) và khi nào cần tôn trọng sự thật lịch sử. Đến nửa cuối năm 2024, tính năng này mới dần được mở lại thông qua các bản cập nhật mô hình Imagen mới an toàn hơn.
 ```
 
 **3. Verdict:** INVALID
