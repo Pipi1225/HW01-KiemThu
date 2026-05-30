@@ -720,13 +720,54 @@ Vụ việc Tessa năm 2023 trở thành một ví dụ điển hình được c
 ## Artifact 11:
 **1. Prompt + Tool**
 - **Tool:** Gemini 3.5 Flash
-- **Timestamp:** 
+- **Timestamp:** 22:27 30/05/2026
 - **Prompt:**
 ```
+Bạn hãy tóm tắt vụ việc liên quan tới sự cố màn hình xanh toàn cầu CrowdStrike vào năm 2024
 ```
 
 **2. AI Output:**
 ```
+Sự cố màn hình xanh (BSOD) toàn cầu của CrowdStrike vào ngày **19 tháng 7, 2024** được coi là một trong những sự cố sập mạng máy tính lớn nhất trong lịch sử công nghệ thông tin.
+
+Dưới đây là tóm tắt toàn diện về nguyên nhân, thiệt hại và cách khắc phục của vụ việc này:
+
+---
+
+## 1. Nguyên nhân sự cố
+
+* **Bản cập nhật bị lỗi:** CrowdStrike (một công ty an ninh mạng lớn của Mỹ) đã tung ra một bản cập nhật cấu hình định kỳ cho phần mềm cảm biến **Falcon** trên hệ điều hành Microsoft Windows.
+* **Lỗi logic (Logic Error):** Bản cập nhật này chứa một lỗi logic ẩn, khiến phần mềm Falcon (vốn chạy ở cấp hệ thống cao nhất - Kernel) bị xung đột nghiêm trọng.
+* **Vòng lặp sập nguồn:** Sự xung đột này khiến hệ điều hành Windows không thể khởi động bình thường và liên tục rơi vào trạng thái "Màn hình xanh chết chóc" (Blue Screen of Death - BSOD) rồi tự khởi động lại.
+
+> **Lưu ý quan trọng:** Đây hoàn toàn là một **sự cố kỹ thuật do lỗi cập nhật phần mềm**, không phải là một cuộc tấn công mạng hay do virus hacker gây ra.
+
+---
+
+## 2. Quy mô và mức độ ảnh hưởng
+
+Sự cố đã làm tê liệt khoảng **8,5 triệu thiết bị Windows** trên toàn cầu, gây ra sự hỗn loạn dây chuyền ở nhiều lĩnh vực thiết yếu:
+
+* **Hàng không toàn cầu bị đóng băng:** Hơn 5.000 chuyến bay thương mại bị hủy bỏ. Các sân bay lớn từ Mỹ, Châu Âu đến Châu Á phải làm thủ tục check-in bằng tay, bảng điện tử hiển thị lỗi xanh lè.
+* **Y tế gián đoạn:** Nhiều bệnh viện phải hoãn các ca phẫu thuật không khẩn cấp, hệ thống lưu trữ bệnh án điện tử không thể truy cập.
+* **Tài chính và Bán lẻ:** Nhiều ngân hàng ngưng hoạt động, hệ thống ATM bị sập, các máy thanh toán tại siêu thị và cửa hàng tiện lợi không hoạt động.
+* **Thiệt hại tài chính:** Các chuyên gia ước tính thiệt hại kinh tế trực tiếp cho các công ty thuộc danh sách Fortune 500 lên tới hàng tỷ USD.
+
+---
+
+## 3. Quá trình khắc phục
+
+Dù CrowdStrike đã nhanh chóng phát hiện và tung ra bản vá chỉ vài giờ sau đó, việc khắc phục trên thực tế lại cực kỳ gian nan:
+
+* **Khắc phục thủ công:** Do máy tính bị kẹt trong vòng lặp màn hình xanh và không thể kết nối Internet, các kỹ sư CNTT buộc phải đến tận nơi, khởi động từng máy vào "Chế độ an toàn" (Safe Mode) và xóa file lỗi một cách thủ công.
+* **Thời gian hồi phục:** Phải mất từ vài ngày đến hàng tuần để các doanh nghiệp lớn đưa toàn bộ hệ thống trở lại trạng thái bình thường hoàn toàn.
+
+---
+
+## 4. Hậu quả và bài học rút ra
+
+* **Niềm tin sụt giảm:** Giá cổ phiếu của CrowdStrike đã lao dốc mạnh ngay sau sự cố. Công ty cũng phải đối mặt với hàng loạt vụ kiện đòi bồi thường từ các đối tác lớn (như hãng hàng không Delta Air Lines).
+* **Bài học về sự phụ thuộc công nghệ:** Sự cố là hồi chuông cảnh báo về việc thế giới đang quá phụ thuộc vào một vài nhà cung cấp phần mềm tập trung. Nó thúc đẩy các doanh nghiệp phải thay đổi quy trình kiểm thử phần mềm chặt chẽ hơn và xây dựng các phương án dự phòng (backup) tốt hơn cho tương lai.
 ```
 
 **3. Verdict:** INVALID
