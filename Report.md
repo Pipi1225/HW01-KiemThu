@@ -667,7 +667,7 @@
 
   Vụ việc Tessa năm 2023 trở thành một ví dụ điển hình được các chuyên gia công nghệ và y tế liên tục nhắc lại. Nó chứng minh rằng: **AI hiện tại chưa đủ khả năng thay thế con người trong các lĩnh vực nhạy cảm liên quan đến sức khỏe tinh thần**, nơi mà sự thấu cảm, phán đoán lâm sàng và sự an toàn của người bệnh phải được đặt lên hàng đầu.
   ```
-  - **Bias/Hallucination:** AI giải thích đúng sơ bộ về vụ việc, việc các chuyên gia y tế và người dùng chỉ trích NEDA và cả nhà hoạt động vì người rối loạn ăn uống Sharon Maxwell chụp cuộc trò chuyện của mình với AI... Nhưng AI bị hallucination khi nói NEDA gỡ bỏ hoàn toàn vào ngày 31/5/2023, trong khi sự thật là NEDA gỡ bỏ chatbot này sớm hơn thế (trong ngày 30/5/2023 - chưa đến 24h sau khi Maxwell đăng cuộc trò của mình với Tessa lên mạng).
+  - **Bias/Hallucination:** AI giải thích đúng sơ bộ về vụ việc, việc các chuyên gia y tế và người dùng chỉ trích NEDA và cả nhà hoạt động vì người rối loạn ăn uống Sharon Maxwell chụp cuộc trò chuyện của mình với AI... Nhưng AI bị hallucination khi nói NEDA gỡ bỏ hoàn toàn vào ngày 31/5/2023, trong khi sự thật là NEDA gỡ bỏ chatbot này sớm hơn thế (trong ngày 30/5/2023 - cụ thể là chưa đến 24h sau khi Maxwell đăng cuộc trò chuyện của mình với Tessa lên mạng).
 
 ---
 
