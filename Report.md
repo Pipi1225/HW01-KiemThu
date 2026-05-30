@@ -522,6 +522,15 @@
 * **Giải pháp (Solution):**
   - Cần huấn luyện lại AI là chỉ nên làm đúng theo yêu cầu của người dùng.
 * **AI Bias/Hallucination:**
+  - **Tool:** Gemini 3.5 Flash
+  - **Prompt:**
+  ```
+  ```
+
+  - **AI Output:**
+  ```
+  ```
+  - **Bias/Hallucination:** 
 
 ---
 
@@ -535,6 +544,15 @@
 * **Giải pháp (Solution):**
   - Những lĩnh vực như tư vấn tâm lý hay y tế (ảnh hưởng tới sức khỏe, tinh thần của người dùng) không bao giờ được để hoàn toàn cho AI Generative xử lý. Nếu dùng thì phải luôn có con người kiểm duyệt nội dung trả lời trước khi phản hồi.
 * **AI Bias/Hallucination:**
+  - **Tool:** Gemini 3.5 Flash
+  - **Prompt:**
+  ```
+  ```
+
+  - **AI Output:**
+  ```
+  ```
+  - **Bias/Hallucination:** 
 
 ---
 
@@ -548,6 +566,15 @@
 * **Giải pháp (Solution):**
   - Cần áp dụng quy trình Phased Rollout thay vì đẩy cập nhập toàn cầu cùng lúc và cần tăng cường test các file cấu hình trước khi publish, đẩy cập nhập.
 * **AI Bias/Hallucination:**
+  - **Tool:** Gemini 3.5 Flash
+  - **Prompt:**
+  ```
+  ```
+
+  - **AI Output:**
+  ```
+  ```
+  - **Bias/Hallucination:** 
 
 ---
 
@@ -561,6 +588,15 @@
 * **Giải pháp (Solution):**
   - Triển khai API Gateway với cơ chế xác thực chặt chẽ hơn và việc kiểm thử nên được thông qua nhiều người hơn (Lỗi rò rỉ trên xảy ra là do con người).
 * **AI Bias/Hallucination:**
+  - **Tool:** Gemini 3.5 Flash
+  - **Prompt:**
+  ```
+  ```
+
+  - **AI Output:**
+  ```
+  ```
+  - **Bias/Hallucination:** 
 
 ---
 
@@ -574,6 +610,15 @@
 * **Giải pháp (Solution):**
   - Nên sửa dứt điểm lỗi của hệ thống và rà soát lại toàn bộ kiến trúc Redundancy của phầm mềm.
 * **AI Bias/Hallucination:**
+  - **Tool:** Gemini 3.5 Flash
+  - **Prompt:**
+  ```
+  ```
+
+  - **AI Output:**
+  ```
+  ```
+  - **Bias/Hallucination:** 
 
 ---
 
@@ -587,6 +632,15 @@
 * **Giải pháp (Solution):**
   - Sử dụng Parameterized Queries thay cho dùng SQL trực tiếp.
 * **AI Bias/Hallucination:**
+  - **Tool:** Gemini 3.5 Flash
+  - **Prompt:**
+  ```
+  ```
+
+  - **AI Output:**
+  ```
+  ```
+  - **Bias/Hallucination:** 
 
 ---
 
@@ -600,6 +654,15 @@
 * **Giải pháp (Solution):**
   - Nếu cần deploy các thay đổi về cấu hình quan trọng, chỉ nên thử nghiệm với vài cửa hàng trước để xem xét thay vì deploy thẳng cho toàn bộ hệ thống
 * **AI Bias/Hallucination:**
+  - **Tool:** Gemini 3.5 Flash
+  - **Prompt:**
+  ```
+  ```
+
+  - **AI Output:**
+  ```
+  ```
+  - **Bias/Hallucination:** 
 
 ---
 
