@@ -679,3 +679,123 @@ Tuy nhiên, đội ngũ kỹ sư của Google đã phạm hai sai lầm lớn:
 
 **5. Student Fix**
 - 
+
+## Artifact 11:
+**1. Prompt + Tool**
+- **Tool:** Gemini 3.5 Flash
+- **Timestamp:** 
+- **Prompt:**
+```
+```
+
+**2. AI Output:**
+```
+```
+
+**3. Verdict:** INVALID
+
+**4. Reasoning:**
+- 
+
+**5. Student Fix**
+- 
+
+## Artifact 12:
+**1. Prompt + Tool**
+- **Tool:** Gemini 3.5 Flash
+- **Timestamp:** 
+- **Prompt:**
+```
+```
+
+**2. AI Output:**
+```
+```
+
+**3. Verdict:** INVALID
+
+**4. Reasoning:**
+- 
+
+**5. Student Fix**
+- 
+
+## Artifact 13:
+**1. Prompt + Tool**
+- **Tool:** Gemini 3.5 Flash
+- **Timestamp:** 
+- **Prompt:**
+```
+```
+
+**2. AI Output:**
+```
+```
+
+**3. Verdict:** INVALID
+
+**4. Reasoning:**
+- 
+
+**5. Student Fix**
+- 
+
+## Artifact 14:
+**1. Prompt + Tool**
+- **Tool:** Gemini 3.5 Flash
+- **Timestamp:** 
+- **Prompt:**
+```
+```
+
+**2. AI Output:**
+```
+```
+
+**3. Verdict:** INVALID
+
+**4. Reasoning:**
+- 
+
+**5. Student Fix**
+- 
+
+## Artifact 15:
+**1. Prompt + Tool**
+- **Tool:** Gemini 3.5 Flash
+- **Timestamp:** 
+- **Prompt:**
+```
+```
+
+**2. AI Output:**
+```
+```
+
+**3. Verdict:** INVALID
+
+**4. Reasoning:**
+- 
+
+**5. Student Fix**
+- 
+
+## Artifact 16:
+**1. Prompt + Tool**
+- **Tool:** Gemini 3.5 Flash
+- **Timestamp:** 
+- **Prompt:**
+```
+```
+
+**2. AI Output:**
+```
+```
+
+**3. Verdict:** INVALID
+
+**4. Reasoning:**
+- 
+
+**5. Student Fix**
+- 
