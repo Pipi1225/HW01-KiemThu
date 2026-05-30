@@ -220,81 +220,153 @@ Bạn có thể điều chỉnh lại văn phong nếu muốn. Nếu bạn cần
 - **Timestamp:** 10:24 27/05/2026
 - **Prompt:**
 ```
-Bạn hãy tìm tiếp cho tôi thêm 5 cái của requirement 2 nữa
+Bạn hãy tìm tiếp cho tôi thêm 15 cái của requirement 2 nữa
 ```
 
 **2. AI Output:**
 ```
-Vì bạn đã có đủ 5 lỗi bắt buộc liên quan đến AI/LLM ở phần trước, 15 lỗi còn lại chúng ta có thể mở rộng ra các sự cố phần mềm nổi tiếng nói chung trong giai đoạn 2022-2026.
+Chào bạn, tôi đã tổng hợp tiếp 15 lỗi phần mềm (software defects) nổi bật trong giai đoạn 2022-2026 để bạn hoàn thiện Requirement 2.
 
-Tuy nhiên, bạn lưu ý một bẫy rất quan trọng trong đề bài: "this applies to EVERY defect... 20 instances total". Nghĩa là dù là lỗi phần mềm truyền thống, bạn vẫn phải chỉ ra được một điểm mà AI bị ảo giác hoặc thiên lệch khi bạn yêu cầu nó giải thích về sự cố đó.
+Như đã thống nhất, mặc dù 15 lỗi này thuộc về các hệ thống phần mềm truyền thống (không phải AI), tôi vẫn tuân thủ nghiêm ngặt yêu cầu "bẫy" của bài tập: **chỉ ra 1 điểm mà AI bị ảo giác/thiên lệch khi giải thích về chính các lỗi này**.
 
-Dưới đây là 5 lỗi tiếp theo (từ số 6 đến 10), được viết cực kỳ chi tiết kèm theo phần bóc tách ảo giác của AI để bạn đưa vào báo cáo:
+Bạn có thể copy toàn bộ phần dưới đây để nối tiếp vào 5 lỗi AI ở trên nhé:
 
-Defect 6: Sự cố toàn cầu CrowdStrike Falcon BSOD (2024)
-Source link: The Verge - CrowdStrike IT outage explained.
+---
 
-Description: Một bản cập nhật cấu hình nội dung (Channel File 291) bị lỗi của phần mềm bảo mật CrowdStrike Falcon đã được đẩy thẳng lên môi trường production. Do Falcon chạy ở cấp độ kernel (nhân hệ điều hành) của Windows, lỗi logic trong file này đã gây ra vòng lặp vô tận và lỗi bộ nhớ, khiến hàng triệu máy tính bị màn hình xanh (BSOD).
+### Defect 6: Sự cố màn hình xanh toàn cầu CrowdStrike (Tháng 7/2024)
 
-Severity: Critical (Mức độ nghiêm trọng cao nhất, ảnh hưởng toàn cầu).
+* **Source link:** [The Verge - CrowdStrike IT outage](https://www.theverge.com/2024/7/19/24201865/crowdstrike-windows-bsod-microsoft-outage)
+* **Description:** Một bản cập nhật cấu hình (channel file) bị lỗi của phần mềm diệt virus CrowdStrike Falcon đã gây ra vòng lặp vô tận, dẫn đến lỗi Màn hình xanh chết chóc (BSOD) trên hàng triệu máy tính Windows toàn cầu.
+* **Severity:** Critical (Tê liệt hạ tầng).
+* **Consequences:** Các hãng hàng không, ngân hàng, và bệnh viện trên toàn thế giới phải ngừng hoạt động. Thiệt hại kinh tế ước tính hàng tỷ USD.
+* **Solution:** Cần áp dụng quy trình "Phased Rollout" (cập nhật theo từng nhóm nhỏ) thay vì đẩy bản cập nhật toàn cầu cùng lúc, và tăng cường Automated Testing cho các file cấu hình.
+* **AI Bias/Hallucination Instance:** Khi tóm tắt sự cố này, AI thường bị **ảo giác về chủ thể (Attribution Hallucination)**, khẳng định sai lệch rằng "Đây là lỗi do Microsoft tung ra bản cập nhật Windows hỏng", trong khi thực tế lỗi hoàn toàn nằm ở phần mềm của bên thứ ba là CrowdStrike.
 
-Consequences: Hệ thống hàng không, ngân hàng, và bệnh viện trên toàn thế giới bị tê liệt trong nhiều ngày. Gây thiệt hại hàng tỷ USD.
+### Defect 7: Lỗi rò rỉ dữ liệu qua API của Optus (2022)
 
-Solution: Cải thiện quy trình QA: Cần có hệ thống kiểm thử tự động nghiêm ngặt cho mọi file cấu hình trước khi deploy. Áp dụng chiến lược "Staged Rollout" (phát hành từng nhóm nhỏ) thay vì đẩy bản cập nhật cho toàn bộ người dùng cùng lúc.
+* **Source link:** [ABC News - Optus data breach](https://www.abc.net.au/news/2022-09-23/optus-massive-data-breach/101467180)
+* **Description:** Một endpoint API (dùng để kiểm tra thông tin khách hàng) của nhà mạng Optus (Úc) đã bị cấu hình sai, mở công khai ra internet mà không yêu cầu bất kỳ bước xác thực (authentication) nào.
+* **Severity:** Critical (Bảo mật dữ liệu).
+* **Consequences:** Dữ liệu cá nhân (hộ chiếu, bằng lái xe) của 10 triệu người dân Úc bị đánh cắp và rao bán.
+* **Solution:** Triển khai API Gateway với cơ chế xác thực chặt chẽ (OAuth2), và áp dụng Zero-Trust Architecture cho mọi endpoint.
+* **AI Bias/Hallucination Instance:** AI thường hay **kịch tính hóa (Dramatic Bias)**, giải thích rằng "hacker đã dùng mã độc tống tiền (ransomware) tinh vi để phá vỡ hệ thống của Optus". Sự thật là hacker chỉ đơn giản gọi một API public không có mật khẩu.
 
-AI Bias/Hallucination Instance: Khi bạn hỏi AI về nguyên nhân sự cố, AI rất dễ bị ảo giác thông tin (Information Hallucination) khi cho rằng "CrowdStrike đã bị hacker tấn công và cài mã độc vào bản cập nhật". Thực tế, đây hoàn toàn là lỗi quy trình nội bộ (QA failure), không có bất kỳ cuộc tấn công mạng nào xảy ra.
+### Defect 8: Sập hệ thống NOTAM của Cục Hàng không Liên bang Mỹ FAA (2023)
 
-Defect 7: Liên Minh Huyền Thoại - Lỗi Vanguard làm treo máy tính (2024)
-Source link: IGN - League of Legends Vanguard anti-cheat issues.
+* **Source link:** [CNN - FAA outage root cause](https://edition.cnn.com/2023/01/19/business/faa-outage-cause/index.html)
+* **Description:** Trong quá trình bảo trì, một nhân viên hợp đồng đã vô tình xóa các file quan trọng trong cơ sở dữ liệu chính. Hệ thống đồng bộ (sync) được thiết kế kém đã ngay lập tức copy lỗi này sang database dự phòng, làm sập toàn bộ hệ thống.
+* **Severity:** High (Tính sẵn sàng của hệ thống).
+* **Consequences:** Toàn bộ các chuyến bay nội địa tại Mỹ bị đình chỉ trong nhiều giờ.
+* **Solution:** Tách biệt logic giữa hệ thống Main và Backup (không sync real-time các lệnh xóa data nhạy cảm), áp dụng cơ chế Soft-delete.
+* **AI Bias/Hallucination Instance:** Do sự cố xảy ra cùng thời điểm với nhiều vụ tấn công mạng, AI rất dễ **ảo giác nguyên nhân**, bịa ra rằng "FAA bị tin tặc Nga tấn công từ chối dịch vụ (DDoS)", trái ngược với kết luận chính thức của FAA là do lỗi quy trình phần mềm nội bộ.
 
-Description: Riot Games bắt buộc triển khai hệ thống chống gian lận Vanguard (chạy ở cấp độ Kernel) cho tựa game Liên Minh Huyền Thoại. Tuy nhiên, phần mềm này xung đột nghiêm trọng với các driver phần cứng cũ hoặc BIOS chưa được cập nhật của người dùng, dẫn đến tình trạng máy tính bị treo, kẹt ở vòng lặp khởi động (boot loop) hoặc mất kết nối mạng.
+### Defect 9: Lỗi phân tích cú pháp Kế hoạch bay của NATS Anh Quốc (2023)
 
-Severity: High (Ảnh hưởng diện rộng đến trải nghiệm người dùng).
+* **Source link:** [BBC - UK air traffic control failure](https://www.bbc.com/news/business-66734710)
+* **Description:** Hệ thống không lưu NATS bị sập vì một lỗi "Edge case" trong phần mềm phân tích kế hoạch bay: nó nhận được một kế hoạch bay có chứa hai điểm tham chiếu (waypoints) trùng tên nhau nhưng ở hai quốc gia khác nhau. Cả hệ thống chính và phụ đều ném ra Exception và ngừng hoạt động.
+* **Severity:** High (Lỗi Logic/Edge Case).
+* **Consequences:** Hơn 1,500 chuyến bay bị hủy, hàng trăm ngàn hành khách mắc kẹt.
+* **Solution:** Bổ sung Exception Handling (xử lý ngoại lệ) tốt hơn. Nếu một kế hoạch bay bị lỗi logic, hệ thống phải từ chối kế hoạch đó (Graceful degradation) thay vì tự động shut down toàn bộ server.
+* **AI Bias/Hallucination Instance:** AI thường gặp **thiên lệch do thiếu ngữ cảnh chuyên ngành (Domain-specific Hallucination)**, cho rằng "hệ thống radar của Anh bị hỏng phần cứng", bỏ qua hoàn toàn lỗi phần mềm phân tích chuỗi dữ liệu (string parsing).
 
-Consequences: Hàng loạt người chơi không thể truy cập game, một số người dùng thậm chí phải cài lại hệ điều hành Windows để cứu máy tính.
+### Defect 10: Lỗ hổng SQL Injection của MOVEit Transfer (2023)
 
-Solution: QA cần xây dựng ma trận kiểm thử phần cứng (Hardware Compatibility Matrix) đa dạng hơn, bao gồm cả các thiết bị đời cũ. Cung cấp công cụ chẩn đoán xung đột tự động cho người dùng trước khi ép buộc cài đặt phần mềm cấp kernel.
+* **Source link:** [Wired - MOVEit mass hack](https://www.wired.com/story/moveit-hack-victims/)
+* **Description:** Phần mềm truyền tải file MOVEit chứa một lỗ hổng Zero-day dạng SQL Injection. Dữ liệu đầu vào không được làm sạch (sanitize) cho phép kẻ tấn công thực thi mã độc trên database.
+* **Severity:** Critical (Bảo mật).
+* **Consequences:** Hàng ngàn công ty và chính phủ bị đánh cắp dữ liệu, băng đảng ransomware Clop tống tiền trên diện rộng.
+* **Solution:** Sử dụng Parameterized Queries thay vì cộng chuỗi SQL trực tiếp, thực hiện rà soát bảo mật mã nguồn tĩnh (SAST).
+* **AI Bias/Hallucination Instance:** AI hay **nhầm lẫn các sự kiện lớn (Event Conflation)**, giải thích rằng "MOVEit bị hack do nhân viên bị lừa đảo Phishing". Thực tế đây là lỗi bảo mật phần mềm thuần túy (SQLi) không cần tương tác của người dùng.
 
-AI Bias/Hallucination Instance: Nếu yêu cầu phân tích hậu quả, AI thường xuyên bị thiên lệch khuếch đại (Exaggeration Bias), khẳng định rằng "Vanguard đã xóa dữ liệu cá nhân của người chơi". Thực tế, phần mềm này gây lỗi driver hệ thống chứ không hề có hành vi xóa file cá nhân.
+### Defect 11: Sự cố sập hệ thống toàn cầu của McDonald's (Tháng 3/2024)
 
-Defect 8: Sập hệ thống NOTAM của Cục Hàng không Liên bang Mỹ FAA (2023)
-Source link: CNN - FAA computer outage causes flight delays.
+* **Source link:** [The Guardian - McDonald's global outage](https://www.theguardian.com/business/2024/mar/15/mcdonalds-global-outage-system-failure)
+* **Description:** Một thay đổi cấu hình phần mềm (configuration change) bị lỗi từ nhà cung cấp dịch vụ bên thứ ba đã được triển khai đồng loạt lên mạng lưới toàn cầu.
+* **Severity:** High (Tính khả dụng).
+* **Consequences:** Các cửa hàng McDonald's ở nhiều quốc gia (Nhật, Úc, Anh...) không thể nhận đơn hàng qua app hoặc màn hình kiosk, phải đóng cửa hoặc ghi giấy tay.
+* **Solution:** Sử dụng chiến lược Canary Deployment (triển khai thử nghiệm trên 1% cửa hàng trước) đối với các thay đổi cấu hình quan trọng.
+* **AI Bias/Hallucination Instance:** Khi phân tích nguyên nhân, AI thường bị **ảo giác về quy mô**, tự động kết luận "AWS hoặc Google Cloud bị sập dẫn đến McDonald's mất kết nối". Sự thật là do lỗi cập nhật cấu hình của riêng hệ thống McDonald's.
 
-Description: Hệ thống Notice to Air Missions (NOTAM) chuyên cung cấp thông tin an toàn bay cho phi công của Mỹ bị sập. Nguyên nhân do một nhân viên vô tình xóa nhầm file trong quá trình đồng bộ hóa dữ liệu giữa cơ sở dữ liệu chính và cơ sở dữ liệu dự phòng (backup).
+### Defect 12: Toyota cấu hình sai Cloud Bucket suốt 10 năm (2023)
 
-Severity: Critical (Ảnh hưởng an ninh quốc gia và giao thông vận tải).
+* **Source link:** [Reuters - Toyota data leak](https://www.reuters.com/business/autos-transportation/toyota-says-vehicle-data-2-mln-customers-japan-may-have-been-leaked-2023-05-12/)
+* **Description:** Do lỗi con người trong việc thiết lập môi trường Cloud, một cơ sở dữ liệu của Toyota đã bị đặt ở chế độ "Public" thay vì "Private" từ năm 2013 đến 2023.
+* **Severity:** High (Rò rỉ dữ liệu).
+* **Consequences:** Dữ liệu vị trí của hơn 2 triệu xe ô tô tại Nhật Bản bị phơi bày trên internet suốt một thập kỷ.
+* **Solution:** Tích hợp các công cụ Quản lý Tư thế Bảo mật Đám mây (CSPM) để tự động quét và cảnh báo các bucket bị public.
+* **AI Bias/Hallucination Instance:** AI thường **phóng đại mức độ khai thác (Exploitation Hallucination)**, nói rằng "tin tặc đã xâm nhập vào xe Toyota và điều khiển chúng từ xa", trong khi thực tế chỉ là rò rỉ dữ liệu tĩnh trên Cloud.
 
-Consequences: Toàn bộ các chuyến bay nội địa tại Mỹ bị cấm cất cánh trong nhiều giờ (hơn 11,000 chuyến bay bị hoãn), lần đầu tiên kể từ sự kiện 11/9.
+### Defect 13: Lỗi gián đoạn mạng diện rộng của AT&T (Tháng 2/2024)
 
-Solution: Xây dựng cơ chế "Fail-safe" và phân quyền chặt chẽ trong quản trị cơ sở dữ liệu. Cần có quy trình cô lập cơ sở dữ liệu dự phòng để lỗi từ hệ thống chính không được tự động sao chép sang hệ thống backup.
+* **Source link:** [CNN - AT&T outage cause](https://edition.cnn.com/2024/02/22/tech/att-cell-service-outage/index.html)
+* **Description:** Việc thực thi sai quy trình trong một bản cập nhật phần mềm nhằm mở rộng mạng lưới đã gây ra lỗi kết nối nghiêm trọng tại các trạm phát sóng.
+* **Severity:** High (Hạ tầng viễn thông).
+* **Consequences:** Hàng triệu người dùng Mỹ mất sóng điện thoại, không thể gọi cấp cứu 911.
+* **Solution:** Tự động hóa khâu kiểm thử quy trình cập nhật mạng, có kịch bản Rollback (khôi phục trạng thái cũ) tức thì khi phát hiện tỷ lệ rớt mạng tăng đột biến.
+* **AI Bias/Hallucination Instance:** Nếu bạn hỏi AI trong thời điểm ngay sau sự cố (hoặc set context sai lệch), AI sẽ bị **thiên lệch theo tin đồn (Rumor Bias)**, quả quyết rằng lỗi do "bão Mặt trời (solar flare) đánh sập vệ tinh" theo các thuyết âm mưu trên mạng.
 
-AI Bias/Hallucination Instance: AI thường xuyên mắc lỗi ảo giác quy kết (Attribution Hallucination) bằng cách kết luận sự kiện này do "tấn công ransomware (mã độc tống tiền) từ tin tặc nước ngoài". Các báo cáo điều tra chính thức của chính phủ Mỹ xác nhận đây chỉ là lỗi con người và quy trình đồng bộ dữ liệu.
+### Defect 14: Vụ tấn công nhồi thông tin xác thực của 23andMe (2023)
 
-Defect 9: Sự cố sập nền tảng Ticketmaster đợt bán vé Taylor Swift (2022)
-Source link: NPR - Ticketmaster cancels public sale of Taylor Swift tour.
+* **Source link:** [TechCrunch - 23andMe confirms data theft](https://techcrunch.com/2023/12/04/23andme-confirms-hackers-stole-ancestry-data-on-6-9-million-users/)
+* **Description:** Lỗ hổng không nằm ở core database, mà ở việc 23andMe thiếu các cơ chế bảo vệ điểm đăng nhập (Rate Limiting) và không bắt buộc 2FA. Hacker đã dùng kỹ thuật Credential Stuffing (lấy pass lộ từ web khác thử vào 23andMe).
+* **Severity:** High (Bảo mật).
+* **Consequences:** Dữ liệu di truyền của 6.9 triệu người dùng bị đánh cắp thông qua tính năng "DNA Relatives".
+* **Solution:** Bắt buộc áp dụng Xác thực 2 yếu tố (MFA/2FA), triển khai reCAPTCHA và khóa tài khoản tạm thời khi đăng nhập sai nhiều lần.
+* **AI Bias/Hallucination Instance:** AI rất hay mắc lỗi **ảo giác cơ chế (Mechanism Hallucination)** khi nói rằng "máy chủ của 23andMe bị chọc thủng", gây hiểu lầm nghiêm trọng về bản chất của lỗi phần mềm (đây là lỗi thiếu cơ chế phòng vệ giao diện đăng nhập, không phải rách tường lửa).
 
-Description: Hệ thống web của Ticketmaster bị sụp đổ hoàn toàn về mặt kiến trúc server khi mở bán vé sự kiện Eras Tour. Dù đã có hệ thống "Verified Fan" để giới hạn lượng truy cập, API của hệ thống không thể xử lý nổi lượng request khổng lồ từ bot và người dùng thật (gấp 4 lần đỉnh điểm lịch sử).
+### Defect 15: LastPass bị đánh cắp Vault mã hóa (2022)
 
-Severity: High (Khủng hoảng truyền thông và tài chính).
+* **Source link:** [The Hacker News - LastPass breach details](https://thehackernews.com/2023/02/lastpass-hack-engineer-breach.html)
+* **Description:** Máy tính tại nhà của một lập trình viên DevOps LastPass bị cài keylogger do phần mềm Plex lỗi thời. Hacker dùng thông tin này để truy cập vào kho lưu trữ đám mây của LastPass, lấy đi cả mã nguồn và vault của người dùng.
+* **Severity:** Critical.
+* **Consequences:** Khủng hoảng niềm tin nghiêm trọng, người dùng phải đổi toàn bộ mật khẩu trên internet.
+* **Solution:** Áp dụng Zero-Trust cho nhân viên làm việc từ xa, không lưu trữ bản backup của vault cùng một chỗ với các key cấu hình hệ thống.
+* **AI Bias/Hallucination Instance:** AI thường xuyên **ảo giác về hậu quả**, nói rằng "toàn bộ mật khẩu của người dùng LastPass đã bị lộ dạng plaintext (chữ rõ)". Sự thật là hacker chỉ lấy được các vault *đã mã hóa*, và chỉ giải mã được nếu mật khẩu cấp 1 (Master Password) của người dùng quá yếu.
 
-Consequences: Phải hủy bỏ đợt bán vé công khai, Ticketmaster bị điều trần trước Thượng viện Mỹ về vấn đề độc quyền và năng lực kỹ thuật yếu kém.
+### Defect 16: Lỗ hổng RCE trên ứng dụng Desktop của Slack (2022)
 
-Solution: Tối ưu hóa lại kiến trúc Microservices, áp dụng các kỹ thuật Rate Limiting (giới hạn truy cập) mạnh mẽ hơn ở tầng Gateway, và nâng cấp thuật toán phát hiện/chặn Bot (Bot Mitigation) theo thời gian thực.
+* **Source link:** [PortSwigger - Slack RCE vulnerability](https://portswigger.net/daily-swig/slack-desktop-client-vulnerable-to-remote-code-execution)
+* **Description:** Một lỗi Cross-Site Scripting (XSS) kết hợp với việc bộ lọc HTML (sanitization) bị qua mặt đã cho phép thực thi mã từ xa (RCE) ngay trên ứng dụng Slack Desktop.
+* **Severity:** Critical (Thực thi mã từ xa).
+* **Consequences:** Hacker có thể chiếm quyền điều khiển máy tính của nạn nhân chỉ bằng cách gửi một tin nhắn độc hại.
+* **Solution:** Cập nhật framework Electron lên phiên bản mới nhất, sử dụng Content Security Policy (CSP) nghiêm ngặt để chặn thực thi script ngoại lai.
+* **AI Bias/Hallucination Instance:** AI thường **nhầm lẫn Client/Server**, giải thích lỗi này là "Server của Slack bị tin tặc cài mã độc", trong khi thực tế đây là lỗi phần mềm ở phía Client (ứng dụng cài trên máy tính người dùng).
 
-AI Bias/Hallucination Instance: Công cụ AI rất hay bị thiên lệch mỏ neo (Anchoring Bias) khi cho rằng "Máy chủ của Ticketmaster bị sập hoàn toàn và ngừng hoạt động trong nhiều ngày". Thực tế là hệ thống web chạy cực kỳ chậm, các hàng đợi (queue) bị lỗi và kẹt, chứ server không hề bị "chết" hoàn toàn (offline) nhiều ngày liền.
+### Defect 17: Microsoft Exchange Online bị làm giả Token (Storm-0558) (2023)
 
-Defect 10: Toyota rò rỉ dữ liệu do lộ Key trên GitHub (2022)
-Source link: Reuters - Toyota says data of 296,000 customers may have been leaked.
+* **Source link:** [Microsoft Blog - Storm-0558](https://msrc.microsoft.com/blog/2023/07/microsoft-mitigates-storm-0558-targeted-cloud-attack/)
+* **Description:** Một lỗ hổng phần mềm trong khâu xác thực token: hệ thống email doanh nghiệp (Exchange Online) lại chấp nhận token được ký bởi một khóa ký (signing key) dành cho tài khoản tiêu dùng (consumer) đã bị đánh cắp trước đó.
+* **Severity:** Critical.
+* **Consequences:** Các tổ chức chính phủ Mỹ bị lộ lọt email nội bộ.
+* **Solution:** Xác thực chặt chẽ hơn phạm vi (scope) và loại của token. Thiết lập quy trình thu hồi và xoay vòng khóa (key rotation) tự động.
+* **AI Bias/Hallucination Instance:** AI hay **ảo giác về Vector tấn công (Attack Vector Bias)**, mô tả rằng "hacker đã gửi email lừa đảo (phishing) cho nhân viên chính phủ Mỹ". Sự thật tinh vi hơn nhiều: hacker trực tiếp làm giả chữ ký số hệ thống để vượt qua vòng đăng nhập mà không cần tương tác với người dùng.
 
-Description: Một nhà thầu phụ (subcontractor) phát triển phần mềm cho Toyota đã upload mã nguồn chứa đoạn mã truy cập (hard-coded access key) của server dữ liệu lên một repository công khai trên GitHub. Đoạn key này nằm chình ình trên mạng suốt 5 năm mà không ai hay biết.
+### Defect 18: Atlassian Confluence - Lỗi kiểm soát truy cập (CVE-2023-22515) (2023)
 
-Severity: High (Lỗi bảo mật nghiêm trọng).
+* **Source link:** [NVD - CVE-2023-22515](https://nvd.nist.gov/vuln/detail/CVE-2023-22515)
+* **Description:** Lỗi phần mềm ở logic định tuyến (routing) cho phép một kẻ tấn công không cần xác thực vẫn có thể truy cập vào các endpoint thiết lập ban đầu, từ đó tự tạo tài khoản Admin mới cho mình.
+* **Severity:** Critical (Chiếm quyền hoàn toàn).
+* **Consequences:** Rất nhiều máy chủ Confluence của các công ty bị mã hóa tống tiền do hacker có quyền admin.
+* **Solution:** Khóa quyền truy cập internet đối với thư mục `/setup/`, vá mã nguồn để kiểm tra trạng thái khởi tạo của server trước khi cấp quyền endpoint.
+* **AI Bias/Hallucination Instance:** AI thường xuyên **ảo giác nhầm lẫn mã CVE**, lôi lỗi kinh điển "Log4j" vào để giải thích cho sự cố này, vì các sản phẩm Atlassian thường xuyên dính Log4j trong quá khứ, bỏ qua nguyên nhân cốt lõi là lỗi Broken Access Control.
 
-Consequences: Dữ liệu cá nhân (địa chỉ email, mã số khách hàng) của gần 300,000 người dùng T-Connect bị kẻ xấu có khả năng truy cập tự do.
+### Defect 19: Lỗ hổng ghi file tùy ý của GitLab (CVE-2024-0402) (Tháng 1/2024)
 
-Solution: Tích hợp các công cụ Secret Scanning tự động vào đường ống CI/CD (ví dụ: GitHub Advanced Security hoặc SonarQube) để chặn ngay lập tức bất kỳ commit nào chứa token, mật khẩu hay API Key trước khi code được đẩy lên repo.
+* **Source link:** [GitLab Security Release](https://about.gitlab.com/releases/2024/01/25/security-release-gitlab-16-8-1-released/)
+* **Description:** Trong tính năng tạo Workspace, lập trình viên không xử lý đúng đường dẫn đầu vào (Path Traversal), cho phép người dùng có tài khoản ghi đè file lên các vị trí tùy ý trên máy chủ.
+* **Severity:** Critical.
+* **Consequences:** Nguy cơ máy chủ GitLab bị xâm nhập và chiếm quyền cao nhất.
+* **Solution:** Vệ sinh dữ liệu đầu vào (Input Sanitization), không bao giờ cho phép các ký tự như `../` trong tên file/đường dẫn từ phía người dùng gửi lên.
+* **AI Bias/Hallucination Instance:** Khi yêu cầu chi tiết về Payload (đoạn mã khai thác), AI thường bị **Safety Bias (Thiên lệch an toàn)**. Nó sẽ từ chối giải thích kỹ thuật lỗi này vì sợ "hướng dẫn bạn cách hack hệ thống", dẫn đến việc phân tích defect bị nông và thiếu chuyên môn QA.
 
-AI Bias/Hallucination Instance: AI thường xuyên bị ảo giác trầm trọng hóa (Catastrophizing Hallucination), bịa ra rằng "hacker đã lấy được mã khóa để điều khiển và khởi động xe Toyota từ xa". Lỗ hổng này thực chất chỉ ảnh hưởng đến hệ thống quản lý dữ liệu khách hàng (CRM), hoàn toàn không dính dáng đến hệ thống điều khiển nội bộ (CAN bus) của xe.
+### Defect 20: Công ty AnyDesk bị xâm nhập hệ thống Production (Tháng 1/2024)
+
+* **Source link:** [Bleeping Computer - AnyDesk incident](https://www.bleepingcomputer.com/news/security/anydesk-says-hackers-breached-its-production-servers-reset-passwords/)
+* **Description:** Hacker chiếm được quyền truy cập vào máy chủ sản xuất của AnyDesk, buộc công ty này phải thu hồi lại toàn bộ chứng chỉ ký mã nguồn (code signing certificates) phần mềm do lo sợ phần mềm gốc bị chèn mã độc.
+* **Severity:** High.
+* **Consequences:** Công ty phải thu hồi chứng chỉ số, người dùng phải cập nhật phiên bản mới để tránh rủi ro.
+* **Solution:** Phân quyền hệ thống khắt khe (Least Privilege), giám sát chặt chẽ các bất thường trong CI/CD pipeline và kho lưu trữ chứng chỉ số.
+* **AI Bias/Hallucination Instance:** AI rất dễ **ảo giác liên đới (Association Hallucination)**, khẳng định chắc nịch rằng "phần mềm AnyDesk trên máy khách hàng đã bị biến thành botnet", trong khi AnyDesk đã khẳng định chưa có bằng chứng nào cho thấy mã độc đã được đẩy xuống thiết bị của người dùng cuối.
 ```
 
 **3. Verdict:** VALID
@@ -781,13 +853,64 @@ Dù CrowdStrike đã nhanh chóng phát hiện và tung ra bản vá chỉ vài 
 ## Artifact 12:
 **1. Prompt + Tool**
 - **Tool:** Gemini 3.5 Flash
-- **Timestamp:** 
+- **Timestamp:** 31/05/2026
 - **Prompt:**
 ```
+Bạn hãy tóm tắt vụ việc liên quan tới lỗi rò rỉ dữ liệu qua API của Optus vào năm 2022
 ```
 
 **2. AI Output:**
 ```
+Vụ rò rỉ dữ liệu của **Optus** (nhà mạng viễn thông lớn thứ hai tại Australia) vào tháng 9 năm 2022 được đánh giá là một trong những sự cố an ninh mạng nghiêm trọng nhất lịch sử nước này. Đáng chú ý, dù ban đầu ban lãnh đạo Optus mô tả đây là một cuộc tấn công "tinh vi", các cuộc điều tra sau đó của giới chuyên gia và chính phủ đã bóc trần một sự thật khá ngỡ ngàng: **Hệ thống bị khai thác qua một lỗ hổng API cực kỳ cơ bản.**
+
+Dưới đây là tóm tắt toàn bộ vụ việc từ nguyên nhân kỹ thuật cho đến hậu quả:
+
+---
+
+## 1. Nguyên nhân kỹ thuật: Lỗi API "mở toang cửa"
+
+Bản chất của vụ hack không nằm ở những kỹ thuật mã độc phức tạp, mà đến từ một chuỗi sai lầm ngớ ngẩn trong quản lý và cấu hình hệ thống API (Giao diện lập trình ứng dụng):
+
+* **API hướng ra công chúng không cần xác thực:** Optus đã để một API dùng cho hệ thống thử nghiệm (test) kết nối trực tiếp với mạng Internet. Nghiêm trọng hơn, API này **không hề yêu cầu bất kỳ bước đăng nhập hay xác thực (Authentication)** nào. Ai tìm thấy địa chỉ URL của API này cũng có thể truy cập được.
+* **Lộ dữ liệu nhạy cảm:** API không bảo mật này lại được cấp quyền truy cập trực tiếp vào cơ sở dữ liệu khách hàng cốt lõi (vốn dùng để tải thông tin khi người dùng đăng nhập trên ứng dụng di động hoặc website).
+* **Sử dụng mã định danh tuần tự:** Hệ thống của Optus sử dụng các mã số khách hàng tăng dần theo thứ tự (ví dụ: `5332`, `5333`, `5334`...). Kẻ tấn công chỉ cần viết một đoạn mã (script) ngắn, chạy tự động thay đổi số định danh này để "quét" (scrape) và tải về toàn bộ cơ sở dữ liệu của hàng triệu khách hàng mà không gặp bất kỳ rào cản nào.
+* **Bỏ quên tên miền phụ:** Lỗi mã hóa này thực chất đã tồn tại từ năm 2018. Dù Optus đã vá lỗ hổng này trên trang web chính vào năm 2021, họ lại "bỏ quên" một tên miền phụ (subdomain) cũ. Hệ thống này đã bị phơi bày trên Internet suốt 3 tháng trước khi vụ hack bị phát hiện.
+
+---
+
+## 2. Quy mô và thiệt hại dữ liệu
+
+Vụ rò rỉ đã ảnh hưởng đến khoảng **10 triệu khách hàng** (cả hiện tại và cựu khách hàng), chiếm tới gần **40% dân số Australia** thời điểm đó.
+
+Các thông tin bị đánh cắp bao gồm:
+
+* Họ tên, ngày tháng năm sinh, số điện thoại, email và địa chỉ nhà.
+* Nghiêm trọng hơn, khoảng **2,1 triệu người** bị lộ số giấy phép lái xe, số hộ chiếu và thẻ bảo hiểm y tế (Medicare) — những giấy tờ cốt lõi có thể bị lợi dụng để đánh cắp danh tính hoặc lừa đảo tài chính.
+* *Lưu ý:* Thông tin thẻ ngân hàng và mật khẩu tài khoản may mắn không bị ảnh hưởng.
+
+---
+
+## 3. Diễn biến và yêu sách tống tiền
+
+* **Phát hiện và công bố:** Ngày 20/9/2022, đội ngũ kỹ thuật của Optus phát hiện hoạt động đáng ngờ. Ngày 22/9/2022, Optus chính thức công khai vụ việc.
+* **Tống tiền:** Một hacker (hoặc nhóm hacker) ẩn danh đã đăng tải một phần dữ liệu (khoảng 10.000 bản ghi) lên diễn đàn hacker và yêu cầu số tiền chuộc **1,5 triệu USD** bằng tiền điện tử, đe dọa sẽ bán toàn bộ dữ liệu nếu Optus không trả tiền.
+* **Quay xe bất ngờ:** Chỉ vài ngày sau, kẻ tống tiền bất ngờ xóa bài đăng, gửi lời xin lỗi đến người dân Úc và tuyên bố đã xóa bản sao dữ liệu duy nhất vì vụ việc "đã gây quá nhiều sự chú ý". Tuy nhiên, giới an ninh mạng vẫn cảnh báo người dùng không được chủ quan vì dữ liệu có thể đã bị sao chép từ trước.
+
+---
+
+## 4. Hậu quả và bài học đắt giá
+
+> **Hệ lụy về mặt tài chính và nhân sự:**
+> * CEO của Optus khi đó, bà Kelly Bayer Rosmarin, đã phải hứng chịu làn sóng chỉ trích dữ dội từ dư luận và chính phủ vì cách xử lý khủng hoảng truyền thông yếu kém, dẫn đến việc bà phải từ chức vào cuối năm 2023.
+> * Optus phải trích lập quỹ dự phòng khoảng **140 triệu AUD** để khắc phục hậu quả, bao gồm việc trả chi phí làm lại hộ chiếu/bằng lái xe cho các nạn nhân bị ảnh hưởng và mua gói dịch vụ giám sát tín dụng cho họ.
+> * Giá trị thương hiệu của Optus ước tính bị sụt giảm hơn 1,5 tỷ USD.
+> 
+> 
+
+* **Hành động pháp lý:** Chính phủ Australia và Cơ quan Truyền thông & Truyền thông (ACMA) đã tiến hành khởi kiện Optus ra tòa liên bang vì vi phạm các quy định bảo mật. Đồng thời, một vụ kiện tập thể từ phía các khách hàng cũng được đệ trình chống lại công ty này.
+* **Thay đổi luật pháp quốc gia:** Vụ việc chấn động này đã buộc Chính phủ Australia phải thắt chặt đáng kể các quy định về quyền riêng tư, tăng mức phạt đối với các công ty để xảy ra rò rỉ dữ liệu, và thành lập Cơ quan điều phối an ninh mạng quốc gia mới.
+
+**Bài học cốt lõi:** Vụ việc Optus trở thành một case-study (bài học điển hình) kinh điển trong ngành an ninh mạng toàn cầu về **"Bảo mật API"**. Nó chứng minh rằng dù một doanh nghiệp có đầu tư hàng triệu USD vào tường lửa hay hệ thống phòng thủ tinh vi đến đâu, chỉ cần một sai sót ngớ ngẩn như để quên một API thử nghiệm không cài mật khẩu, toàn bộ pháo đài đều có thể sụp đổ.
 ```
 
 **3. Verdict:** INVALID

@@ -735,7 +735,7 @@
 ---
 
 ### Defect 7: Lỗi rò rỉ dữ liệu qua API của Optus (2022)
-* **Link defect (Source):** https://www.qld.gov.au/community/your-home-community/cyber-security/cyber-security-for-queenslanders/case-studies/optus-data-breach
+* **Link defect (Source):** https://securityscorecard.com/blog/5-lessons-from-the-optus-data-breach-for-telecom-and-third-party-risk/
 * **Nội dung (Description):**
   - Một endpoint API (dùng để kiểm tra thông tin khách hàng) của nhà mạng Optus đã bị cấu hình sai, mở công khai ra internet mà không yêu cầu bất kỳ bước authentication nào.
 * **Độ nghiêm trọng (Severity):** Rất cao
@@ -747,12 +747,63 @@
   - **Tool:** Gemini 3.5 Flash
   - **Prompt:**
   ```
+  Bạn hãy tóm tắt vụ việc liên quan tới lỗi rò rỉ dữ liệu qua API của Optus vào năm 2022
   ```
 
   - **AI Output:**
   ```
+  Vụ rò rỉ dữ liệu của **Optus** (nhà mạng viễn thông lớn thứ hai tại Australia) vào tháng 9 năm 2022 được đánh giá là một trong những sự cố an ninh mạng nghiêm trọng nhất lịch sử nước này. Đáng chú ý, dù ban đầu ban lãnh đạo Optus mô tả đây là một cuộc tấn công "tinh vi", các cuộc điều tra sau đó của giới chuyên gia và chính phủ đã bóc trần một sự thật khá ngỡ ngàng: **Hệ thống bị khai thác qua một lỗ hổng API cực kỳ cơ bản.**
+
+  Dưới đây là tóm tắt toàn bộ vụ việc từ nguyên nhân kỹ thuật cho đến hậu quả:
+
+  ---
+
+  ## 1. Nguyên nhân kỹ thuật: Lỗi API "mở toang cửa"
+
+  Bản chất của vụ hack không nằm ở những kỹ thuật mã độc phức tạp, mà đến từ một chuỗi sai lầm ngớ ngẩn trong quản lý và cấu hình hệ thống API (Giao diện lập trình ứng dụng):
+
+  * **API hướng ra công chúng không cần xác thực:** Optus đã để một API dùng cho hệ thống thử nghiệm (test) kết nối trực tiếp với mạng Internet. Nghiêm trọng hơn, API này **không hề yêu cầu bất kỳ bước đăng nhập hay xác thực (Authentication)** nào. Ai tìm thấy địa chỉ URL của API này cũng có thể truy cập được.
+  * **Lộ dữ liệu nhạy cảm:** API không bảo mật này lại được cấp quyền truy cập trực tiếp vào cơ sở dữ liệu khách hàng cốt lõi (vốn dùng để tải thông tin khi người dùng đăng nhập trên ứng dụng di động hoặc website).
+  * **Sử dụng mã định danh tuần tự:** Hệ thống của Optus sử dụng các mã số khách hàng tăng dần theo thứ tự (ví dụ: `5332`, `5333`, `5334`...). Kẻ tấn công chỉ cần viết một đoạn mã (script) ngắn, chạy tự động thay đổi số định danh này để "quét" (scrape) và tải về toàn bộ cơ sở dữ liệu của hàng triệu khách hàng mà không gặp bất kỳ rào cản nào.
+  * **Bỏ quên tên miền phụ:** Lỗi mã hóa này thực chất đã tồn tại từ năm 2018. Dù Optus đã vá lỗ hổng này trên trang web chính vào năm 2021, họ lại "bỏ quên" một tên miền phụ (subdomain) cũ. Hệ thống này đã bị phơi bày trên Internet suốt 3 tháng trước khi vụ hack bị phát hiện.
+
+  ---
+
+  ## 2. Quy mô và thiệt hại dữ liệu
+
+  Vụ rò rỉ đã ảnh hưởng đến khoảng **10 triệu khách hàng** (cả hiện tại và cựu khách hàng), chiếm tới gần **40% dân số Australia** thời điểm đó.
+
+  Các thông tin bị đánh cắp bao gồm:
+
+  * Họ tên, ngày tháng năm sinh, số điện thoại, email và địa chỉ nhà.
+  * Nghiêm trọng hơn, khoảng **2,1 triệu người** bị lộ số giấy phép lái xe, số hộ chiếu và thẻ bảo hiểm y tế (Medicare) — những giấy tờ cốt lõi có thể bị lợi dụng để đánh cắp danh tính hoặc lừa đảo tài chính.
+  * *Lưu ý:* Thông tin thẻ ngân hàng và mật khẩu tài khoản may mắn không bị ảnh hưởng.
+
+  ---
+
+  ## 3. Diễn biến và yêu sách tống tiền
+
+  * **Phát hiện và công bố:** Ngày 20/9/2022, đội ngũ kỹ thuật của Optus phát hiện hoạt động đáng ngờ. Ngày 22/9/2022, Optus chính thức công khai vụ việc.
+  * **Tống tiền:** Một hacker (hoặc nhóm hacker) ẩn danh đã đăng tải một phần dữ liệu (khoảng 10.000 bản ghi) lên diễn đàn hacker và yêu cầu số tiền chuộc **1,5 triệu USD** bằng tiền điện tử, đe dọa sẽ bán toàn bộ dữ liệu nếu Optus không trả tiền.
+  * **Quay xe bất ngờ:** Chỉ vài ngày sau, kẻ tống tiền bất ngờ xóa bài đăng, gửi lời xin lỗi đến người dân Úc và tuyên bố đã xóa bản sao dữ liệu duy nhất vì vụ việc "đã gây quá nhiều sự chú ý". Tuy nhiên, giới an ninh mạng vẫn cảnh báo người dùng không được chủ quan vì dữ liệu có thể đã bị sao chép từ trước.
+
+  ---
+
+  ## 4. Hậu quả và bài học đắt giá
+
+  > **Hệ lụy về mặt tài chính và nhân sự:**
+  > * CEO của Optus khi đó, bà Kelly Bayer Rosmarin, đã phải hứng chịu làn sóng chỉ trích dữ dội từ dư luận và chính phủ vì cách xử lý khủng hoảng truyền thông yếu kém, dẫn đến việc bà phải từ chức vào cuối năm 2023.
+  > * Optus phải trích lập quỹ dự phòng khoảng **140 triệu AUD** để khắc phục hậu quả, bao gồm việc trả chi phí làm lại hộ chiếu/bằng lái xe cho các nạn nhân bị ảnh hưởng và mua gói dịch vụ giám sát tín dụng cho họ.
+  > * Giá trị thương hiệu của Optus ước tính bị sụt giảm hơn 1,5 tỷ USD.
+  > 
+  > 
+
+  * **Hành động pháp lý:** Chính phủ Australia và Cơ quan Truyền thông & Truyền thông (ACMA) đã tiến hành khởi kiện Optus ra tòa liên bang vì vi phạm các quy định bảo mật. Đồng thời, một vụ kiện tập thể từ phía các khách hàng cũng được đệ trình chống lại công ty này.
+  * **Thay đổi luật pháp quốc gia:** Vụ việc chấn động này đã buộc Chính phủ Australia phải thắt chặt đáng kể các quy định về quyền riêng tư, tăng mức phạt đối với các công ty để xảy ra rò rỉ dữ liệu, và thành lập Cơ quan điều phối an ninh mạng quốc gia mới.
+
+  **Bài học cốt lõi:** Vụ việc Optus trở thành một case-study (bài học điển hình) kinh điển trong ngành an ninh mạng toàn cầu về **"Bảo mật API"**. Nó chứng minh rằng dù một doanh nghiệp có đầu tư hàng triệu USD vào tường lửa hay hệ thống phòng thủ tinh vi đến đâu, chỉ cần một sai sót ngớ ngẩn như để quên một API thử nghiệm không cài mật khẩu, toàn bộ pháo đài đều có thể sụp đổ.
   ```
-  - **Bias/Hallucination:** 
+  - **Bias/Hallucination:** AI giải thích đúng sơ bộ về vụ việc như việc nhóm Hacker sau 1-2 ngày tống tiền Optus thì lại quay xe đăng bài xin lỗi và tuyên bố đã xóa bản sao dữ liệu duy nhất, số người bị ảnh hưởng và số người bị lộ các giấy tờ định danh. Nhưng AI bị hallucination ở chỗ, AI tống tiền Optus với số tiền là 1 triệu ransom (USD), chứ không phải 1,5 triệu USD.
 
 ---
 
