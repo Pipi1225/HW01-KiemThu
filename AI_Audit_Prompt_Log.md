@@ -853,7 +853,7 @@ Dù CrowdStrike đã nhanh chóng phát hiện và tung ra bản vá chỉ vài 
 ## Artifact 12:
 **1. Prompt + Tool**
 - **Tool:** Gemini 3.5 Flash
-- **Timestamp:** 31/05/2026
+- **Timestamp:** 00:32 31/05/2026
 - **Prompt:**
 ```
 Bạn hãy tóm tắt vụ việc liên quan tới lỗi rò rỉ dữ liệu qua API của Optus vào năm 2022
@@ -924,13 +924,44 @@ Các thông tin bị đánh cắp bao gồm:
 ## Artifact 13:
 **1. Prompt + Tool**
 - **Tool:** Gemini 3.5 Flash
-- **Timestamp:** 
+- **Timestamp:** 21:48 31/05/2026
 - **Prompt:**
 ```
+Bạn hãy tóm tắt vụ việc liên quan tới lỗi gây sập toàn bộ hệ thống của NATS Anh Quốc vào năm 2025
 ```
 
 **2. AI Output:**
 ```
+Vụ việc sập hệ thống điều khiển không lưu của Cơ quan Kiểm soát Không lưu Quốc gia Anh (**NATS**) xảy ra vào **thứ Tư, ngày 30 tháng 7 năm 2025**. Đây là một trong những sự cố công nghệ nghiêm trọng gây chấn động ngành hàng không Anh khi nó diễn ra ngay vào giai đoạn cao điểm du lịch hè.
+
+Dưới đây là tóm tắt chi tiết về vụ việc:
+
+### 1. Diễn biến sự cố
+
+* **Thời gian:** Sự cố bắt đầu vào khoảng **14h30** (giờ địa phương). Hệ thống gặp trục trặc và tê liệt trong khoảng hơn 4 tiếng trước khi được khôi phục cơ bản vào khoảng **16h43** cùng ngày.
+* **Vị trí cốt lõi:** Lỗi kỹ thuật xuất phát từ **Trung tâm kiểm soát không lưu Swanwick** (phía Tây Nam nước Anh) – nơi chịu trách nhiệm điều phối vùng trời bận rộn bậc nhất châu Âu.
+* **Biện pháp khẩn cấp:** Hệ thống radar chính bị sập khiến NATS ngay lập tức phải kích hoạt chế độ dự phòng an toàn (fail-safe). Tuy nhiên, để đảm bảo khoảng cách an toàn giữa các máy bay khi không có radar chuẩn, NATS bắt buộc phải **áp đặt hạn chế nghiêm ngặt và đóng cửa phần lớn không phận Anh**, dừng toàn bộ lệnh cất cánh.
+
+### 2. Nguyên nhân ban đầu
+
+* Theo các báo cáo từ NATS và phân tích từ Viện Kỹ thuật và Công nghệ (IET), sự cố bắt nguồn từ **lỗi kỹ thuật radar hoặc xung đột dữ liệu hệ thống nghiêm trọng**.
+* Khi lỗi này xảy ra, hệ thống tự động rơi vào trạng thái "stand-down" (ngừng phản hồi) để ngăn chặn các dữ liệu sai lệch gây nguy hiểm, buộc các kiểm soát viên không lưu phải chuyển sang các phương thức điều phối thủ công và giảm tần suất bay.
+
+---
+
+### 3. Hậu quả và mức độ ảnh hưởng
+
+Sự cố diễn ra vào ngày cao điểm nhất năm khiến ngành hàng không rơi vào trạng thái hỗn loạn:
+
+* **Hàng trăm ngàn hành khách bị ảnh hưởng:** Ước tính có khoảng **577.000 hành khách** trên hơn **3.080 chuyến bay** chịu tác động trực tiếp do hoãn hoặc hủy chuyến.
+* **Tê liệt các sân bay lớn:** Toàn bộ các cửa ngõ hàng không lớn của Anh như Heathrow, Gatwick, Manchester, Edinburgh, Birmingham và London City đều bị đình trệ. Nhiều máy bay phải bay vòng trên trời hoặc buộc phải chuyển hướng hạ cánh sang các nước lân cận như Bỉ (Brussels) hay Pháp.
+* **Hiệu ứng dây chuyền:** Mặc dù hệ thống được sửa lỗi sau vài tiếng, tình trạng ùn ứ lịch bay và quá tải (backlog) tại các sân bay vẫn kéo dài đến tận đêm muộn và sang các ngày hôm sau.
+
+### 4. Phản ứng từ các bên
+
+* **NATS:** Gửi lời xin lỗi sâu sắc tới hành khách và các hãng hàng không, khẳng định ưu tiên hàng đầu là an toàn bay nên việc hạn chế bầu trời là bắt buộc.
+* **Các hãng hàng không:** British Airways phải giới hạn số chuyến bay tại Heathrow xuống mức tối thiểu (khoảng 32 chuyến/giờ). Nhiều hãng bay lớn như Ryanair bày tỏ sự giận dữ trước hạ tầng CNTT của NATS và yêu cầu các bên liên quan phải giải trình rõ ràng về năng lực dự phòng.
+* **Chính phủ Anh:** Bộ Giao thông Vận tải Anh phối hợp cùng Cơ quan Hàng không Dân dụng (CAA) lập tức vào cuộc để điều tra độc lập, đánh giá tính hiệu quả của các kịch bản ứng phó rủi ro công nghệ của NATS.
 ```
 
 **3. Verdict:** INVALID

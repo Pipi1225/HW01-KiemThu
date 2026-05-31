@@ -808,7 +808,9 @@
 ---
 
 ### Defect 8: Lỗi gây sập toàn bộ hệ thống của NATS Anh Quốc (2025)
-* **Link defect (Source):** https://www.euronews.com/travel/2025/07/31/uk-air-traffic-control-failure-airlines-demand-answers-after-more-than-150-flights-cancell
+* **Link defect (Source):** 
+  - https://www.euronews.com/travel/2025/07/31/uk-air-traffic-control-failure-airlines-demand-answers-after-more-than-150-flights-cancell
+  - https://avitrader.com/2025/07/31/hundreds-of-uk-flights-delayed-after-atc-system-failure/
 * **Nội dung (Description):**
   - Hệ thống xử lý kế hoạch bay của NATS bị sập vì lỗi "liên quan tới radar", nên thay vì xử lý chuyến bay tự động thì giờ hệ thống bắt buộc xử lý thủ công. Từ đó, khiến cho hơn 150 chuyến bay bị hủy, ảnh hưởng gần hàng chục nghìn hành khách.
 * **Độ nghiêm trọng (Severity):** Rất cao
@@ -820,12 +822,43 @@
   - **Tool:** Gemini 3.5 Flash
   - **Prompt:**
   ```
+  Bạn hãy tóm tắt vụ việc liên quan tới lỗi gây sập toàn bộ hệ thống của NATS Anh Quốc vào năm 2025
   ```
 
   - **AI Output:**
   ```
+  Vụ việc sập hệ thống điều khiển không lưu của Cơ quan Kiểm soát Không lưu Quốc gia Anh (**NATS**) xảy ra vào **thứ Tư, ngày 30 tháng 7 năm 2025**. Đây là một trong những sự cố công nghệ nghiêm trọng gây chấn động ngành hàng không Anh khi nó diễn ra ngay vào giai đoạn cao điểm du lịch hè.
+
+  Dưới đây là tóm tắt chi tiết về vụ việc:
+
+  ### 1. Diễn biến sự cố
+
+  * **Thời gian:** Sự cố bắt đầu vào khoảng **14h30** (giờ địa phương). Hệ thống gặp trục trặc và tê liệt trong khoảng hơn 4 tiếng trước khi được khôi phục cơ bản vào khoảng **16h43** cùng ngày.
+  * **Vị trí cốt lõi:** Lỗi kỹ thuật xuất phát từ **Trung tâm kiểm soát không lưu Swanwick** (phía Tây Nam nước Anh) – nơi chịu trách nhiệm điều phối vùng trời bận rộn bậc nhất châu Âu.
+  * **Biện pháp khẩn cấp:** Hệ thống radar chính bị sập khiến NATS ngay lập tức phải kích hoạt chế độ dự phòng an toàn (fail-safe). Tuy nhiên, để đảm bảo khoảng cách an toàn giữa các máy bay khi không có radar chuẩn, NATS bắt buộc phải **áp đặt hạn chế nghiêm ngặt và đóng cửa phần lớn không phận Anh**, dừng toàn bộ lệnh cất cánh.
+
+  ### 2. Nguyên nhân ban đầu
+
+  * Theo các báo cáo từ NATS và phân tích từ Viện Kỹ thuật và Công nghệ (IET), sự cố bắt nguồn từ **lỗi kỹ thuật radar hoặc xung đột dữ liệu hệ thống nghiêm trọng**.
+  * Khi lỗi này xảy ra, hệ thống tự động rơi vào trạng thái "stand-down" (ngừng phản hồi) để ngăn chặn các dữ liệu sai lệch gây nguy hiểm, buộc các kiểm soát viên không lưu phải chuyển sang các phương thức điều phối thủ công và giảm tần suất bay.
+
+  ---
+
+  ### 3. Hậu quả và mức độ ảnh hưởng
+
+  Sự cố diễn ra vào ngày cao điểm nhất năm khiến ngành hàng không rơi vào trạng thái hỗn loạn:
+
+  * **Hàng trăm ngàn hành khách bị ảnh hưởng:** Ước tính có khoảng **577.000 hành khách** trên hơn **3.080 chuyến bay** chịu tác động trực tiếp do hoãn hoặc hủy chuyến.
+  * **Tê liệt các sân bay lớn:** Toàn bộ các cửa ngõ hàng không lớn của Anh như Heathrow, Gatwick, Manchester, Edinburgh, Birmingham và London City đều bị đình trệ. Nhiều máy bay phải bay vòng trên trời hoặc buộc phải chuyển hướng hạ cánh sang các nước lân cận như Bỉ (Brussels) hay Pháp.
+  * **Hiệu ứng dây chuyền:** Mặc dù hệ thống được sửa lỗi sau vài tiếng, tình trạng ùn ứ lịch bay và quá tải (backlog) tại các sân bay vẫn kéo dài đến tận đêm muộn và sang các ngày hôm sau.
+
+  ### 4. Phản ứng từ các bên
+
+  * **NATS:** Gửi lời xin lỗi sâu sắc tới hành khách và các hãng hàng không, khẳng định ưu tiên hàng đầu là an toàn bay nên việc hạn chế bầu trời là bắt buộc.
+  * **Các hãng hàng không:** British Airways phải giới hạn số chuyến bay tại Heathrow xuống mức tối thiểu (khoảng 32 chuyến/giờ). Nhiều hãng bay lớn như Ryanair bày tỏ sự giận dữ trước hạ tầng CNTT của NATS và yêu cầu các bên liên quan phải giải trình rõ ràng về năng lực dự phòng.
+  * **Chính phủ Anh:** Bộ Giao thông Vận tải Anh phối hợp cùng Cơ quan Hàng không Dân dụng (CAA) lập tức vào cuộc để điều tra độc lập, đánh giá tính hiệu quả của các kịch bản ứng phó rủi ro công nghệ của NATS.
   ```
-  - **Bias/Hallucination:** 
+  - **Bias/Hallucination:** AI giải thích đúng sơ bộ về vụ việc sập hệ thống NATS Anh Quốc vào năm 2025, không bị nhầm lẫn với vụ việc tương tự vào tháng 8 năm 2023. Nhưng có vài thông số có vẻ là do AI tự bịa ra, như "Ước tính có khoảng 577.000 hành khách trên hơn 3.080 chuyến bay chịu tác động trực tiếp do hoãn hoặc hủy chuyến..." vì hầu như không có bài báo nào đề cập đến và nếu có thì báo chỉ ghi hơn 150 chuyến. Cũng như AI tự đoán rằng lệnh khống chế lưu lượng bay của British Airways kéo dài đến tận 19h15, là do đến 19h15 thì các kỹ sư mới khôi phục hệ thống NATS hoàn toàn.
 
 ---
 
