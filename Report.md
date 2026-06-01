@@ -863,7 +863,10 @@
 ---
 
 ### Defect 9: Lỗ hổng SQL Injection của MOVEit Transfer (2023)
-* **Link defect (Source):** https://vncsglobal.vn/lo-hong-sql-injection-nghiem-trong-trong-moveit-transfer/
+* **Link defect (Source):** 
+  - https://nvd.nist.gov/vuln/detail/cve-2023-34362
+  - https://vncsglobal.vn/lo-hong-sql-injection-nghiem-trong-trong-moveit-transfer/
+  - https://www.emsisoft.com/en/blog/44123/unpacking-the-moveit-breach-statistics-and-analysis/
 * **Nội dung (Description):** 
   - Lỗ hổng được định danh là CVE-2023-36934 gây ra mối đe dọa nghiêm trọng đối với một số phiên bản của Progress MOVEit Transfer. Mối đe dọa ở đây là lỗ hổng SQL injection trong ứng dụng web MOVEit Transfer.
 * **Độ nghiêm trọng (Severity):** Rất cao
@@ -875,16 +878,61 @@
   - **Tool:** Gemini 3.5 Flash
   - **Prompt:**
   ```
+  Bạn hãy tóm tắt vụ việc liên quan tới lỗ hổng SQL Injection của MOVEit Transfer vào năm 2023
   ```
 
   - **AI Output:**
   ```
+  Vụ rò rỉ dữ liệu qua lỗ hổng **SQL Injection của MOVEit Transfer năm 2023** được đánh giá là một trong những chiến dịch tấn công mạng chuỗi cung ứng (supply chain attack) nghiêm trọng và có quy mô ảnh hưởng lớn nhất lịch sử.
+
+  Dưới đây là tóm tắt chi tiết về vụ việc này:
+
+  ---
+
+  ## 1. Lỗ hổng gốc (CVE-2023-34362) là gì?
+
+  * **Loại lỗ hổng:** SQL Injection (Chèn mã SQL trái phép) kết hợp với Thực thi mã từ xa (RCE - Remote Code Execution).
+  * **Mức độ nghiêm trọng:** **Mức tối đa (CVSS 10.0/10)**.
+  * **Cơ chế:** Kẻ tấn công chưa xác thực (unauthenticated) có thể gửi một gói tin HTTP/HTTPS được tùy biến đặc biệt đến ứng dụng web MOVEit Transfer. Do hệ thống không lọc kỹ dữ liệu đầu vào, mã độc hại sẽ can thiệp vào cơ sở dữ liệu (MySQL, MS SQL hoặc Azure SQL), từ đó giúp kẻ tấn công nâng cao đặc quyền và chiếm quyền kiểm soát toàn bộ máy chủ.
+
+  ---
+
+  ## 2. Diễn biến và Thủ đoạn Tấn công
+
+  * **Kẻ chủ mưu:** Nhóm hacker/tống tiền khét tiếng **Cl0p (TA505)** – một băng đảng ransomware có liên hệ với Nga. Nhóm này được cho là đã âm thầm thử nghiệm và tìm ra lỗ hổng này từ năm 2021 trước khi chính thức kích hoạt chiến dịch quy mô lớn.
+  * **Thời điểm bùng nổ:** Cuối tháng 5 năm 2023 (đúng vào kỳ nghỉ Ngày Chiến sĩ Trận vong - Memorial Day của Mỹ, khi các đội ngũ IT thường lơ là cảnh giác).
+  * **Cách thức hoạt động:** 1. Nhóm Cl0p khai thác lỗ hổng SQLi để xâm nhập vào máy chủ MOVEit của các tổ chức.
+  2. Chúng cài đặt một mã độc dạng web shell có tên là **LEMURLOOT** (thường giả dạng dưới tên file `human2.aspx`).
+  3. Web shell này cho phép chúng lục lọi cấu hình, lấy trộm dữ liệu từ cơ sở dữ liệu, tải xuống các tệp tin nhạy cảm và thậm chí xóa hoặc tạo tài khoản người dùng mới để duy trì quyền truy cập lâu dài.
+
+  ---
+
+  ## 3. Quy mô và Thiệt hại Khổng lồ
+
+  MOVEit Transfer là phần mềm chuyển tệp an toàn được hàng ngàn doanh nghiệp, cơ quan chính phủ và các đơn vị y tế/tài chính lớn trên thế giới tin dùng để truyền tải các dữ liệu tối mật. Khi mã độc xâm nhập vào chuỗi cung ứng này, hậu quả để lại vô cùng nặng nề:
+
+  * **Số lượng nạn nhân:** Tính đến cuối năm 2023, có **hơn 2.600 tổ chức** và **hơn 66 triệu cá nhân** bị ảnh hưởng bởi vụ rò rỉ dữ liệu này.
+  * **Các tổ chức lớn bị ảnh hưởng:** * *Chính phủ:* Các cơ quan chính phủ liên bang Mỹ (như Bộ Năng lượng), hệ thống y tế công cộng Anh (NHS), chính phủ bang Louisiana và Oregon.
+  * *Doanh nghiệp/Tổ chức tài chính:* Các tập đoàn lớn như BBC, British Airways, Siemens Energy, các trường đại học lớn như Johns Hopkins, và hàng loạt ngân hàng lớn.
+
+
+  * **Hình thức tống tiền:** Thay vì mã hóa dữ liệu đòi tiền chuộc như các vụ ransomware truyền thống, nhóm Cl0p chỉ **đánh cắp dữ liệu** rồi đe dọa sẽ tung lên mạng nếu nạn nhân không trả tiền. Chi phí thiệt hại và khắc phục của toàn bộ vụ việc ước tính lên tới hàng tỷ USD.
+
+  ---
+
+  ## 4. Biện pháp Khắc phục từ Nhà sản xuất
+
+  * **Bá cáo và Bản vá:** Ngày 31/05/2023, Progress Software (công ty mẹ của MOVEit) đã chính thức công bố lỗ hổng 0-day này và khẩn cấp tung ra bản vá.
+  * **Các lỗ hổng tiếp theo:** Trong quá trình rà soát lại mã nguồn sau vụ tấn công, Progress Software còn phát hiện thêm một loạt lỗ hổng SQLi nguy hiểm khác (như CVE-2023-35036, CVE-2023-35708) và tiếp tục phải tung ra các bản vá bổ sung trong tháng 6 năm 2023.
+  * **Khuyến nghị:** Toàn bộ các doanh nghiệp sử dụng MOVEit được yêu cầu ngay lập tức ngắt lưu lượng truy cập HTTP/HTTPS, kiểm tra xem hệ thống đã xuất hiện file `human2.aspx` chưa, reset lại các tài khoản và cập nhật lên phiên bản vá lỗi mới nhất.
+
+  > **Bài học rút ra:** Vụ việc MOVEit 2023 là một hồi chuông cảnh tỉnh sâu sắc về rủi ro của "Phần mềm bên thứ ba". Một doanh nghiệp dù có hệ thống bảo mật nội bộ tốt đến đâu vẫn có thể bị sụp đổ nếu đối tác cung ứng phần mềm truyền file của họ bị dính lỗ hổng bảo mật.
   ```
-  - **Bias/Hallucination:** 
+  - **Bias/Hallucination:** AI giải thích sơ bộ về vụ án là đúng. Nhưng thông tin mức độ nghiêm trọng (số điểm CVSS), thì AI lại bị hallucination. Cụ thể số điểm của vụ việc được đánh giá là 9.8/10 chứ không phải 10.0/10. Và số cá nhân bị ảnh hưởng là tầm 96 triệu theo Emsisoft thống kê, không phải là chỉ hơn 66 triệu cá nhân như AI nói, con số 66 triệu sẽ khiến cho người đọc có thể hiểu sai về mức độ tác động của vụ việc.
 
 ---
 
-### Defect 10: Sự cố sập hệ thống toàn cầu của McDonald's
+### Defect 10: Sự cố sập hệ thống toàn cầu của McDonald's (2024)
 * **Link defect (Source):** https://znews.vn/mcdonald-s-dong-loat-gap-su-co-khap-the-gioi-post1464677.html
 * **Nội dung (Description):**
   - Sự cố hệ thống khiến nhiều cửa hàng McDonald's trên toàn thế giới phải đóng cửa, làm gián đoạn ứng dụng và đơn đặt hàng online ở các quốc gia và vùng lãnh thổ. McDonald’s Nhật Bản xác nhận "nhiều" cửa hàng trên toàn quốc đã tạm ngừng hoạt động vì vấn đề này và McDonald's Hong Kong cho biết trên Facebook rằng họ cũng đang gặp "lỗi hệ thống máy tính" 
@@ -897,12 +945,44 @@
   - **Tool:** Gemini 3.5 Flash
   - **Prompt:**
   ```
+  Bạn hãy tóm tắt vụ việc liên quan tới sự cố sập hệ thống toàn cầu của McDonald's vào năm 2024
   ```
 
   - **AI Output:**
   ```
+  Vào ngày **15 tháng 3 năm 2024**, gã khổng lồ thức ăn nhanh McDonald’s đã phải trải qua một sự cố sập hệ thống công nghệ trên quy mô toàn cầu. Sự cố này đã khiến hàng loạt cửa hàng bị tê liệt hoạt động, tạo nên một làn sóng xôn xao trên các phương tiện truyền thông và mạng xã hội.
+
+  Dưới đây là tóm tắt chi tiết về vụ việc:
+
+  ### 1. Diễn biến và Phạm vi ảnh hưởng
+
+  * **Bắt đầu:** Sự cố xảy ra vào khoảng nửa đêm ngày 15/3 (theo giờ CDT - Giờ ánh sáng ban ngày Trung tâm Bắc Mỹ).
+  * **Phạm vi:** Riêng tại khu vực châu Á - Thái Bình Dương và châu Âu chịu ảnh hưởng nặng nề nhất. Các quốc gia ghi nhận tình trạng gián đoạn nghiêm trọng nhất bao gồm **Úc, Nhật Bản, Hồng Kông (Trung Quốc), Singapore, Vương quốc Anh, Đức, và cả một số khu vực tại Mỹ**.
+  * **Hậu quả tại cửa hàng:**
+  * Hệ thống máy tính nội bộ, màn hình hiển thị trong bếp, màn hình Drive-thru (đặt hàng trên xe) và các ki-ốt tự phục vụ (Kiosk POS) đều bị đóng băng hoặc hiện màn hình đen.
+  * Ứng dụng di động của McDonald's không thể truy cập, tính năng tích điểm đổi quà và đặt món trực tuyến bị vô hiệu hóa.
+  * Một số cửa hàng tại Nhật Bản và Úc đã phải **đóng cửa tạm thời**. Trong khi đó, nhiều chi nhánh khác ở Singapore hay Anh phải quay về thời kỳ "thủ công": Nhân viên dùng giấy bút để ghi tay đơn hàng và chỉ chấp nhận thanh toán bằng tiền mặt.
+
+
+
+  ### 2. Nguyên nhân sự cố
+
+  Ngay sau khi sự cố xảy ra, có nhiều đồn đoán về một cuộc tấn công mạng quy mô lớn. Tuy nhiên, McDonald’s đã nhanh chóng lên tiếng phủ nhận.
+
+  > **Nguyên nhân chính thức:** Sự cố xuất phát từ một **"nhà cung cấp công nghệ bên thứ ba"** khi họ tiến hành một lệnh **thay đổi cấu hình hệ thống (configuration change)**. Lỗi kỹ thuật này sau đó đã tạo ra hiệu ứng dây chuyền làm sập mạng lưới kết nối máy chủ toàn cầu của hãng.
+
+  McDonald's cũng đính chính rằng sự cố này hoàn toàn không liên quan đến việc họ đang chuyển dịch hệ thống tính toán sang nền tảng Google Cloud (thỏa thuận đã ký kết vào cuối năm 2023).
+
+  ### 3. Khắc phục và Hệ quả
+
+  * **Khắc phục:** Giám đốc Thông tin Toàn cầu của McDonald's - ông Brian Rice - đã đưa ra lời xin lỗi chính thức tới khách hàng và các đối tác nhượng quyền. Hệ thống dần được khôi phục sau khoảng **12 tiếng** nỗ lực sửa lỗi của các kỹ sư công nghệ.
+  * **Hệ quả kinh tế:** Dù McDonald's không công bố thiệt hại cụ thể, các chuyên gia ngành bán lẻ ước tính việc sập hệ thống POS tại hơn 39.000 cửa hàng trên toàn cầu trong nhiều giờ cao điểm đã khiến hãng tổn thất hàng triệu USD doanh thu.
+
+  ---
+
+  Vụ việc năm 2024 này được xem là một bài học đắt giá đối với ngành dịch vụ ăn uống (QSR) toàn cầu. Nó phản ánh mặt trái của việc các chuỗi bán lẻ quá phụ thuộc vào hệ thống hạ tầng công nghệ tập trung và điện toán đám mây: Chỉ cần một sai sót nhỏ từ bên thứ ba cũng có thể làm tê liệt cả một "đế chế" kinh doanh trong tích tắc.
   ```
-  - **Bias/Hallucination:** 
+  - **Bias/Hallucination:** AI giải thích sơ bộ về vụ việc đúng. Nhưng ở phần các chi nhánh phải quay về thời kỳ "thủ công" ghi đơn bằng tay thì AI bị hallucination khi chỉ đề cập đến các chi nhánh ở Singapore hay Anh, trong khi còn có cả Úc. Và việc AI tự thêm các nước "Singapore, Vương quốc Anh, Đức, và cả một số khu vực tại Mỹ" vào trong danh sách các quốc gia được ghi nhận nghiêm trọng nhất, trong khi chỉ có Úc, Nhật Bản, Hong Kong và Anh.
 
 ---
 
@@ -916,6 +996,15 @@
 * **Giải pháp (Solution):**
   - Tích hợp các công cụ CSPM để tự động quét và cảnh báo các bucket bị public.
 * **AI Bias/Hallucination:**
+  - **Tool:** Gemini 3.5 Flash
+  - **Prompt:**
+  ```
+  ```
+
+  - **AI Output:**
+  ```
+  ```
+  - **Bias/Hallucination:** 
 
 ---
 
@@ -930,6 +1019,15 @@
 * **Giải pháp (Solution):**
   - Thiết lập tính năng Rollback tức thì nếu như phát hiện tỷ lệ rớt mạng tăng đột biến.
 * **AI Bias/Hallucination:**
+  - **Tool:** Gemini 3.5 Flash
+  - **Prompt:**
+  ```
+  ```
+
+  - **AI Output:**
+  ```
+  ```
+  - **Bias/Hallucination:** 
 
 ---
 
@@ -943,6 +1041,15 @@
 * **Giải pháp (Solution):**
   - Bắt buộc áp dụng Xác thực 2 yếu tố (MFA/2FA) cho tài khoản mới và trước đó, triển khai reCAPTCHA và khóa tài khoản tạm thời khi đăng nhập sai nhiều lần.
 * **AI Bias/Hallucination:**
+  - **Tool:** Gemini 3.5 Flash
+  - **Prompt:**
+  ```
+  ```
+
+  - **AI Output:**
+  ```
+  ```
+  - **Bias/Hallucination:** 
 
 ---
 
@@ -956,6 +1063,15 @@
 * **Giải pháp (Solution):**
   - Áp dụng Zero-Trust cho nhân viên làm việc từ xa, không lưu trữ bản backup của vault cùng một chỗ với các key cấu hình hệ thống.
 * **AI Bias/Hallucination:**
+  - **Tool:** Gemini 3.5 Flash
+  - **Prompt:**
+  ```
+  ```
+
+  - **AI Output:**
+  ```
+  ```
+  - **Bias/Hallucination:** 
 
 ---
 
@@ -971,19 +1087,15 @@
 * **Giải pháp (Solution):**
   - Phân quyền hệ thống khắt khe hơn và giám sát chặt chẽ các bất thường trong kho lưu trữ chứng chỉ số.
 * **AI Bias/Hallucination:**
+  - **Tool:** Gemini 3.5 Flash
+  - **Prompt:**
+  ```
+  ```
 
----
-
-### Defect 16: 
-* **Link defect (Source):**
-* **Nội dung (Description):**
-  - 
-* **Độ nghiêm trọng (Severity):**
-* **Hậu quả (Consequences):** 
-  - 
-* **Giải pháp (Solution):**
-  - 
-* **AI Bias/Hallucination:**
+  - **AI Output:**
+  ```
+  ```
+  - **Bias/Hallucination:** 
 
 ---
 
