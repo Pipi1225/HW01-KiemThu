@@ -1176,7 +1176,7 @@ Ngay sau khi xác định được quy mô vụ việc, AnyDesk đã thực hi�
 
 ## Prompt 22:
 **1. Prompt + Tool**
-- **Tool:** Gemini 3.5 Flash
+- **Tool:** Gemini 3.1 Pro
 - **Timestamp:** 09:38 02/06/2026 
 - **Prompt:**
 ```

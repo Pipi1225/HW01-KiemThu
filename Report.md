@@ -1260,7 +1260,7 @@
 ## Requirement 3 - Test cases for ONE physical product
 
 ### Device + Student ID Card:
-  ![Device with student ID card](Device_Student_ID.png)
+  ![Device with student ID card](Device_Student_ID.jpg)
   
 ### Physical Device Information:
 * **Brand:** Senko
