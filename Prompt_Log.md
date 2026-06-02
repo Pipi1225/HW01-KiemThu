@@ -1232,27 +1232,3 @@ mindmap
 
 Bạn hãy sử dụng kiến thức môn học để "bắt lỗi" bản mindmap này và ghi vào phần AI Audit Report nhé!
 ```
-
-## Prompt 23:
-**1. Prompt + Tool**
-- **Tool:** Gemini 3.5 Flash
-- **Timestamp:** 
-- **Prompt:**
-```
-```
-
-**2. AI Output:**
-```
-```
-
-## Prompt 24:
-**1. Prompt + Tool**
-- **Tool:** Gemini 3.5 Flash
-- **Timestamp:** 
-- **Prompt:**
-```
-```
-
-**2. AI Output:**
-```
-```
