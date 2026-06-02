@@ -1284,7 +1284,7 @@
 | **TC10** | Kiểm tra ngắt điện đột ngột khi đang hoạt động | Phích cắm điện | 1. Quạt đang chạy ở Mức 2.<br>2. Rút phích cắm điện khỏi ổ. | Quạt mất điện và dừng quay. Nút 2 VẪN giữ nguyên trạng thái lún. | Quạt khi mất điện ngừng quay ngay, nút 2 vẫn giữ trạng thái lún. | Pass | Trống |
 | **TC11** | Kiểm tra cấp điện khi nút tốc độ đã được nhấn sẵn | Phích cắm điện | 1. Rút phích cắm điện.<br>2. Nhấn sẵn Nút 3.<br>3. Cắm phích điện vào ổ. | Quạt lập tức quay ở Mức 3 ngay khi có điện. Nút 3 VẪN giữ nguyên trạng thái lún. | Sau khi cắm điện, quạt lập tức quay ổn định ở mức gió 3, nút 3 không bị nảy lên. | Pass | https://youtu.be/xKoOXIIbjD4 |
 | **TC12** | Kiểm tra nhấn nhẹ (half-press) nút tắt | Nút bấm số 0 | 1. Quạt đang chạy ở Mức 1.<br>2. Nhấn từ từ Nút 0 nhưng không ấn chạm đáy. | Nút 1 bị đẩy nảy lên, ngắt điện động cơ ngay cả khi nút 0 chưa lún hoàn toàn xuống rãnh khóa. | Nút 1 nảy lên ngay khi nút 0 chưa lún xuống hoàn toàn, quạt ngừng quay. | Pass | Trống |
-| **TC13**<br>*(Edge)* | Khởi động khi rotor quạt bị kẹt cứng | Rotor quay của quạt | 1. Quạt đang cắm điện và ở trạng thái tắt.<br>2. Dùng một đôi đũa chèn qua lồng chặn lại cánh quạt.<br>3. Bấm Nút 3.<br>4. Giữ khoảng 5 giây rồi thả đũa ra. | Động cơ phát ra tiếng "è è" nhưng không cháy động cơ. Khi rút đũa thì quạt quay bình thường và ổn định. | Động cơ quạt phát ra tiếng "è è", không thấy cháy động cơ. Rút đũa thì quay lấy lại tốc độ và quay bình thường, ổn định. | Pass | Trống |
+| **TC13**<br>*(Edge)* | Khởi động khi rotor quạt bị kẹt cứng | Rotor quay của quạt | 1. Quạt đang cắm điện và ở trạng thái tắt.<br>2. Dùng một đôi đũa chèn qua lồng chặn lại cánh quạt.<br>3. Bấm Nút 3.<br>4. Giữ khoảng 5 giây rồi thả đũa ra. | Động cơ không phát ra tiếng, không bị cháy hay nóng và không quay. Khi rút đũa thì quạt quay bình thường và ổn định. | Động cơ quạt không phát ra tiếng, không thấy cháy động cơ và không có quay. Rút đũa thì quạt lấy lại tốc độ và quay bình thường, ổn định. | Pass | Trống |
 | **TC14**<br>*(Edge)* | Kiểm tra sức chịu tải vật lý của hộp số | Mép lồng quạt | 1. Quạt đang chạy ở Mức 3 và đang xoay.<br>2. Đặt tay giữ mép quạt, cố tình cản lại không cho quạt xoay sang bên trái trong 5 giây.<br>3. Sau 5 giây, thả tay ra. | Quạt phát ra tiếng "cạch cạch" ở hộp số đằng sau và khi thả tay ra, quạt vẫn xoay bình thường và ổn định. | Quạt phát ra tiếng "cạch cạch" khi bị chặn lại và quạt quay bình thường, ổn định khi thả tay ra. | Pass | https://youtu.be/s5aSeYV6AG4 |
 | **TC15**<br>*(Edge)* | Kiểm tra độ vững của chân đế | Thân quạt | 1. Quạt đang chạy ở Mức 3.<br>2. Đẩy nhẹ thân quạt nghiêng 1 góc khoảng chừng 15 độ rồi buông tay. | Sau khi buông tay, quạt tự lấy lại cân bằng và quay ổn định, không bị ngã. | Sau khi buông tay, quạt tự lấy lại cân bằng (thẳng đứng) và vẫn quay ổn định | Pass | Trống |
 
@@ -1294,7 +1294,12 @@
 (Em đã thay thế 3 test case cuối TC13, TC14, TC15 do AI tự tạo thành 3 edge case do mình tự làm)
 
 ### AI Missed Edge Cases Analysis:
-- AI thường mô hình hóa chiếc quạt như một phần mềm với logic nhị phân (On/Off) mà bỏ qua các định luật vật lý thực tế, dẫn đến việc bỏ sót 3 Edge Cases sau:
+- AI thường mô hình hóa chiếc quạt như một phần mềm với logic nhị phân (On/Off) mà bỏ qua các định luật vật lý thực tế, dẫn đến việc bỏ sót 3 edge cases sau:
   - TC13: AI sẽ thường mặc định rằng bấm nút là quay, mà không lường trước quạt vẫn có điện, đã bấm nút mức 3 nhưng cánh quạt bị kẹt cứng do các yếu tố khác (như đưa cây đũa vào chặn quạt trong test case).
   - TC14: AI thường chỉ xem tính năng xoay là biến logic (True/False), nên thường sẽ không nghĩ đến cơ chế an toàn khi gặp lực cản (trượt bánh răng để chống gãy quạt).  
   - TC15: Các trường hợp đặc thù như có người vô tình đụng vô thân quạt khiến cho quạt bị nghiêng (mô phỏng bằng cách đẩy thân quạt nghiêng 15 độ) thường sẽ bị AI bỏ qua do thiếu nhận thức, tư duy về tình huống ngoài đời.
+
+### Bug Screenshot Issues on GitHub Repository
+- Vì cả 15 test case đều Pass nên không có lỗi nào để Log Defects dưới dạng Issues trên GitHub Repository cả.
+- Github Link: https://github.com/Pipi1225/HW01-KiemThu
+  ![Issues Github Repository](Issues_Github_Repo.jpg)
