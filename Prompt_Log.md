@@ -921,7 +921,7 @@ MOVEit Transfer là phần mềm chuyển tệp an toàn được hàng ngàn do
 ## Prompt 16:
 **1. Prompt + Tool**
 - **Tool:** Gemini 3.5 Flash
-- **Timestamp:** 22:09
+- **Timestamp:** 22:09 01/06/2026
 - **Prompt:**
 ```
 Bạn hãy tóm tắt vụ việc liên quan tới sự cố sập hệ thống toàn cầu của McDonald's vào năm 2024
@@ -963,6 +963,230 @@ Vụ việc năm 2024 này được xem là một bài học đắt giá đối 
 ```
 
 ## Prompt 17:
+**1. Prompt + Tool**
+- **Tool:** Gemini 3.5 Flash
+- **Timestamp:** 08:11 02/06/2026
+- **Prompt:**
+```
+Bạn hãy tóm tắt vụ việc liên quan tới Toyota cấu hình sai Cloud Bucket suốt 10 năm (năm 2023)
+```
+
+**2. AI Output:**
+```
+Dưới đây là bản tóm tắt toàn bộ vụ việc Toyota cấu hình sai Cloud Bucket suốt một thập kỷ, được phát hiện vào năm 2023.
+
+---
+
+## 1. Bối cảnh vụ việc
+
+Vào tháng 5 năm 2023, tập đoàn ô tô Toyota (Nhật Bản) bất ngờ thông báo về một sự cố rò rỉ dữ liệu nghiêm trọng kéo dài gần 10 năm (từ tháng 11/2013 đến tháng 4/2023). Nguyên nhân của vụ việc bắt nguồn từ một lỗi cấu hình sai trên hệ thống lưu trữ đám mây (Cloud Bucket) do công ty con **Toyota Connected** quản lý.
+
+Sự nhầm lẫn này đã vô tình biến cơ sở dữ liệu của họ từ chế độ riêng tư (Private) thành chế độ công khai (Public), cho phép bất kỳ ai cũng có thể truy cập mà không cần mật khẩu.
+
+---
+
+## 2. Quy mô và dữ liệu bị ảnh hưởng
+
+Vụ rò rỉ ảnh hưởng trực tiếp đến khoảng **2,15 triệu khách hàng** tại Nhật Bản sử dụng các dịch vụ kết nối thông minh của hãng như T-Connect, G-Link, G-Link Lite hoặc G-BOOK.
+
+Các thông tin bị phơi bày trên đám mây bao gồm:
+
+* Mã số định danh thiết bị định vị GPS trên xe.
+* Số khung xe (VIN).
+* Thông tin tài khoản ngân hàng và mã PIN thẻ tín dụng của chủ xe.
+* Dữ liệu về vị trí của xe kèm mốc thời gian chi tiết.
+* Các đoạn video quay bên ngoài xe từ camera hành trình (bị lộ trong giai đoạn 2016 - 2023).
+
+---
+
+## 3. Phát hiện và Khắc phục
+
+* **Phát hiện:** Lỗi này chỉ được Toyota tìm thấy trong một đợt rà soát toàn diện sau khi họ tái cấu trúc quy trình quản lý dữ liệu đám mây.
+* **Xử lý:** Ngay sau khi phát hiện vào tháng 4/2023, Toyota đã lập tức chặn quyền truy cập từ bên ngoài, đồng thời triển khai hệ thống giám sát liên tục để quét các lỗi cấu hình đám mây tương tự.
+* **Hậu quả thực tế:** Phía Toyota tuyên bố chưa tìm thấy bằng chứng nào cho thấy dữ liệu bị kẻ xấu khai thác hay lạm dụng trong suốt 10 năm qua.
+```
+
+## Prompt 18:
+**1. Prompt + Tool**
+- **Tool:** Gemini 3.5 Flash
+- **Timestamp:** 08:17 02/06/2026
+- **Prompt:**
+```
+Bạn hãy tóm tắt vụ việc liên quan tới lỗi gián đoạn mạng diện rộng của AT&T vào năm 2024
+```
+
+**2. AI Output:**
+```
+Dưới đây là bản tóm tắt diễn biến vụ sự cố gián đoạn mạng diện rộng của nhà mạng AT&T vào đầu năm 2024.
+
+---
+
+## 1. Diễn biến sự cố
+
+Vào sáng sớm ngày **22 tháng 2 năm 2024**, hàng triệu thuê bao của nhà mạng AT&T trên khắp nước Mỹ bất ngờ rơi vào tình trạng "No Service" (Không có dịch vụ).
+
+Sự cố bắt đầu từ khoảng 3:30 sáng (giờ EST) và đạt đỉnh điểm vài tiếng sau đó, khiến người dùng không thể thực hiện cuộc gọi, nhắn tin, truy cập mạng di động, và nghiêm trọng nhất là **không thể gọi cho các đầu số khẩn cấp như 911**. Sự gián đoạn này kéo dài liên tục trong hơn 10 tiếng đồng hồ trước khi dịch vụ được khôi phục hoàn toàn vào chiều cùng ngày.
+
+---
+
+## 2. Nguyên nhân thực tế
+
+Ngay sau khi sự cố xảy ra, nhiều thuyết âm mưu về một cuộc tấn công mạng quy mô lớn hoặc bão mặt trời đã lan truyền chóng mặt trên Internet. Tuy nhiên, AT&T đã chính thức lên tiếng đính chính.
+
+* **Nguyên nhân:** Lỗi xảy ra do quy trình nội bộ trong lúc công ty đang tiến hành mở rộng và cập nhật hệ thống mạng lưới.
+* **Chi tiết kỹ thuật:** Một cấu hình sai (misconfiguration) trong quá trình áp dụng một bản cập nhật phần mềm định kỳ đã vô tình kích hoạt chuỗi lỗi hệ thống, đánh sập khả năng kết nối của các trạm phát sóng.
+
+---
+
+## 3. Hậu quả và đền bù từ AT&T
+
+Sự cố đã gây tổn hại nghiêm trọng đến uy tín của AT&T và khiến các cơ quan quản lý liên bang (như FCC) phải vào cuộc điều tra. Để xoa dịu dư luận, AT&T đã đưa ra phương án đền bù:
+
+* **Chính sách đền bù:** Khách hàng bị ảnh hưởng bởi sự cố được tặng ngay một gói dữ liệu (Data) tốc độ cao dung lượng **100 GB** hoàn toàn miễn phí vào tài khoản để sử dụng trong vòng 1 năm.
+* **Lời xin lỗi:** Giám đốc điều hành của AT&T đã gửi thư xin lỗi công khai và cam kết sẽ cải tiến quy trình để không lặp lại sai lầm tương tự.
+```
+
+## Prompt 19:
+**1. Prompt + Tool**
+- **Tool:** Gemini 3.5 Flash
+- **Timestamp:** 08:23 02/06/2026
+- **Prompt:**
+```
+Bạn hãy tóm tắt vụ việc liên quan tới vụ tấn công nhồi thông tin xác thực của 23andMe vào năm 2023
+```
+
+**2. AI Output:**
+```
+Dưới đây là bản tóm tắt diễn biến vụ tấn công nhồi thông tin xác thực (Credential Stuffing) nhắm vào công ty xét nghiệm di truyền **23andMe** vào cuối năm 2023.
+
+---
+
+## 1. Phương thức tấn công và Quy mô
+
+Vào tháng 10 năm 2023, 23andMe thông báo họ đã bị tin tặc tấn công. Tuy nhiên, tin tặc không hề bẻ khóa hay xâm nhập trực tiếp vào hệ thống máy chủ của công ty. Thay vào đó, chúng sử dụng phương thức **Credential Stuffing (Nhồi thông tin xác thực)**.
+
+* **Cách thức:** Tin tặc lấy các cặp tài khoản/mật khẩu đã bị lộ từ các vụ rò rỉ dữ liệu của các website khác trước đó, rồi dùng công cụ tự động để "thử đại" vào trang đăng nhập của 23andMe. Do nhiều người dùng có thói quen dùng chung một mật khẩu cho nhiều tài khoản, tin tặc đã đăng nhập thành công vào khoảng **14.000 tài khoản gốc**.
+* **Hiệu ứng domino:** Từ 14.000 tài khoản này, nhờ tính năng "DNA Relatives" (Tìm kiếm người thân qua DNA) mà người dùng bật để kết nối với họ hàng, tin tặc đã tiếp cận và thu thập được thông tin của tổng cộng khoảng **6,9 triệu người dùng** khác.
+
+---
+
+## 2. Dữ liệu bị đánh cắp
+
+Dữ liệu bị rò rỉ rất nhạy cảm và sau đó đã bị rao bán trên các diễn đàn hacker, bao gồm:
+
+* Tên tuổi, danh tính, giới tính và năm sinh.
+* Cây gia phả, tỷ lệ phần trăm nguồn gốc tổ tiên (ví dụ: gốc Do Thái Ashkenazi, gốc Hoa, v.v.).
+* Vị trí địa lý và danh sách những người có cùng huyết thống trong hệ thống.
+
+---
+
+## 3. Phản ứng của 23andMe và Hậu quả
+
+Vụ việc đã khiến cổ phiếu của công ty lao dốc và đối mặt với hàng loạt vụ kiện tập thể từ khách hàng vì cho rằng công ty bảo mật quá lỏng lẻo. Để khắc phục, 23andMe đã thực hiện các bước sau:
+
+* **Bắt buộc đổi mật khẩu:** Yêu cầu toàn bộ người dùng thay đổi mật khẩu ngay lập tức.
+* **Áp dụng bảo mật mới:** Bắt buộc tất cả khách hàng phải kích hoạt tính năng Xác thực 2 yếu tố (2FA).
+* **Bồi thường thiệt hại:** 23andMe đã đồng ý chi trả gói cứu trợ tài chính trị giá 30 triệu USD, cam kết bồi thường tối đa lên tới 10.000 USD cho mỗi khách hàng bị ảnh hưởng để họ thực hiện lại các xét nghiệm ADN tại các trung tâm y tế khác.
+```
+
+## Prompt 20:
+**1. Prompt + Tool**
+- **Tool:** Gemini 3.5 Flash
+- **Timestamp:** 08:32 02/06/2026
+- **Prompt:**
+```
+Bạn hãy tóm tắt vụ việc liên quan tới LastPass bị đánh cắp Vault mã hóa vào năm 2022
+```
+
+**2. AI Output:**
+```
+Dưới đây là bản tóm tắt diễn biến vụ tấn công chấn động năm 2022 nhắm vào **LastPass** – một trong những dịch vụ quản lý mật khẩu phổ biến nhất thế giới.
+
+---
+
+## 1. Diễn biến và Phương thức tấn công
+
+Vụ hack LastPass năm 2022 không chỉ là một sự cố đơn lẻ mà là một chuỗi tấn công phức tạp kéo dài nhiều tháng, chia làm hai giai đoạn chính:
+
+* **Giai đoạn 1 (Tháng 8/2022):** Tin tặc đã xâm nhập vào tài khoản của một lập trình viên LastPass, từ đó tiếp cận và đánh cắp mã nguồn (source code) cùng một số tài liệu kỹ thuật trong môi trường phát triển của hãng.
+* **Giai đoạn 2 (Cuối năm 2022):** Sử dụng các thông tin kỹ thuật lấy được từ giai đoạn 1, tin tặc tiếp tục nhắm mục tiêu vào một trong bốn kỹ sư DevOps cấp cao của LastPass. Chúng đã hack vào máy tính cá nhân tại nhà của kỹ sư này bằng cách khai thác lỗ hổng từ một phần mềm đa phương tiện bên thứ ba (Plex), sau đó cài phần mềm gián điệp (keylogger) để lấy cắp mật khẩu master, từ đó mở khóa và sao chép toàn bộ dữ liệu sao lưu trên đám mây của LastPass.
+
+---
+
+## 2. Dữ liệu bị đánh cắp: Kho Vault mã hóa
+
+Vụ tấn công này cực kỳ nghiêm trọng vì tin tặc đã lấy đi bản sao lưu các **kho dữ liệu mật khẩu (Vault)** của hàng triệu người dùng.
+
+Dữ liệu trong kho Vault bị lấy đi bao gồm hai loại:
+
+* **Dữ liệu không mã hóa:** Tên miền của các trang web mà người dùng lưu tài khoản, địa chỉ email đăng ký, số điện thoại, và địa chỉ IP mà khách hàng dùng để truy cập LastPass.
+* **Dữ liệu có mã hóa:** Tên đăng nhập (username), mật khẩu (password), ghi chú bảo mật và các dữ liệu điền form tự động.
+
+---
+
+## 3. Phản ứng của LastPass và Khuyến nghị bảo mật
+
+Sau sự cố, LastPass đã phải chịu sự chỉ trích dữ dội từ cộng đồng bảo mật vì ban đầu họ đã cố tình giảm nhẹ quy mô vụ việc, trước khi phải thừa nhận mức độ nghiêm trọng vào tháng 12/2022.
+
+* **Về mặt kỹ thuật:** LastPass khẳng định nếu người dùng đặt Mật khẩu chủ (Master Password) đủ mạnh theo đúng tiêu chuẩn của hãng, tin tặc sẽ mất hàng triệu năm để giải mã các mật khẩu bằng phương pháp "Brute Force" (thử sai liên tục).
+* **Biện pháp khắc phục:** Ngay lập tức, LastPass đã kích hoạt lệnh khẩn cấp, tự động đặt lại (reset) toàn bộ Mật khẩu chủ (Master Password) của tất cả người dùng trên toàn cầu và gửi SMS mã xác thực mới để đảm bảo an toàn.
+```
+
+## Prompt 21:
+**1. Prompt + Tool**
+- **Tool:** Gemini 3.5 Flash
+- **Timestamp:** 08:42 02/06/2026
+- **Prompt:**
+```
+Bạn hãy tóm tắt vụ việc liên quan tới công ty AnyDesk bị xâm nhập hệ thống Production vào năm 2024
+```
+
+**2. AI Output:**
+```
+Dưới đây là bản tóm tắt diễn biến vụ việc phần mềm điều khiển máy tính từ xa **AnyDesk** bị tin tặc xâm nhập vào hệ thống Production (môi trường vận hành chính thức) vào đầu năm 2024.
+
+---
+
+## 1. Phát hiện sự cố
+
+Vào tháng 1 năm 2024, AnyDesk phát hiện ra các dấu hiệu bất thường trên hệ thống máy chủ của mình. Sau khi tiến hành một cuộc kiểm toán bảo mật và có sự can thiệp của công ty an ninh mạng nổi tiếng CrowdStrike, AnyDesk chính thức xác nhận hệ thống Production của họ đã bị tin tặc thỏa hiệp (compromised).
+
+Công ty khẳng định đây không phải là một cuộc tấn công mã hóa tống tiền (Ransomware), mà là một vụ xâm nhập nhằm chiếm đoạt tài nguyên hệ thống và mã nguồn.
+
+---
+
+## 2. Những dữ liệu bị ảnh hưởng
+
+Sự cố này gây rúng động ngành công nghệ vì AnyDesk là phần mềm có hơn 170.000 khách hàng doanh nghiệp và hàng triệu người dùng cá nhân.
+
+* **Những thứ bị đánh cắp:** Tin tặc đã tiếp cận được mã nguồn của phần mềm và đặc biệt là **các khóa chứng thực số (Code Signing Certificates)** – công cụ dùng để xác thực các bản cập nhật phần mềm chính thống của AnyDesk.
+* **Những thứ an toàn:** AnyDesk khẳng định không có bằng chứng nào cho thấy thông tin token xác thực của người dùng bị đánh cắp. Họ cũng nhấn mạnh cơ chế bảo mật của phần mềm không lưu trữ mật khẩu Master hay khóa riêng tư (Private Key) của khách hàng trên máy chủ.
+
+---
+
+## 3. Biện pháp xử lý hậu quả từ AnyDesk
+
+Ngay sau khi xác định được quy mô vụ việc, AnyDesk đã thực hiện một chiến dịch "thay máu" bảo mật trên diện rộng:
+
+* **Thu hồi chứng chỉ cũ:** AnyDesk lập tức thu hồi toàn bộ các khóa chứng thực số cũ bị nghi ngờ đã lọt vào tay hacker.
+* **Phát hành bản cập nhật:** Họ nhanh chóng tung ra phiên bản mới (AnyDesk 8.0.8) được ký bằng một chứng chỉ số mới hoàn toàn sạch sẽ để thay thế.
+* **Vá lỗi hệ thống:** Thay thế hoặc làm mới toàn bộ các mật khẩu, chứng chỉ liên quan đến hệ thống Production nội bộ.
+* **Hỗ trợ người dùng:** AnyDesk đã gửi tặng mỗi tài khoản trả phí một thiết bị bảo mật phần cứng YubiKey miễn phí để người dùng thiết lập xác thực 2 lớp (2FA), nhằm ngăn chặn triệt để nguy cơ bị hacker chiếm quyền điều khiển thiết bị thông qua tài khoản cũ.
+```
+
+## Prompt 22:
+**1. Prompt + Tool**
+- **Tool:** Gemini 3.5 Flash
+- **Timestamp:** 
+- **Prompt:**
+```
+```
+
+**2. AI Output:**
+```
+```
+
+## Prompt 23:
 **1. Prompt + Tool**
 - **Tool:** Gemini 3.5 Flash
 - **Timestamp:** 
