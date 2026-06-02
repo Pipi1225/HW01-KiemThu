@@ -1,5 +1,9 @@
 # HW01 – QA/QC Jobs · 20 Defects · Test a Physical Product
 
+## ISTQB Mindmap QA/QC Role
+
+![ISTQB Mindmap QA/QC Role](QAQC_Role_Mindmap.png)
+
 ## Requirement 1 - QA/QC Job Market 2026+
 
 ### Job 1: QA Automation Engineer, Embedded Video AI - Motorola Solutions

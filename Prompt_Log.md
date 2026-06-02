@@ -1177,6 +1177,65 @@ Ngay sau khi xác định được quy mô vụ việc, AnyDesk đã thực hi�
 ## Prompt 22:
 **1. Prompt + Tool**
 - **Tool:** Gemini 3.5 Flash
+- **Timestamp:** 09:38 02/06/2026 
+- **Prompt:**
+```
+Bạn hãy generate cho tôi 1 script mermaid về QA/QC role mindmap
+```
+
+**2. AI Output:**
+```
+Dưới đây là đoạn mã Mermaid cho Mindmap về các vai trò và hoạt động trong lĩnh vực QA/QC. Bạn có thể copy đoạn code này và dán vào các công cụ hỗ trợ Mermaid (như GitHub, Notion, Obsidian, hoặc trang web [Mermaid Live Editor](https://mermaid.live)) để xuất ra định dạng ảnh (PNG) và chèn vào báo cáo của mình.
+
+```mermaid
+mindmap
+  root((QA & QC Roles))
+    Quality Assurance QA
+      Focus: Process Oriented
+      Key Roles
+        QA Automation Engineer
+        QA Process Auditor
+        QA Manager
+      Core Activities
+        Test Execution
+        Process Improvement
+        Defining Standards
+    Quality Control QC
+      Focus: Product Oriented
+      Key Roles
+        Manual Tester
+        Performance Tester
+        Security Tester
+      Core Activities
+        Test Design
+        Debugging Software
+        Defect Logging
+    Test Management
+      Key Roles
+        Test Lead
+        Test Manager
+      Core Activities
+        Test Strategy
+        Test Planning
+        Resource Allocation
+    AI-Augmented QA/QC
+      Key Roles
+        AI Prompt Tester
+        LLM Evaluation Engineer
+      Core Activities
+        Prompt Injection Testing
+        Hallucination Checking
+
+``
+
+**Một lưu ý nhỏ cho bạn:** Bài tập có yêu cầu sinh viên phải sử dụng AI để vẽ một mindmap về quy trình ISTQB/QA/QC, sau đó **phân tích và tìm ra 3 điểm sai (mistakes) trong kết quả của AI**. Bản vẽ trên phản ánh đúng cách các mô hình ngôn ngữ lớn (LLM) thường phân loại khái niệm QA/QC dựa trên dữ liệu đại trà trên internet. Tuy nhiên, nếu đối chiếu nghiêm ngặt với **giáo trình ISTQB Foundation Level**, mindmap này đang có một số điểm nhầm lẫn kinh điển về mặt khái niệm.
+
+Bạn hãy sử dụng kiến thức môn học để "bắt lỗi" bản mindmap này và ghi vào phần AI Audit Report nhé!
+```
+
+## Prompt 23:
+**1. Prompt + Tool**
+- **Tool:** Gemini 3.5 Flash
 - **Timestamp:** 
 - **Prompt:**
 ```
@@ -1186,7 +1245,7 @@ Ngay sau khi xác định được quy mô vụ việc, AnyDesk đã thực hi�
 ```
 ```
 
-## Prompt 23:
+## Prompt 24:
 **1. Prompt + Tool**
 - **Tool:** Gemini 3.5 Flash
 - **Timestamp:** 
