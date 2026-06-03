@@ -1306,17 +1306,6 @@
 
 ---
 
-## Assessment & Self-Assessment 
-| No. | Criteria | Grade | Self-Assessed Grade |
-| :--- | :--- | :--- | :--- |
-| 1 | Job Market 2026+ (10 jobs × 3pts + AI Impact) | 40 | 40 |
-| 2 | Software Defects 2022–2026 (20 defects) | 20 | 15 |
-| 3 | Physical-product test design (15 TCs + 5 videos) | 25 | 25 |
-| AI-1 | [AI-02] AI Audit Report (5section) attached | 8 | 8 |
-| AI-2 | AI Critique 200–300 words + [AI-03] Disclosure attached | 4 | 4 |
-| AI-3 | [AI-05] Checklist signed + anticheat artifacts | 3 | 3 |
-|  | Total | 100 | 95 |
-
 ## AI Critique
 
 Trong quá trình phân tích các defects, AI liên tục sinh ra các đường link không tồn tại và tự động bịa đặt số liệu cụ thể, chẳng hạn như tự quy đổi sai tỷ giá tiền bồi thường hay cung cấp sai điểm số rủi ro CVSS... Còn đối với các tác vụ kiểm thử thiết bị vật lý, AI hoàn toàn thất bại trong việc thiết lập các edge cases. Nó chỉ giới hạn góc nhìn ở logic trạng thái phần mềm (xung đột tín hiệu nút bấm) mà không có khả năng nhận thức về các trường hợp cơ học thực tế có thể xảy ra như tình trạng kẹt rotor quay hay sức chịu tải của hộp số. Về mặt học thuật, AI cũng phân loại sai lệch các khái niệm khắt khe của quy trình ISTQB.
@@ -1540,3 +1529,16 @@ Những mục được đánh dấu [x] dưới đây là để xác nhận vi�
 
 ### **Student Signature:** Huy - Dương Gia Huy
 ### **Date:** 02/06/2026
+
+---
+
+## Assessment & Self-Assessment 
+| No. | Criteria | Grade | Self-Assessed Grade |
+| :--- | :--- | :--- | :--- |
+| 1 | Job Market 2026+ (10 jobs × 3pts + AI Impact) | 40 | 40 |
+| 2 | Software Defects 2022–2026 (20 defects) | 20 | 15 |
+| 3 | Physical-product test design (15 TCs + 5 videos) | 25 | 25 |
+| AI-1 | [AI-02] AI Audit Report (5section) attached | 8 | 8 |
+| AI-2 | AI Critique 200–300 words + [AI-03] Disclosure attached | 4 | 4 |
+| AI-3 | [AI-05] Checklist signed + anticheat artifacts | 3 | 3 |
+|  | Total | 100 | 95 |
